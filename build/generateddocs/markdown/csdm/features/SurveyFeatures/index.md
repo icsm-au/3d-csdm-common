@@ -82,7 +82,7 @@ Either geometry will inherit its CRS from the container's defaults.
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -227,7 +227,7 @@ An example Geodetic Mark extending Survey Point with additional geodeticid attri
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -339,7 +339,7 @@ A monument as a standalone object
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -413,7 +413,7 @@ An example vector (line between two points) using the topo-line schema from the 
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -481,12 +481,12 @@ $defs:
     anyOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
-    - $ref: https://geojson.org/schema/Feature.json
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
   SurveyPointProperties:
     type: object
     properties:
       name:
-        $ref: ../../datatypes/compoundName/schema.json
+        $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml
         x-jsonld-id: https://linked.data.gov.au/def/csdm/commonpatterns/name
         x-jsonld-type: '@id'
       purpose:
@@ -567,7 +567,7 @@ $defs:
     - type: object
       properties:
         geodeticid:
-          $ref: ../../datatypes/compoundName/schema.json
+          $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml
           x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid
       required:
       - geodeticid
@@ -695,8 +695,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json)
-* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.yaml)
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.yaml)
 
 
 # JSON-LD Context
@@ -1465,7 +1465,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld)
+[context.jsonld](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld)
 
 ## Sources
 
@@ -1475,6 +1475,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/icsm-au/3d-csdm-schema](https://github.com/icsm-au/3d-csdm-schema)
+* URL: [https://github.com/icsm-au/3d-csdm-common](https://github.com/icsm-au/3d-csdm-common)
 * Path: `_sources/csdm/features/SurveyFeatures`
 

@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-02-13T01:41:20.383886+00:00
+Generated 2024-04-09T02:59:45.165077+00:00
 === Files ===
 Using collection-sensor-extension.json from test resources
 JSON-LD context is present - uplifting
@@ -24,12 +24,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
 
 === End SHACL ===
 

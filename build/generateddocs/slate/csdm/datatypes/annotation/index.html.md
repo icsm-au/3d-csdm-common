@@ -30,7 +30,7 @@ An annotation allowing multiple values, either links with descriptions or simple
 </p>
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/datatypes/annotation/" target="_blank">valid</a></strong>
+This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/datatypes/annotation/" target="_blank">valid</a></strong>
 </aside>
 
 # Examples
@@ -58,8 +58,8 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schem
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/annotation/example_1_1.json">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fannotation%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fannotation%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -67,7 +67,7 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schem
 
 ```jsonld
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
   "@graph": [
     {
       "description": "Annotation with link and role",
@@ -86,8 +86,8 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schem
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/annotation/example_1_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fannotation%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fannotation%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -99,20 +99,20 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schem
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 
+[] dcterms:description "Annotation with role" ;
+    prof:hasRole <http://example.org/myReason> .
+
 [] dcterms:description "Annotation with link and role" ;
     ns1:relation <http://www.iana.org/assignments/relation/related> ;
     prof:hasRole <http://example.org/myReason> ;
     oa:hasTarget <http://example.org/aDocument> .
-
-[] dcterms:description "Annotation with role" ;
-    prof:hasRole <http://example.org/myReason> .
 
 
 ```
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/annotation/example_1_1.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -154,12 +154,12 @@ x-jsonld-prefixes:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fannotation%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fannotation%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
 
 Links to the schema:
 
-* YAML version: <a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.yaml" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.yaml</a>
-* JSON version: <a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.json" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.json</a>
+* YAML version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.yaml" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.yaml</a>
+* JSON version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.json" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.json</a>
 
 
 # JSON-LD Context
@@ -200,10 +200,10 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fannotation%2Fcontext.jsonld">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fannotation%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
-<a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld</a>
+<a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld</a>
 
 # References
 
@@ -213,7 +213,7 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: <a href="https://github.com/icsm-au/3d-csdm-schema" target="_blank">https://github.com/icsm-au/3d-csdm-schema</a>
+* URL: <a href="https://github.com/icsm-au/3d-csdm-common" target="_blank">https://github.com/icsm-au/3d-csdm-common</a>
 * Path:
-<code><a href="https://github.com/icsm-au/3d-csdm-schema/blob/HEAD/_sources/csdm/datatypes/annotation" target="_blank">_sources/csdm/datatypes/annotation</a></code>
+<code><a href="https://github.com/icsm-au/3d-csdm-common/blob/HEAD/_sources/csdm/datatypes/annotation" target="_blank">_sources/csdm/datatypes/annotation</a></code>
 

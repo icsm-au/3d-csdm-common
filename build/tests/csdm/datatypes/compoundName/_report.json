@@ -2,14 +2,15 @@
   "title": "Validation report for icsm.csdm.datatypes.compoundName - Compound Name",
   "bblockName": "Compound Name",
   "bblockId": "icsm.csdm.datatypes.compoundName",
-  "generated": "2024-02-13T01:41:18.059816+00:00",
+  "generated": "2024-04-09T02:59:44.009609+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/compoundName/example_1_1.json",
+        "filename": "build/tests/csdm/datatypes/compoundName/example_1_1.json",
+        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/compoundName/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"
@@ -86,12 +87,12 @@
             {
               "shaclFile": "_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:ncc3ca44aed54467bb07fa7ae9983bbabb1": {
+                "_:n71ba1a21f14b4c67a2b7c95b50310966b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:ncc3ca44aed54467bb07fa7ae9983bbabb1: *none*\n"
+              "message": "Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n71ba1a21f14b4c67a2b7c95b50310966b1: *none*\n"
             }
           ]
         },

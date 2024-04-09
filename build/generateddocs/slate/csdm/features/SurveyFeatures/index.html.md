@@ -30,7 +30,7 @@ The set of geographic features present on a survey - these include the FeatureOf
 </p>
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/features/SurveyFeatures/" target="_blank">valid</a></strong>
+This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyFeatures/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
@@ -102,8 +102,8 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/surveymark">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveymark&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/surveymark">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveymark&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -112,7 +112,7 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -166,8 +166,8 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/surveymark.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveymark.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/surveymark.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveymark.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -209,7 +209,7 @@ eg1:P1 a surv:BoundaryMark,
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/surveymark.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/surveymark.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -277,8 +277,8 @@ Either geometry will inherit its CRS from the container's defaults.
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/geodeticmark">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fgeodeticmark&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/geodeticmark">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fgeodeticmark&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -287,7 +287,7 @@ Either geometry will inherit its CRS from the container's defaults.
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -339,8 +339,8 @@ Either geometry will inherit its CRS from the container's defaults.
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/geodeticmark.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fgeodeticmark.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/geodeticmark.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fgeodeticmark.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -380,7 +380,7 @@ eg1:P2 a surv:GeodeticReferenceMark,
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/geodeticmark.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/geodeticmark.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -414,8 +414,8 @@ An example Geodetic Mark extending Survey Point with additional geodeticid attri
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/monument">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fmonument&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/monument">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fmonument&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -424,7 +424,7 @@ An example Geodetic Mark extending Survey Point with additional geodeticid attri
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -447,8 +447,8 @@ An example Geodetic Mark extending Survey Point with additional geodeticid attri
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/monument.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fmonument.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/monument.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fmonument.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -469,7 +469,7 @@ An example Geodetic Mark extending Survey Point with additional geodeticid attri
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/monument.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/monument.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -513,8 +513,8 @@ A monument as a standalone object
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/surveyvectors">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveyvectors&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/surveyvectors">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveyvectors&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -523,7 +523,7 @@ A monument as a standalone object
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
     {
       "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
       "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
@@ -559,8 +559,8 @@ A monument as a standalone object
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/surveyvectors.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveyvectors.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/surveyvectors.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fsurveyvectors.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -583,7 +583,7 @@ eg1:P1P3 a surv:ObservedVector,
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyFeatures/surveyvectors.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyFeatures/surveyvectors.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -608,12 +608,12 @@ $defs:
     anyOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
-    - $ref: https://geojson.org/schema/Feature.json
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
   SurveyPointProperties:
     type: object
     properties:
       name:
-        $ref: ../../datatypes/compoundName/schema.json
+        $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml
         x-jsonld-id: https://linked.data.gov.au/def/csdm/commonpatterns/name
         x-jsonld-type: '@id'
       purpose:
@@ -694,7 +694,7 @@ $defs:
     - type: object
       properties:
         geodeticid:
-          $ref: ../../datatypes/compoundName/schema.json
+          $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml
           x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid
       required:
       - geodeticid
@@ -820,12 +820,12 @@ x-jsonld-prefixes:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
 
 Links to the schema:
 
-* YAML version: <a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.yaml" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.yaml</a>
-* JSON version: <a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json</a>
+* YAML version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.yaml" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.yaml</a>
+* JSON version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.json" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.json</a>
 
 
 # JSON-LD Context
@@ -1593,10 +1593,10 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fcontext.jsonld">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyFeatures%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
-<a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld</a>
+<a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld</a>
 
 # Validation
 
@@ -1605,10 +1605,10 @@ You can find the full JSON-LD context here:
 The following sets of SHACL shapes are used for validating this building block:
 
 * Feature with topology <small><code>ogc.geo.topo.features.topo-feature</code></small>
-  * [https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl](https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl)
   * [https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl](https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl)
+  * [https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl](https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl)
 * Compound Name <small><code>icsm.csdm.datatypes.compoundName</code></small>
-  * [https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/rules.shacl](https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/rules.shacl)
+  * [https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl)
 
 # References
 
@@ -1618,7 +1618,7 @@ The following sets of SHACL shapes are used for validating this building block:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: <a href="https://github.com/icsm-au/3d-csdm-schema" target="_blank">https://github.com/icsm-au/3d-csdm-schema</a>
+* URL: <a href="https://github.com/icsm-au/3d-csdm-common" target="_blank">https://github.com/icsm-au/3d-csdm-common</a>
 * Path:
-<code><a href="https://github.com/icsm-au/3d-csdm-schema/blob/HEAD/_sources/csdm/features/SurveyFeatures" target="_blank">_sources/csdm/features/SurveyFeatures</a></code>
+<code><a href="https://github.com/icsm-au/3d-csdm-common/blob/HEAD/_sources/csdm/features/SurveyFeatures" target="_blank">_sources/csdm/features/SurveyFeatures</a></code>
 

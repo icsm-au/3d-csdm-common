@@ -19,6 +19,6 @@ x-defs:
     x-jsonld-prefixes:
       csdm: https://linked.data.gov.au/def/csdm/
     x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema-oas3.0.yaml
+    x-schema-source: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema-oas3.0.yaml
 allOf:
-- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.quality
+- $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.quality

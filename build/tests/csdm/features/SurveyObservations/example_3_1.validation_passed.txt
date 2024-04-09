@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-02-13T01:41:20.491376+00:00
+Generated 2024-04-09T02:59:45.251397+00:00
 === Files ===
 Using example_3_1.json from examples
 JSON-LD context is present - uplifting
@@ -24,12 +24,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N05997a7c4ec34585b82774472e804925
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N05997a7c4ec34585b82774472e804925
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N05997a7c4ec34585b82774472e804925
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N05997a7c4ec34585b82774472e804925
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Neaad66b5ef164b508606f8abcf4cd02b
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Neaad66b5ef164b508606f8abcf4cd02b
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Neaad66b5ef164b508606f8abcf4cd02b
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Neaad66b5ef164b508606f8abcf4cd02b
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
 
 === End SHACL ===
 

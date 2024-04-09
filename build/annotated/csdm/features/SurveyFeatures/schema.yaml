@@ -13,12 +13,12 @@ $defs:
     anyOf:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
-    - $ref: https://geojson.org/schema/Feature.json
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
   SurveyPointProperties:
     type: object
     properties:
       name:
-        $ref: ../../datatypes/compoundName/schema.json
+        $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml
         x-jsonld-id: https://linked.data.gov.au/def/csdm/commonpatterns/name
         x-jsonld-type: '@id'
       purpose:
@@ -99,7 +99,7 @@ $defs:
     - type: object
       properties:
         geodeticid:
-          $ref: ../../datatypes/compoundName/schema.json
+          $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml
           x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid
       required:
       - geodeticid

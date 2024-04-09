@@ -90,18 +90,6 @@
       "@id": "sosa:madeBySensor",
       "@type": "@id"
     },
-    "hasResult": {
-      "@context": {
-        "pose": "csdm:surveyfeatures/pose",
-        "distance": "csdm:surveyfeatures/distance"
-      },
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
-      "@type": "@id"
-    },
     "ActuatableProperty": {
       "@id": "sosa:ActuatableProperty",
       "@type": "@id"
@@ -222,12 +210,12 @@
           "@id": "sosa:madeBySensor",
           "@type": "@id"
         },
-        "hasResult": {
-          "@id": "sosa:hasResult",
-          "@type": "@id"
-        },
         "features": {
           "@id": "sosa:hasMember",
+          "@type": "@id"
+        },
+        "hasResult": {
+          "@id": "sosa:hasResult",
           "@type": "@id"
         }
       }
@@ -244,6 +232,14 @@
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id",
+      "@context": {
+        "pose": "csdm:surveyfeatures/pose",
+        "distance": "csdm:surveyfeatures/distance"
+      }
+    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -254,6 +250,10 @@
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {

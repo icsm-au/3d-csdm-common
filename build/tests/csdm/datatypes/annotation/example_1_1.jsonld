@@ -1,5 +1,5 @@
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld",
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
   "@graph": [
     {
       "description": "Annotation with link and role",

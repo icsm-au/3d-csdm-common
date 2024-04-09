@@ -30,7 +30,7 @@ An Observation specialisation for an aspect of a survey - typically vectors with
 </p>
 
 <aside class="success">
-This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/features/SurveyObservations/" target="_blank">valid</a></strong>
+This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyObservations/" target="_blank">valid</a></strong>
 </aside>
 
 # Description
@@ -83,8 +83,8 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/newvector">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -120,14 +120,14 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
       }
     }
   },
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/newvector.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -156,7 +156,7 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/newvector.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -197,8 +197,8 @@ An example observation of a vector based on bearing and distance - in 2D
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/newvector-3d">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector-3d&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector-3d">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector-3d&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -229,14 +229,14 @@ An example observation of a vector based on bearing and distance - in 2D
       }
     }
   },
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/newvector-3d.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector-3d.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector-3d.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fnewvector-3d.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -260,7 +260,7 @@ An example observation of a vector based on bearing and distance - in 2D
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/newvector-3d.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector-3d.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -293,8 +293,8 @@ An example observation of a vector based on bearing,pitch (azimuth angle) and di
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/example_3_1.json">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_3_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_3_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_3_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -317,14 +317,14 @@ An example observation of a vector based on bearing,pitch (azimuth angle) and di
       "distance": 333207.1
     }
   },
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/example_3_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_3_1.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_3_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_3_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -348,7 +348,7 @@ An example observation of a vector based on bearing,pitch (azimuth angle) and di
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/example_3_1.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_3_1.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -388,8 +388,8 @@ Example Survey Observation - vector only distance
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/example_4_1.json">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_4_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_4_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_4_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -419,14 +419,14 @@ Example Survey Observation - vector only distance
       }
     }
   },
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/example_4_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_4_1.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_4_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fexample_4_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -449,7 +449,7 @@ Example Survey Observation - vector only distance
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/example_4_1.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_4_1.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -503,8 +503,8 @@ Example Survey Observation - vector only bearing
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/collection">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fcollection&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/collection">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fcollection&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -513,7 +513,7 @@ Example Survey Observation - vector only bearing
 ```jsonld
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld",
+    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld",
     {}
   ],
   "id": "vectorObservations",
@@ -555,8 +555,8 @@ Example Survey Observation - vector only bearing
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/collection.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fcollection.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/collection.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fcollection.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -590,7 +590,7 @@ Example Survey Observation - vector only bearing
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/features/SurveyObservations/collection.ttl">Open in new window</a>
+    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/collection.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -654,7 +654,7 @@ $defs:
     - type: object
       properties:
         hasResultQuality:
-          $ref: ../../datatypes/quality/schema.json
+          $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml
         hasResult:
           properties:
             pose:
@@ -734,12 +734,12 @@ x-jsonld-prefixes:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
 
 Links to the schema:
 
-* YAML version: <a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.yaml" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.yaml</a>
-* JSON version: <a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json</a>
+* YAML version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.yaml" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.yaml</a>
+* JSON version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.json" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.json</a>
 
 
 # JSON-LD Context
@@ -835,18 +835,6 @@ Links to the schema:
         "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor"
       },
       "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@context": {
-        "pose": "csdm:surveyfeatures/pose",
-        "distance": "csdm:surveyfeatures/distance"
-      },
-      "@id": "sosa:hasResult",
-      "@type": "@id"
-    },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "ActuatableProperty": {
@@ -969,12 +957,12 @@ Links to the schema:
           "@id": "sosa:madeBySensor",
           "@type": "@id"
         },
-        "hasResult": {
-          "@id": "sosa:hasResult",
-          "@type": "@id"
-        },
         "features": {
           "@id": "sosa:hasMember",
+          "@type": "@id"
+        },
+        "hasResult": {
+          "@id": "sosa:hasResult",
           "@type": "@id"
         }
       }
@@ -991,6 +979,14 @@ Links to the schema:
       "@id": "sosa:hasProperty",
       "@type": "@id"
     },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id",
+      "@context": {
+        "pose": "csdm:surveyfeatures/pose",
+        "distance": "csdm:surveyfeatures/distance"
+      }
+    },
     "hasResultQuality": {
       "@id": "sosa:hasResultQuality",
       "@type": "@id"
@@ -1001,6 +997,10 @@ Links to the schema:
     },
     "hasSampledFeature": {
       "@id": "sosa:hasSampledFeature",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
       "@type": "@id"
     },
     "hasSubSystem": {
@@ -1260,10 +1260,10 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-schema%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fcontext.jsonld">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Ffeatures%2FSurveyObservations%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
-<a href="https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld" target="_blank">https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld</a>
+<a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld</a>
 
 # Validation
 
@@ -1272,7 +1272,7 @@ You can find the full JSON-LD context here:
 The following sets of SHACL shapes are used for validating this building block:
 
 * Survey Observations <small><code>icsm.csdm.features.SurveyObservations</code></small>
-  * [https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/rules.shacl](https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/rules.shacl)
+  * [https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl)
 * Observation Properties <small><code>ogc.sosa.properties.observation</code></small>
   * [https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl](https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl)
 
@@ -1284,7 +1284,7 @@ The following sets of SHACL shapes are used for validating this building block:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: <a href="https://github.com/icsm-au/3d-csdm-schema" target="_blank">https://github.com/icsm-au/3d-csdm-schema</a>
+* URL: <a href="https://github.com/icsm-au/3d-csdm-common" target="_blank">https://github.com/icsm-au/3d-csdm-common</a>
 * Path:
-<code><a href="https://github.com/icsm-au/3d-csdm-schema/blob/HEAD/_sources/csdm/features/SurveyObservations" target="_blank">_sources/csdm/features/SurveyObservations</a></code>
+<code><a href="https://github.com/icsm-au/3d-csdm-common/blob/HEAD/_sources/csdm/features/SurveyObservations" target="_blank">_sources/csdm/features/SurveyObservations</a></code>
 

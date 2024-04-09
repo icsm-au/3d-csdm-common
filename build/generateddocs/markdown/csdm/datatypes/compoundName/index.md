@@ -48,7 +48,7 @@ A name with a label, but also a set of parts with roles that can be validated ag
       "label": "IS II"
     }
   ],
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld"
 }
 ```
 
@@ -107,8 +107,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json)
-* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.yaml)
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml)
 
 
 # JSON-LD Context
@@ -135,7 +135,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/context.jsonld)
+[context.jsonld](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld)
 
 ## Sources
 
@@ -145,6 +145,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/icsm-au/3d-csdm-schema](https://github.com/icsm-au/3d-csdm-schema)
+* URL: [https://github.com/icsm-au/3d-csdm-common](https://github.com/icsm-au/3d-csdm-common)
 * Path: `_sources/csdm/datatypes/compoundName`
 

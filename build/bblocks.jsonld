@@ -1,7 +1,7 @@
 {
   "@context": [
     {
-      "@base": "https://icsm-au.github.io/3d-csdm-schema"
+      "@base": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main"
     },
     {
       "bblocks": "https://www.opengis.net/def/bblocks/",
@@ -11,6 +11,7 @@
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "prof": "http://www.w3.org/ns/dx/prof/",
       "dcat": "http://www.w3.org/ns/dcat#",
+      "modspec": "http://www.opengis.net/def/ont/modspec/",
       "itemIdentifier": "@id",
       "baseURL": "@id",
       "name": "rdfs:label",
@@ -95,25 +96,29 @@
       "imports": {
         "@id": "bblocks:imports",
         "@type": "@id"
+      },
+      "conformanceClasses": {
+        "@id": "modspec:class",
+        "@type": "@id"
       }
     }
   ],
-  "name": "3D Cadastre Survey Data Exchange Specification",
+  "name": "Building Blocks - 3D Cadastre Survey Data Exchange Specification",
   "abstract": "This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. \n\nThe specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. \n\n  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**\n\nThe core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** \n\nThe schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  \n\nThe [set of modules comprising the specification](bblock) is implemented as a \"register\" of \"Building Blocks\" managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). \n\nThe [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) \n\n_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_\n",
   "description": "This specification defines a [JSON schema](https://json-schema.org/) compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange model.\n\nThis schema is linked to the underlying [3D Cadastre Model](https://icsm-au.github.io/3d-csdm/) using JSON-LD, which allows additional constraint rules to be specified using the [SHACL (Shapes Constraint Language) standard](https://www.w3.org/TR/shacl/).\n\n_The **[REVIEW GUIDE](https://github.com/icsm-au/3d-csdm-profiles/blob/main/REVIEW_GUIDE.md)** provides a detailed overview of all aspects of the design and testing process, and related materials._\n\nThis implementation pattern:\n\n- is supported by the OGC with a set of [open source tools](https://github.com/opengeospatial/bblock-template) and a library of building blocks based on OGC specifications.\n- simplifies development, testing and documentation of each component\n- allows for transparent, machine-readable, identification of the underlying standards each component is based on\n- allows richer machine readable specifications of implementation constraints and controlled vocabulary requirements.\n- supports explicit machine readable profile specifications to support discovery of all the different components required.\n\nThe \"semantic annotation\" capabilities of the OGC Building Block design links the schema to the conceptual and logical models.\n_NB Publication of these models as Linked Data would allow access to documentation of each element by online systems_.\n",
-  "modified": "2024-02-13T01:39:36.021076",
+  "modified": "2024-04-09T02:58:21.392726",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"14ee607a3043861f45036785e2601c2f26d55790",
-      "shortCommitId": "\"14ee60",
-      "date": "2024-02-08T21:40:56+00:00\""
+      "commitId": "\"7bc28ab560dbf91c352585ba69c0f3c4d356dba1",
+      "shortCommitId": "\"7bc28a",
+      "date": "2024-04-08T10:23:56+00:00\""
     }
   },
-  "gitRepository": "https://github.com/icsm-au/3d-csdm-schema",
-  "gitHubRepository": "https://github.com/icsm-au/3d-csdm-schema/blob/main/",
-  "baseURL": "https://icsm-au.github.io/3d-csdm-schema/",
-  "viewerURL": "https://icsm-au.github.io/3d-csdm-schema/",
-  "validationReport": "https://icsm-au.github.io/3d-csdm-schema/build/tests/report.html",
+  "gitRepository": "https://github.com/icsm-au/3d-csdm-common",
+  "gitHubRepository": "https://github.com/icsm-au/3d-csdm-common/blob/main/",
+  "baseURL": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/",
+  "viewerURL": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/",
+  "validationReport": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/report.html",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://opengeospatial.github.io/ogcapi-sosa/build/register.json",
@@ -124,7 +129,7 @@
     "skos:ConceptScheme",
     "dcat:Catalog"
   ],
-  "skos:prefLabel": "3D Cadastre Survey Data Exchange Specification",
+  "skos:prefLabel": "Building Blocks - 3D Cadastre Survey Data Exchange Specification",
   "hasConcepts": [
     {
       "itemIdentifier": "icsm.csdm.datatypes.compoundName",
@@ -135,7 +140,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-04-09",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -150,35 +155,35 @@
       ],
       "shaclRules": {
         "icsm.csdm.datatypes.compoundName": [
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/rules.shacl"
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl"
         ]
       },
-      "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/context.jsonld",
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld",
       "schema": {
-        "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.yaml",
-        "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json"
+        "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.json"
       },
-      "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/context.jsonld",
-      "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/schema.json",
-      "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/",
+      "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/context.jsonld",
+      "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/schema.json",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/datatypes/compoundName/",
+      "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/datatypes/compoundName/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/slate-build/csdm/datatypes/compoundName/"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/compoundName/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/bblock/icsm.csdm.datatypes.compoundName"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.compoundName"
         }
       },
       "@type": [
@@ -196,7 +201,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-04-09",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -210,32 +215,32 @@
         "utils"
       ],
       "shaclRules": {},
-      "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/context.jsonld",
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld",
       "schema": {
-        "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.yaml",
-        "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json"
+        "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.json"
       },
-      "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/context.jsonld",
-      "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/schema.json",
-      "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/",
+      "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/quality/context.jsonld",
+      "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/quality/schema.json",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/quality/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/datatypes/quality/",
+      "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/datatypes/quality/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/markdown/csdm/datatypes/quality/index.md"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/quality/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/json-full/csdm/datatypes/quality/index.json"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/quality/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/slate-build/csdm/datatypes/quality/"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/quality/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/bblock/icsm.csdm.datatypes.quality"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.quality"
         }
       },
       "@type": [
@@ -253,7 +258,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-04-09",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -268,35 +273,35 @@
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.geo.json-fg.link-role"
+        "ogc.geo.json-fg.link-role",
+        "ogc.ogc-utils.iri-or-curie"
       ],
-      "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld",
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
       "schema": {
-        "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.yaml",
-        "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.json"
+        "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.json"
       },
-      "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/annotation/context.jsonld",
-      "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/annotation/schema.json",
-      "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/annotation/",
+      "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/context.jsonld",
+      "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/schema.json",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/datatypes/annotation/",
+      "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/datatypes/annotation/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/markdown/csdm/datatypes/annotation/index.md"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/annotation/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/json-full/csdm/datatypes/annotation/index.json"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/annotation/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/slate-build/csdm/datatypes/annotation/"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/annotation/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/bblock/icsm.csdm.datatypes.annotation"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.annotation"
         }
       },
       "@type": [
@@ -314,7 +319,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-04-09",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -334,45 +339,45 @@
       ],
       "shaclRules": {
         "icsm.csdm.features.SurveyObservations": [
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/rules.shacl"
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl"
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.properties.observationCollection",
+        "icsm.csdm.datatypes.quality",
         "ogc.sosa.properties.observation",
         "ogc.sosa.features.observation",
-        "icsm.csdm.datatypes.quality",
-        "ogc.sosa.properties.observationCollection"
+        "ogc.ogc-utils.iri-or-curie"
       ],
-      "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld",
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld",
       "schema": {
-        "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.yaml",
-        "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json"
+        "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.json"
       },
-      "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/context.jsonld",
-      "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/schema.json",
-      "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/",
+      "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/context.jsonld",
+      "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/schema.json",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/features/SurveyObservations/",
+      "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyObservations/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/slate-build/csdm/features/SurveyObservations/"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyObservations/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/bblock/icsm.csdm.features.SurveyObservations"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyObservations"
         }
       },
       "@type": [
@@ -390,7 +395,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-04-09",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -408,47 +413,48 @@
       ],
       "shaclRules": {
         "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "icsm.csdm.datatypes.compoundName": [
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/rules.shacl"
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
         "ogc.geo.topo.features.topo-line",
-        "ogc.geo.json-fg.feature",
         "ogc.ogc-utils.prov",
-        "icsm.csdm.datatypes.compoundName",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.geo.common.data_types.geojson",
+        "ogc.geo.json-fg.feature",
+        "ogc.ogc-utils.iri-or-curie",
+        "icsm.csdm.datatypes.compoundName"
       ],
-      "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
       "schema": {
-        "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.yaml",
-        "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json"
+        "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.json"
       },
-      "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyFeatures/context.jsonld",
-      "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyFeatures/schema.json",
-      "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyFeatures/",
+      "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyFeatures/context.jsonld",
+      "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyFeatures/schema.json",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyFeatures/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/features/SurveyFeatures/",
+      "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyFeatures/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/slate-build/csdm/features/SurveyFeatures/"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyFeatures/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/bblock/icsm.csdm.features.SurveyFeatures"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyFeatures"
         }
       },
       "@type": [
@@ -467,7 +473,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-04-09",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -486,73 +492,73 @@
       "superBBlock": false,
       "shaclRules": {
         "icsm.csdm.features.CSD": [
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/shapes/container.shapes.ttl",
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/shapes/parcel_module.shapes.ttl",
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/container.shapes.ttl",
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
-        ],
-        "icsm.csdm.features.SurveyObservations": [
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/SurveyObservations/rules.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl"
         ],
-        "ogc.geo.topo.features.topo-arc": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+        "icsm.csdm.datatypes.compoundName": [
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ],
+        "icsm.csdm.features.SurveyObservations": [
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl"
         ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
-        "icsm.csdm.datatypes.compoundName": [
-          "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/compoundName/rules.shacl"
+        "ogc.geo.topo.features.topo-arc": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie",
         "ogc.geo.topo.features.topo-line",
-        "ogc.geo.topo.features.topo-feature",
+        "ogc.ogc-utils.prov",
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.sosa.properties.observationCollection",
+        "icsm.csdm.features.SurveyFeatures",
         "icsm.csdm.features.SurveyObservations",
-        "ogc.geo.topo.features.topo-arc",
         "ogc.geo.topo.features.topo-feature-collection",
+        "ogc.geo.topo.features.topo-arc",
+        "ogc.geo.json-fg.link-role",
+        "ogc.ogc-utils.iri-or-curie",
         "ogc.geo.topo.datatypes.topology",
         "icsm.csdm.datatypes.compoundName",
-        "ogc.ogc-utils.prov",
-        "ogc.sosa.properties.observationCollection",
-        "ogc.geo.json-fg.link-role",
-        "icsm.csdm.features.SurveyFeatures",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.geo.topo.features.topo-feature"
       ],
-      "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/context.jsonld",
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/context.jsonld",
       "schema": {
-        "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.yaml",
-        "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json"
+        "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/schema.json"
       },
-      "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/CSD/context.jsonld",
-      "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/CSD/schema.json",
-      "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/features/CSD/",
+      "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/context.jsonld",
+      "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/schema.json",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/features/CSD/",
+      "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/features/CSD/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/markdown/csdm/features/CSD/index.md"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/CSD/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/json-full/csdm/features/CSD/index.json"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/CSD/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/build/generateddocs/slate-build/csdm/features/CSD/"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/CSD/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://icsm-au.github.io/3d-csdm-schema/bblock/icsm.csdm.features.CSD"
+          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.CSD"
         }
       },
       "@type": [

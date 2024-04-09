@@ -14,5 +14,5 @@
       "distance": 333207.1
     }
   },
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }

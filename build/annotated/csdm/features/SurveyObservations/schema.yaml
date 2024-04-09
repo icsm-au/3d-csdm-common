@@ -52,7 +52,7 @@ $defs:
     - type: object
       properties:
         hasResultQuality:
-          $ref: ../../datatypes/quality/schema.json
+          $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml
         hasResult:
           properties:
             pose:

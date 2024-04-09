@@ -27,12 +27,12 @@ eg1:4494877 a eg1:OccupationMark,
     rdfs:label [ rdfs:label "Post II LT 584372" ;
             dct:hasPart [ rdfs:label "LT" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "584372" ;
-                    commonpatterns:namePartType "PlanStamp" ],
                 [ rdfs:label "II" ;
                     commonpatterns:namePartType "MarkStamp" ],
                 [ rdfs:label "Post" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "584372" ;
+                    commonpatterns:namePartType "PlanStamp" ] ] ;
     rdfs:comment "Wooden Post" ;
     surv:age "40+ years" ;
     surv:purpose nz-surveypoint-purpose:occupation ;
@@ -51,5 +51,5 @@ eg1:occupation-example a geojson:FeatureCollection ;
 eg1:964009 a geojson:Feature ;
     rdfs:label "fence" ;
     geojson:geometry [ a geojson:LineString ;
-            geojson:coordinates ( "[176.08263977, -38.09875775]" "[176.0831891, -38.09945669]" ) ] .
+            geojson:coordinates ( ( 1.760826e+02 -3.809876e+01 ) ( 1.760832e+02 -3.809946e+01 ) ) ] .
 

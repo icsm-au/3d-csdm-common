@@ -88,14 +88,14 @@
 <https://linked.data.gov.au/def/csdm/csd-example/11745104> a surv:GeodeticReferenceMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM C DP 119552 (EQ9W)" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "C" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "RM" ;
+            dcterms:hasPart [ rdfs:label "RM" ;
                     commonpatterns:namePartType "MarkType" ],
                 [ rdfs:label "EQ9W" ;
                     commonpatterns:namePartType "geodeticStamp" ],
+                [ rdfs:label "C" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "119552" ;
                     commonpatterns:namePartType "Stamp" ] ] ;
     surv:geodeticid "XX FFF" ;
@@ -109,10 +109,10 @@
 <https://linked.data.gov.au/def/csdm/csd-example/1725787> a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "RM E DP 119552" ;
-            dcterms:hasPart [ rdfs:label "DP 119552" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "RM E" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+            dcterms:hasPart [ rdfs:label "RM E" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP 119552" ;
+                    commonpatterns:namePartType "Source" ] ] ;
     rdfs:comment "ALP in channel of drive" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
             surv:form nz-monument-form:plaque ;

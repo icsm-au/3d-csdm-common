@@ -61,14 +61,14 @@ base:DP_422532 a container:CSD,
 base:12595522 a parcel:PrimaryParcel,
         geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 215 DP 572532" ;
-            dct:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "PlanIdentifier" ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType "ParcelType" ],
-                [ rdfs:label "DP" ;
+            dct:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "215" ;
-                    commonpatterns:namePartType "ParcelIdentifier" ] ] ;
+                    commonpatterns:namePartType "ParcelIdentifier" ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType "PlanIdentifier" ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType "ParcelType" ] ] ;
     parcel:interest [ parcel:interestLink local-context-interests:123449-13 ;
             parcel:interestType <wa-interest-type:fh> ;
             parcel:statuteLink local-context-statutes:reg123 ] ;
@@ -77,7 +77,7 @@ base:12595522 a parcel:PrimaryParcel,
     parcel:surfaceArea 854 ;
     parcel:type wa-parcel-type:F ;
     geojson:topology [ a geojson:Polygon ;
-            geojson:relatedFeatures ( "['20220170', '20220171', '20220172', '20220192', '20220173']" ) ] ;
+            geojson:relatedFeatures ( ( base:20220170 base:20220171 base:20220172 base:20220192 base:20220173 ) ) ] ;
     sdo:address [ ns3:propertyNumber "4" ;
             ns3:streetName "Clarendon" ;
             ns3:streetType "St" ;
@@ -93,10 +93,10 @@ base:12595523 a parcel:PrimaryParcel,
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType "ParcelType" ],
-                [ rdfs:label "216" ;
-                    commonpatterns:namePartType "ParcelIdentifier" ],
                 [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "PlanIdentifier" ] ] ;
+                    commonpatterns:namePartType "PlanIdentifier" ],
+                [ rdfs:label "216" ;
+                    commonpatterns:namePartType "ParcelIdentifier" ] ] ;
     parcel:interest [ parcel:interestLink base:BBBBB ;
             parcel:interestType <wa-interest-type:fh> ] ;
     parcel:purpose wa-parcel-purpose:1 ;
@@ -104,7 +104,7 @@ base:12595523 a parcel:PrimaryParcel,
     parcel:surfaceArea 854 ;
     parcel:type wa-parcel-type:F ;
     geojson:topology [ a geojson:Polygon ;
-            geojson:relatedFeatures ( "['20220192', '20220172', '20220174', '20220175', '20220191', '20220176']" ) ] .
+            geojson:relatedFeatures ( ( base:20220192 base:20220172 base:20220174 base:20220175 base:20220191 base:20220176 ) ) ] .
 
 base:12595541 a parcel:SecondaryParcel,
         geojson:Feature ;
@@ -117,7 +117,7 @@ base:12595541 a parcel:SecondaryParcel,
     parcel:state <wa-parcel-state:created> ;
     parcel:type <http://example.org/base-for-csd-object-ids/nz-secondary-parcel-type/X> ;
     geojson:topology [ a geojson:Polygon ;
-            geojson:relatedFeatures ( "['20220192', '20220189', '20220191', '20220176']" ) ] .
+            geojson:relatedFeatures ( ( base:20220192 base:20220189 base:20220191 base:20220176 ) ) ] .
 
 base:BoundaryMark a base:BoundaryMarks,
         geojson:FeatureCollection ;
@@ -161,62 +161,6 @@ base:observedVectors a surv:ObservedVector,
 <vectorobservation:theodolite+edm> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220173 ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220172 ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220192 ;
-            sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220174 ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220189 ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220175 ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220170 ;
-            sosa:hasResult [ surv:distance 3.5e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest base:20220176 ;
             sosa:hasResult [ surv:distance 2.44e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00" ;
@@ -233,8 +177,64 @@ base:observedVectors a surv:ObservedVector,
             ns1:distanceAccuracyMeasure 4000 ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220174 ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest base:20220191 ;
             sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220192 ;
+            sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220175 ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220173 ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220172 ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220170 ;
+            sosa:hasResult [ surv:distance 3.5e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220189 ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00" ;
             ns1:angleAccuracyMeasure 8.33333e-02 ;
             ns1:angleType icsm-angle-type:bearing ;
@@ -244,46 +244,6 @@ base:observedVectors a surv:ObservedVector,
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00" ;
     sosa:usedProcedure surveyproc:m .
-
-base:20220170 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876563 base:17876564 ) ] .
-
-base:20220171 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876565 base:17876563 ) ] .
-
-base:20220172 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876565 base:17876566 ) ] .
-
-base:20220173 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876564 base:17876567 ) ] .
-
-base:20220174 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876565 base:17876568 ) ] .
-
-base:20220175 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876568 base:17876569 ) ] .
-
-base:20220176 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876570 base:17876567 ) ] .
-
-base:20220189 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876569 base:17876566 ) ] .
-
-base:20220191 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876569 base:17876570 ) ] .
-
-base:20220192 a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( base:17876566 base:17876567 ) ] .
 
 base:17876563 a surv:BoundaryMark,
         geojson:Feature ;
@@ -325,6 +285,30 @@ base:17876570 a surv:BoundaryMark,
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 5.469434e+04 3.986152e+05 ) ] .
 
+base:20220170 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876563 base:17876564 ) ] .
+
+base:20220171 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876565 base:17876563 ) ] .
+
+base:20220173 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876564 base:17876567 ) ] .
+
+base:20220174 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876565 base:17876568 ) ] .
+
+base:20220175 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876568 base:17876569 ) ] .
+
+base:20220189 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876569 base:17876566 ) ] .
+
 base:17876565 a surv:BoundaryMark,
         geojson:Feature ;
     commonpatterns:qualityMeasure 1.3e-02 ;
@@ -360,4 +344,20 @@ base:17876569 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:21 ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 5.469584e+04 3.986152e+05 ) ] .
+
+base:20220172 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876565 base:17876566 ) ] .
+
+base:20220176 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876570 base:17876567 ) ] .
+
+base:20220191 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876569 base:17876570 ) ] .
+
+base:20220192 a geojson:Feature ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( base:17876566 base:17876567 ) ] .
 

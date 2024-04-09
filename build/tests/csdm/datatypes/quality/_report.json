@@ -2,14 +2,15 @@
   "title": "Validation report for icsm.csdm.datatypes.quality - SurveyQuality",
   "bblockName": "SurveyQuality",
   "bblockId": "icsm.csdm.datatypes.quality",
-  "generated": "2024-02-13T01:41:18.074058+00:00",
+  "generated": "2024-04-09T02:59:44.022046+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "TEST_RESOURCE",
         "requireFail": true,
-        "filename": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/tests/quality-fail.json",
+        "filename": "_sources/csdm/datatypes/quality/tests/quality-fail.json",
+        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/quality/tests/quality-fail.json",
         "language": "json"
       },
       "result": true,
@@ -94,7 +95,8 @@
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/quality/example_1_1.json",
+        "filename": "build/tests/csdm/datatypes/quality/example_1_1.json",
+        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/quality/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"

@@ -448,12 +448,12 @@
           "@type": "@id"
         },
         "hasResult": {
+          "@id": "sosa:hasResult",
+          "@type": "@id",
           "@context": {
             "pose": "surv:pose",
             "distance": "surv:distance"
-          },
-          "@id": "sosa:hasResult",
-          "@type": "@id"
+          }
         },
         "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
         "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",

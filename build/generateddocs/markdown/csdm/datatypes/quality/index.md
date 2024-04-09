@@ -30,7 +30,7 @@ Schema checking is limited to datatypes of present properties as all are optiona
   "angleAccuracy": 0.028154691543,
   "distanceAccuracyClass": "http://any.valid/",
   "angleAccuracyClass": "http://any.valid/",
-  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/context.jsonld"
+  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld"
 }
 ```
 
@@ -74,8 +74,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json)
-* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.yaml)
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml)
 
 
 # JSON-LD Context
@@ -100,7 +100,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/context.jsonld)
+[context.jsonld](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld)
 
 ## Sources
 
@@ -110,6 +110,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/icsm-au/3d-csdm-schema](https://github.com/icsm-au/3d-csdm-schema)
+* URL: [https://github.com/icsm-au/3d-csdm-common](https://github.com/icsm-au/3d-csdm-common)
 * Path: `_sources/csdm/datatypes/quality`
 
