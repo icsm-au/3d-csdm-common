@@ -1,0 +1,9 @@
+@prefix nz-monument-condition: <https://linked.data.gov.au/def/csdm/nz-monument-condition/> .
+@prefix nz-monument-form: <https://linked.data.gov.au/def/csdm/nz-monument-form/> .
+@prefix nz-monument-state: <https://linked.data.gov.au/def/csdm/nz-monument-state/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+
+[] surv:condition nz-monument-condition:fair ;
+    surv:form nz-monument-form:pin ;
+    surv:state nz-monument-state:present .
+

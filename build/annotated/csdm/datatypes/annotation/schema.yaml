@@ -1,0 +1,29 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$defs:
+  linkWithRole:
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml
+  codeRef:
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+  Options:
+    anyOf:
+    - $ref: '#/$defs/linkWithRole'
+    - properties:
+        role:
+          $ref: '#/$defs/codeRef'
+        description:
+          type: string
+          x-jsonld-id: http://purl.org/dc/terms/description
+      required:
+      - description
+    - type: string
+  AnnotationSet:
+    anyOf:
+    - $ref: '#/$defs/Options'
+    - type: 'null'
+    - type: array
+      items:
+        $ref: '#/$defs/Options'
+allOf:
+- $ref: '#/$defs/AnnotationSet'
+x-jsonld-prefixes:
+  dct: http://purl.org/dc/terms/

@@ -1,0 +1,68 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.datatypes.annotation",
+  "name": "Generalised annotation",
+  "abstract": "An annotation allowing multiple values, either links with descriptions or simple text.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2024-02-08",
+  "link": "https://github.com/icsm-au/3d-csdm-schema",
+  "sources": [
+    {
+      "title": "CSDM model",
+      "link": "https://github.com/icsm-au/3d-csdm"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "utils"
+  ],
+  "shaclRules": {},
+  "dependsOn": [
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.geo.json-fg.link-role"
+  ],
+  "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld",
+  "schema": {
+    "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.yaml",
+    "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema.json"
+  },
+  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/annotation/context.jsonld",
+  "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/annotation/schema.json",
+  "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/annotation/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/datatypes/annotation/",
+  "examples": [
+    {
+      "title": "Example CompoundName",
+      "content": "A name with a label, but also a set of parts with roles that can be validated against content rules.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "example.json",
+          "base-uri": "http://www.example.com/namedobjects/",
+          "code": "[\n  {\n    \"description\": \"Annotation with link and role\",\n    \"href\": \"http://example.org/aDocument\",\n    \"role\": \"http://example.org/myReason\",\n    \"rel\": \"related\"\n  },\n  {\n    \"description\": \"Annotation with role\",\n    \"role\": \"http://example.org/myReason\"\n  },\n  \"Plain text annotation\"\n]\n",
+          "url": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/annotation/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld\",\n  \"@graph\": [\n    {\n      \"description\": \"Annotation with link and role\",\n      \"href\": \"http://example.org/aDocument\",\n      \"role\": \"http://example.org/myReason\",\n      \"rel\": \"related\"\n    },\n    {\n      \"description\": \"Annotation with role\",\n      \"role\": \"http://example.org/myReason\"\n    },\n    \"Plain text annotation\"\n  ]\n}",
+          "url": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/annotation/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] dcterms:description \"Annotation with link and role\" ;\n    ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/myReason> ;\n    oa:hasTarget <http://example.org/aDocument> .\n\n[] dcterms:description \"Annotation with role\" ;\n    prof:hasRole <http://example.org/myReason> .\n\n",
+          "url": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/annotation/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  linkWithRole:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml\n  codeRef:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  Options:\n    anyOf:\n    - $ref: '#/$defs/linkWithRole'\n    - properties:\n        role:\n          $ref: '#/$defs/codeRef'\n        description:\n          type: string\n          x-jsonld-id: http://purl.org/dc/terms/description\n      required:\n      - description\n    - type: string\n  AnnotationSet:\n    anyOf:\n    - $ref: '#/$defs/Options'\n    - type: 'null'\n    - type: array\n      items:\n        $ref: '#/$defs/Options'\nallOf:\n- $ref: '#/$defs/AnnotationSet'\nx-jsonld-prefixes:\n  dct: http://purl.org/dc/terms/\n",
+  "gitRepository": "https://github.com/icsm-au/3d-csdm-schema",
+  "gitPath": "_sources/csdm/datatypes/annotation"
+}

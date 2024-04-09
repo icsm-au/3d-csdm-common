@@ -1,0 +1,12 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a geojson:Feature ;
+    sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
+    sosa:hasResult [ surv:distance 3.332071e+05 ] ;
+    sosa:madeBySensor [ ] ;
+    sosa:observedProperty <https://linked.data.gov.au/def/csdm/property/pose> ;
+    sosa:resultTime "2023-05-22T16:41:00+2" .
+

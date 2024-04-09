@@ -1,0 +1,8 @@
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns1:angleAccuracyClass <http://any.valid/> ;
+    ns1:angleAccuracyMeasure 2.815469e-02 ;
+    ns1:distanceAccuracyClass <http://any.valid/> ;
+    ns1:distanceAccuracyMeasure 1.00138e-04 .
+

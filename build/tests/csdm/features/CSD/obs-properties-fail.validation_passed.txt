@@ -1,0 +1,133 @@
+Validation report for icsm.csdm.features.CSD - Cadastral Survey Dataset
+Generated 2024-02-13T01:41:28.211893+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using obs-properties-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD obs-properties-fail.jsonld created
+Output Turtle obs-properties-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'observedProperty' is a required property
+
+Failed validating 'required' in schema['properties']['vectorObservations']['items']['allOf'][1]['properties']['properties']:
+    {'not': {'required': ['hasResult']},
+     'properties': {'angleType': {'$ref': '#/$defs/coderef',
+                                  'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',
+                                  'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/angleType',
+                                  'x-jsonld-type': '@id'},
+                    'distanceType': {'$ref': '#/$defs/coderef',
+                                     'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',
+                                     'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/distanceType',
+                                     'x-jsonld-type': '@id'},
+                    'madeBySensor': {'$ref': '#/$defs/SensorType',
+                                     'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/sensors/Sensor',
+                                     'x-jsonld-id': 'sosa:madeBySensor'},
+                    'observedProperty': {'$ref': '#/$defs/coderef',
+                                         'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/property/',
+                                         'x-jsonld-id': 'sosa:observedProperty',
+                                         'x-jsonld-type': '@id'}},
+     'required': ['madeBySensor', 'observedProperty']}
+
+On instance['vectorObservations'][0]['properties']:
+    {'madeBySensor': {'baseSensor': 'gps+38666',
+                      'roverSensor': 'gps+37544',
+                      'sensorType': 'DifferentialGPS'},
+     'resultTime': '2023-05-24',
+     'usedProcedure': 'surveyproc:traverse'}
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :LandInterest: *none*
+ - Shape :EstateParcel: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :ParcelQualityClass: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :ParcelType: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelState: *none*
+
+Validation result for _sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/shapes/container.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD-seeAlso: *none*
+ - Shape container:CSD: *none*
+
+Validation result for _sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+ - Shape :testFOIexists: eg1:FailsToDeclareObservedProperty,eg1:FailsValueObservedProperty
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n4452185be58543cba728ed906c1aa7e3b3: eg1:44396823/geojson:geometry,eg1:11745104/geojson:geometry,eg1:1725787/geojson:geometry
+ - Shape _:n4452185be58543cba728ed906c1aa7e3b1: eg1:44396823/geojson:geometry,eg1:11745104/geojson:geometry,eg1:1725787/geojson:geometry
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+ - Shape topo:testTopoReferencesExist: eg1:l973158/geojson:topology
+ - Shape topo:testTopoLinesReferencePoints: eg1:l973158/geojson:topology
+
+Validation result for _sources/csdm/features/SurveyObservations/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/SurveyObservations/rules.shacl:
+ - Shape :testRequiredProperties: eg1:FailsToDeclareObservedProperty,eg1:FailsValueObservedProperty
+
+
+** Validation error **
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty ) ]
+  	Focus Node: eg1:FailsToDeclareObservedProperty
+  	Result Path: ( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
+  	Message: Less than 1 values on eg1:FailsToDeclareObservedProperty->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: eg1:FailsToDeclareObservedProperty,eg1:FailsValueObservedProperty
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: eg1:FailsToDeclareObservedProperty,eg1:FailsValueObservedProperty
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: eg1:FailsToDeclareObservedProperty,eg1:FailsValueObservedProperty
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: eg1:FailsToDeclareObservedProperty,eg1:FailsValueObservedProperty
+
+Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:ncb3b9372709e4764aea729b9870bc720b1: *none*
+
+=== End SHACL ===
+

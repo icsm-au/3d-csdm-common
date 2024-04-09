@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Survey Vector Observation Quality",
+  "properties": {
+    "angleAccuracy": {
+      "type": "number"
+    },
+    "distanceAccuracy": {
+      "type": "number"
+    },
+    "distanceAccuracyClass": {
+      "type": "string"
+    },
+    "angleAccuracyClass": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@prefix angletype: <https://linked.data.gov.au/def/csdm/defs/angletypes/> .
+@prefix distancetype: <https://linked.data.gov.au/def/csdm/defs/distancetypes/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
+@prefix surveyproc: <https://linked.data.gov.au/def/csdm/defs/surveyprocedures/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///github/workspace/vectorObservations> a sosa:ObservationCollection,
+        geojson:FeatureCollection ;
+    sosa:hasMember [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
+            sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ] ;
+    sosa:madeBySensor [ ] ;
+    sosa:observedProperty surveyable:VectorDetermination ;
+    sosa:resultTime "2023-05-24T16:41:00" ;
+    sosa:usedProcedure surveyproc:traverse ;
+    ns1:angleType angletype:bearing ;
+    ns1:distanceType distancetype:ellipsoidal .
+

@@ -1,0 +1,92 @@
+Validation report for icsm.csdm.features.CSD - Cadastral Survey Dataset
+Generated 2024-02-13T01:41:26.638694+00:00
+=== Files ===
+Using fgjson.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD fgjson.jsonld created
+Output Turtle fgjson.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :LandInterest: *none*
+ - Shape :EstateParcel: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :ParcelQualityClass: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :ParcelType: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelState: *none*
+
+Validation result for _sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/shapes/container.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD-seeAlso: *none*
+ - Shape container:CSD: *none*
+
+Validation result for _sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+ - Shape :testFOIexists: <https://linked.data.gov.au/def/csdm/csd-example/obs>/sosa:hasMember
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n4452185be58543cba728ed906c1aa7e3b3: <https://linked.data.gov.au/def/csdm/csd-example/11745104>/geojson:geometry,<https://linked.data.gov.au/def/csdm/csd-example/44396823>/geojson:geometry,<https://linked.data.gov.au/def/csdm/csd-example/1725787>/geojson:geometry
+ - Shape _:n4452185be58543cba728ed906c1aa7e3b1: <https://linked.data.gov.au/def/csdm/csd-example/11745104>/geojson:geometry,<https://linked.data.gov.au/def/csdm/csd-example/44396823>/geojson:geometry,<https://linked.data.gov.au/def/csdm/csd-example/1725787>/geojson:geometry
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+ - Shape topo:testTopoReferencesExist: <https://linked.data.gov.au/def/csdm/csd-example/l973158>/geojson:topology
+ - Shape topo:testTopoLinesReferencePoints: <https://linked.data.gov.au/def/csdm/csd-example/l973158>/geojson:topology
+
+Validation result for _sources/csdm/features/SurveyObservations/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/SurveyObservations/rules.shacl:
+ - Shape :testRequiredProperties: <https://linked.data.gov.au/def/csdm/csd-example/obs>/sosa:hasMember
+
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <https://linked.data.gov.au/def/csdm/csd-example/obs>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <https://linked.data.gov.au/def/csdm/csd-example/obs>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <https://linked.data.gov.au/def/csdm/csd-example/obs>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <https://linked.data.gov.au/def/csdm/csd-example/obs>/sosa:hasMember
+
+Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:ncb3b9372709e4764aea729b9870bc720b1: *none*
+
+=== End SHACL ===
+

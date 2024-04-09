@@ -1,0 +1,90 @@
+{
+  "@context": {
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "commonpatterns": "https://linked.data.gov.au/def/csdm/commonpatterns/",
+    "geojson": "https://purl.org/geojson/vocab#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "surv": "https://linked.data.gov.au/def/csdm/surveyfeatures/",
+    "@base": "https://linked.data.gov.au/def/csdm/surveyfeatures/",
+    "dct": "http://purl.org/dc/terms/",
+    "place": "geojson:geometry",
+    "purpose": {
+      "@type": "@id",
+      "@id": "surv:purpose"
+    },
+    "vectorPurpose": {
+      "@type": "@id",
+      "@id": "surv:vectorPurpose"
+    },
+    "monumentedBy": {
+      "@type": "@id",
+      "@id": "surv:monumentedBy"
+    },
+    "form": {
+      "@type": "@id",
+      "@id": "surv:form"
+    },
+    "replaces": {
+      "@type": "@id",
+      "@id": "surv:replaces"
+    },
+    "state": {
+      "@type": "@id",
+      "@id": "surv:state"
+    },
+    "comment": {
+      "@id": "rdfs:comment"
+    },
+    "note": {
+      "@id": "rdfs:comment"
+    },
+    "age": {
+      "@id": "surv:age"
+    },
+    "geodeticid": {
+      "@id": "surv:geodeticid"
+    },
+    "condition": {
+      "@type": "@id",
+      "@id": "surv:condition"
+    },
+    "fromSurvey": {
+      "@type": "@id",
+      "@id": "surv:fromSurvey"
+    },
+    "CadastralMark": {
+      "@id": "surv:CadastralMark",
+      "@type": "@id"
+    },
+    "BoundaryMark": {
+      "@id": "surv:BoundaryMark",
+      "@type": "@id"
+    },
+    "ptQuality": {
+      "@id": "commonpatterns:qualityClass",
+      "@type": "@id"
+    },
+    "ptQualityMeasure": {
+      "@id": "commonpatterns:qualityMeasure",
+      "@type": "@id"
+    },
+    "GeodeticReferenceMark": {
+      "@id": "surv:GeodeticReferenceMark",
+      "@type": "@id"
+    },
+    "ObservedVector": {
+      "@id": "surv:ObservedVector",
+      "@type": "@id"
+    },
+    "AdoptedVector": {
+      "@id": "surv:SurveyedVector",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "commonpatterns:name",
+      "@type": "@id"
+    },
+    "label": "rdfs:label"
+  }
+}

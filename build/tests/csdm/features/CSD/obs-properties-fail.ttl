@@ -1,0 +1,117 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix container: <https://linked.data.gov.au/def/csdm/container/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eg1: <https://linked.data.gov.au/def/csdm/csd-example/> .
+@prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix icsm-survey-type: <https://linked.data.gov.au/def/csdm/icsm-survey-type/> .
+@prefix nz-line-purpose: <https://linked.data.gov.au/def/csdm/nz-linepurpose/> .
+@prefix nz-monument-condition: <https://linked.data.gov.au/def/csdm/nz-monument-condition/> .
+@prefix nz-monument-form: <https://linked.data.gov.au/def/csdm/nz-monument-form/> .
+@prefix nz-monument-state: <https://linked.data.gov.au/def/csdm/nz-monument-state/> .
+@prefix nz-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix surveyproc: <https://linked.data.gov.au/def/csdm/observationProcedures/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+eg1:DP_572532 a container:CSD,
+        geojson:FeatureCollection ;
+    rdfs:label "DP 572532" ;
+    prov:wasGeneratedBy eg1:DP-1-S2 ;
+    container:bearingRotation 0e+00 ;
+    container:horizontalCRS epsg:4167 ;
+    container:observedVectors eg1:ov ;
+    container:points eg1:points ;
+    container:purpose <code:subdivision> ;
+    container:surveyType icsm-survey-type:Subdivision ;
+    container:vectorObservations eg1:obs .
+
+eg1:44396823 a surv:CadastralMark,
+        geojson:Feature ;
+    rdfs:label [ rdfs:label "ALP I DP 481392" ;
+            dct:hasPart [ rdfs:label "ALP I" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP 481392" ;
+                    commonpatterns:namePartType "Source" ] ] ;
+    surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
+            surv:form nz-monument-form:pin ;
+            surv:state nz-monument-state:original ] ;
+    surv:purpose nz-surveypoint-purpose:nonBoundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747508e+02 -3.693141e+01 ) ] .
+
+eg1:DP-1-S2 prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
+
+eg1:FailsToDeclareObservedProperty a geojson:Feature ;
+    sosa:hasFeatureOfInterest eg1:l973158 ;
+    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ;
+    sosa:resultTime "2023-05-22T16:41:00+2" .
+
+eg1:FailsValueObservedProperty a geojson:Feature ;
+    sosa:hasFeatureOfInterest eg1:l973158 ;
+    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ;
+    sosa:observedProperty eg1: ;
+    sosa:resultTime "2023-05-22T16:41:00+2" .
+
+eg1:obs a sosa:ObservationCollection,
+        geojson:FeatureCollection ;
+    sosa:hasMember eg1:FailsToDeclareObservedProperty,
+        eg1:FailsValueObservedProperty ;
+    sosa:madeBySensor [ ] ;
+    sosa:resultTime "2023-05-24" ;
+    sosa:usedProcedure surveyproc:traverse .
+
+eg1:ov a surv:ObservedVector,
+        geojson:FeatureCollection ;
+    geojson:features eg1:l973158 .
+
+eg1:points a geojson:FeatureCollection ;
+    geojson:features eg1:11745104,
+        eg1:1725787,
+        eg1:44396823 .
+
+eg1:11745104 a surv:GeodeticReferenceMark,
+        geojson:Feature ;
+    rdfs:label [ rdfs:label "RM C DP 119552 (EQ9W)" ;
+            dct:hasPart [ rdfs:label "EQ9W" ;
+                    commonpatterns:namePartType "geodeticStamp" ],
+                [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "RM" ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "C" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
+    surv:geodeticid "XX FFF" ;
+    surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
+            surv:form nz-monument-form:pin ;
+            surv:state nz-monument-state:original ] ;
+    surv:purpose eg1:prm ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.7475e+02 -3.69309e+01 ) ] .
+
+eg1:1725787 a surv:BoundaryMark,
+        geojson:Feature ;
+    rdfs:label [ rdfs:label "RM E DP 119552" ;
+            dct:hasPart [ rdfs:label "DP 119552" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "RM E" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
+    rdfs:comment "ALP in channel of drive" ;
+    surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
+            surv:form nz-monument-form:plaque ;
+            surv:state nz-monument-state:original ] ;
+    surv:purpose nz-surveypoint-purpose:boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.747502e+02 -3.693074e+01 ) ] .
+
+eg1:l973158 a geojson:Feature ;
+    container:purpose nz-line-purpose:boundary ;
+    geojson:topology [ a geojson:LineString ;
+            geojson:relatedFeatures ( eg1:1725787 eg1:11745104 ) ] .
+

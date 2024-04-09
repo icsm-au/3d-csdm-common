@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
+    "surv": "https://linked.data.gov.au/def/csdm/surveyfeatures/",
+    "angletype": "csdm:defs/angletypes/",
+    "distancetype": "csdm:defs/distancetypes/",
+    "surveyproc": "csdm:defs/surveyprocedures/",
+    "surveyable": "csdm:defs/surveyableproperties/",
+    "geopose": "csdm:utils/geopose/",
+    "features": {
+      "@id": "sosa:hasMember",
+      "@container": "@set",
+      "@context": {
+        "features": {
+          "@container": "@set",
+          "@context": {
+            "properties": {
+              "@id": "@nest",
+              "@context": {
+                "observedProperty": {
+                  "@id": "sosa:observedProperty",
+                  "@context": {
+                    "@base": "csdm:property/"
+                  }
+                },
+                "hasResult": {
+                  "@id": "sosa:hasResult",
+                  "@context": {
+                    "pose": {
+                      "@id": "surv:pose",
+                      "@context": {
+                        "position": {
+                          "@id": "geopose:position",
+                          "@context": {
+                            "lat": "geo:lat",
+                            "lon": "geo:long",
+                            "h": "geopose:h"
+                          }
+                        },
+                        "angles": {
+                          "@id": "geopose:angles",
+                          "@context": {
+                            "yaw": "geopose:yaw",
+                            "pitch": "geopose:pitch",
+                            "roll": "geopose:roll"
+                          }
+                        }
+                      }
+                    },
+                    "distance": "surv:distance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "angleType": {
+      "@type": "@id",
+      "@id": "csdm:surveyobs/angleType",
+      "@context": {
+        "@base": "csdm:defs/angletypes/"
+      }
+    },
+    "distanceType": {
+      "@type": "@id",
+      "@id": "csdm:surveyobs/distanceType",
+      "@context": {
+        "@base": "csdm:defs/distancetypes/"
+      }
+    },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@context": {
+        "sensorType": "@type",
+        "@base": "csdm:sensors/Sensor",
+        "baseSensor": "csdm:sensors/baseSensor",
+        "roverSensor": "csdm:sensors/roverSensor"
+      }
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id",
+      "@context": {
+        "@base": "csdm:property/"
+      }
+    },
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@context": {
+        "pose": {
+          "@id": "surv:pose",
+          "@context": {
+            "position": {
+              "@id": "geopose:position",
+              "@context": {
+                "lat": "geo:lat",
+                "lon": "geo:long",
+                "h": "geopose:h"
+              }
+            },
+            "angles": {
+              "@id": "geopose:angles",
+              "@context": {
+                "yaw": "geopose:yaw",
+                "pitch": "geopose:pitch",
+                "roll": "geopose:roll"
+              }
+            }
+          }
+        },
+        "distance": "surv:distance"
+      }
+    }
+  }
+}

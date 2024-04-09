@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
+    "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
+    "surveyable": "https://linked.data.gov.au/def/csdm/observedProperties/",
+    "surveyproc": "https://linked.data.gov.au/def/csdm/observationProcedures/",
+    "nz-surveypoint-purpose": "https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/",
+    "nz-line-purpose": "https://linked.data.gov.au/def/csdm/nz-linepurpose/",
+    "icsm-survey-type": "https://linked.data.gov.au/def/csdm/icsm-survey-type/",
+    "nz-monument-form": "https://linked.data.gov.au/def/csdm/nz-monument-form/",
+    "nz-monument-condition": "https://linked.data.gov.au/def/csdm/nz-monument-condition/",
+    "nz-monument-state": "https://linked.data.gov.au/def/csdm/nz-monument-state/",
+    "registered-surveyors": "https://example.org/surveyors/",
+    "icsm-jurisdictions": "https://linked.data.gov.au/def/jurisdictions/",
+    "epsg": "http://www.opengis.net/def/crs/EPSG/0/"
+  },
+  "id": "DP_572532",
+  "name": "DP 572532",
+  "type": "FeatureCollection",
+  "featureType": "CSD",
+  "purpose": "code:subdivision",
+  "time": { "date": "2022-05-23" },
+  "horizontalCRS": "epsg:4167",
+  "bearingRotation": 0.0,
+  "surveyType": "icsm-survey-type:Subdivision",
+    "wasGeneratedBy": {
+    "id": "DP-1-S2",
+    "endedAtTime": "2029-01-01T01:02:03Z"
+  },
+  "features": [],
+  "referencedCSDs": [
+    {
+      "id": "DP_119552",
+      "name": "DP 119552",
+      "time": { "date": "2022-05-23" },
+      "bearingRotation": 0.001
+    }
+  ],
+  "points": [
+    {
+      "id": "points",
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "id": "1725787",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              174.7501603083,
+              -36.9307359096
+            ]
+          },
+          "properties": {
+            "name": {
+              "label": "RM E DP 119552",
+              "hasPart": [
+                {
+                  "type": "Source",
+                  "label": "DP 119552"
+                },
+                {
+                  "type": "Stamp",
+                  "label": "RM E"
+                }
+              ]
+            },
+            "purpose": "nz-surveypoint-purpose:boundary",
+            "fromSurvey": "DP_119552",
+            "comment": "ALP in channel of drive",
+            "occupation": {
+              "comment": "No occupation"
+            },
+            "monumentedBy": {
+              "form": "nz-monument-form:plaque",
+              "condition": "nz-monument-condition:markfound",
+              "state": "nz-monument-state:original"
+            }
+          }
+        },
+        {
+          "id": "44396823",
+          "type": "Feature",
+          "featureType": "CadastralMark",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              174.7508196767,
+              -36.9314093194
+            ]
+          },
+          "time": null,
+          "properties": {
+            "name": {
+              "label": "ALP I DP 481392",
+              "hasPart": [
+                {
+                  "type": "Source",
+                  "label": "DP 481392"
+                },
+                {
+                  "type": "Stamp",
+                  "label": "ALP I"
+                }
+              ]
+            },
+            "purpose": "nz-surveypoint-purpose:nonBoundary",
+            "occupation": {
+              "comment": "ALP in channel of drive"
+            },
+            "monumentedBy": {
+              "form": "nz-monument-form:pin",
+              "condition": "nz-monument-condition:markfound",
+              "state": "nz-monument-state:original"
+            }
+          }
+        },
+        {
+          "id": "11745104",
+          "type": "Feature",
+          "featureType": "GeodeticReferenceMark",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              174.7499979960,
+              -36.9309039370
+            ]
+          },
+          "time": null,
+          "properties": {
+            "geodeticid": "XX FFF",
+            "name": {
+              "label": "RM C DP 119552 (EQ9W)",
+              "hasPart": [
+                {
+                  "type": "PlanType",
+                  "label": "DP"
+                },
+                {
+                  "type": "Stamp",
+                  "label": "119552"
+                },
+                {
+                  "type": "MarkType",
+                  "label": "RM"
+                },
+                {
+                  "type": "Stamp",
+                  "label": "C"
+                },
+                {
+                  "type": "geodeticStamp",
+                  "label": "EQ9W"
+                }
+              ]
+            },
+            "occupation": {
+              "comment": "ALP in channel of drive"
+            },
+            "purpose": "prm",
+            "monumentedBy": {
+              "form": "nz-monument-form:pin",
+              "condition": "nz-monument-condition:markfound",
+              "state": "nz-monument-state:original"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "observedVectors": [
+    {
+      "id": "ov",
+      "type": "FeatureCollection",
+      "featureType": "surv:ObservedVector",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "l973158",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "1725787",
+              "11745104"
+            ]
+          },
+          "properties": {
+            "purpose": "nz-line-purpose:boundary"
+          }
+        }
+      ]
+    }
+  ],
+  "vectorObservations": [
+    {
+      "id": "obs",
+      "type": "FeatureCollection",
+      "featureType": "sosa:ObservationCollection",
+      "time": null,
+      "properties": {
+        "resultTime": "2023-05-24T16:41:00",
+        "usedProcedure": "surveyproc:traverse",
+        "observedProperty": "surveyable:VectorDetermination",
+        "madeBySensor": {
+          "sensorType": "DifferentialGPS",
+          "baseSensor": "gps+38666",
+          "roverSensor": "gps+37544"
+        }
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "l973158",
+            "resultTime": "2023-05-22T16:41:00",
+            "hasResult": {
+              "pose": {
+                "angles": {
+                  "yaw": 231.38
+                },
+                "distance": 333207.1
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "@context": {
+    "bblocks": "http://example.com/ogc/def/bblocks/",
+    "@base": "http://example.com/ogc/def/bblocks/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "itemIdentifier": "@id",
+    "name": "rdfs:label",
+    "abstract": "dct:description",
+    "register": {
+      "@id": "bblocks:inRegister",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://example.com/ogc/def/bblocks/"
+      }
+    },
+    "status": {
+      "@id": "bblocks:status",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://www.opengis.net/def/status/"
+      }
+    },
+    "dateTimeAddition": {
+      "@id": "dct:created",
+      "@type": "xsd:dateTime"
+    },
+    "version": "dct:hasVersion",
+    "dateOfLastChange": {
+      "@id": "dct:modified",
+      "@type": "xsd:date"
+    },
+    "maturity": {
+      "@id": "bblocks:maturity",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://example.com/ogc/def/bblocks/maturity/"
+      }
+    },
+    "scope": {
+      "@id": "bblocks:scope",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://example.com/ogc/def/bblocks/scope/"
+      }
+    },
+    "sources": {
+      "@id": "dct:source",
+      "@context": {
+        "title": "rdfs:label",
+        "link": {
+          "@id": "rdfs:seeAlso",
+          "@type": "@id"
+        }
+      }
+    },
+    "link": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "schema": {
+      "@id": "bblocks:hasSchema",
+      "@type": "@id"
+    },
+    "ldContext": {
+      "@id": "bblocks:hasJsonLdContext",
+      "@type": "@id"
+    },
+    "documentation": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "name": "Compound Name",
+      "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2023-24-05",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "templates"
+      ],
+      "itemIdentifier": "icsm.csdm.csdm.datatypes.compoundName",
+      "schema": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/datatypes/compoundName/schema.yaml",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/datatypes/compoundName/schema.json"
+      ],
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/datatypes/compoundName/context.jsonld",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/_sources/csdm/datatypes/compoundName/",
+      "documentation": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/csdm/datatypes/compoundName/index.md",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/csdm/datatypes/compoundName/index.json",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/csdm/datatypes/compoundName/"
+      ],
+      "validationPassed": true,
+      "@type": "bblocks:Schema"
+    },
+    {
+      "name": "Survey Point",
+      "abstract": "Survey Point Feature (Abstract), supports common geometry and naming patterns for all points on a survey.",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2023-24-05",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "Sample source document",
+          "link": "https://example.com/sources/1"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "templates"
+      ],
+      "itemIdentifier": "icsm.csdm.csdm.features.SurveyPoint",
+      "schema": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/SurveyPoint/schema.yaml",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/SurveyPoint/schema.json"
+      ],
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/SurveyPoint/context.jsonld",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/_sources/csdm/features/SurveyPoint/",
+      "documentation": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/csdm/features/SurveyPoint/index.md",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/csdm/features/SurveyPoint/index.json",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/csdm/features/SurveyPoint/"
+      ],
+      "validationPassed": true,
+      "@type": "bblocks:Schema"
+    },
+    {
+      "name": "Cadastral Survey Data Model",
+      "abstract": "Collection of building blocks.. ",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-05-08",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "icsm",
+        "csdm",
+        "sosa"
+      ],
+      "superBBlock": true,
+      "itemIdentifier": "icsm.csdm",
+      "schema": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/schema.yaml",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/schema.json"
+      ],
+      "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/context.jsonld",
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/_sources/",
+      "documentation": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/index.md",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/index.json",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/"
+      ],
+      "validationPassed": true,
+      "@type": "bblocks:Schema"
+    },
+    {
+      "name": "Cadastral Survey Data Model",
+      "abstract": "CSDM container for survey features and observations",
+      "status": "valid",
+      "dateTimeAddition": "2023-04-13T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2023-05-08",
+      "sources": [
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "link": "https://www.w3.org/TR/vocab-ssn/"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "sosa",
+        "ssn",
+        "o&m",
+        "o&m&s"
+      ],
+      "superBBlock": true,
+      "itemIdentifier": "icsm.csdm.csdm.features.CSD",
+      "schema": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/CSD/schema.yaml",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/CSD/schema.json"
+      ],
+      "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/_sources/csdm/features/CSD/",
+      "documentation": [
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/csdm/features/CSD/index.md",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/csdm/features/CSD/index.json",
+        "https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/csdm/features/CSD/"
+      ],
+      "validationPassed": true,
+      "@type": "bblocks:Schema"
+    }
+  ]
+}

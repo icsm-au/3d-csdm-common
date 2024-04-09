@@ -1,0 +1,92 @@
+Validation report for icsm.csdm.features.CSD - Cadastral Survey Dataset
+Generated 2024-02-13T01:41:30.508277+00:00
+=== Files ===
+Using related_documents.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD related_documents.jsonld created
+Output Turtle related_documents.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :LandInterest: *none*
+ - Shape :EstateParcel: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :ParcelQualityClass: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :ParcelType: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelState: *none*
+
+Validation result for _sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/shapes/container.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD-seeAlso: *none*
+ - Shape container:CSD: *none*
+
+Validation result for _sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+ - Shape :testFOIexists: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n4452185be58543cba728ed906c1aa7e3b3: *none*
+ - Shape _:n4452185be58543cba728ed906c1aa7e3b1: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+ - Shape topo:testTopoReferencesExist: *none*
+ - Shape topo:testTopoLinesReferencePoints: *none*
+
+Validation result for _sources/csdm/features/SurveyObservations/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/SurveyObservations/rules.shacl:
+ - Shape :testRequiredProperties: *none*
+
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+
+Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:ncb3b9372709e4764aea729b9870bc720b1: *none*
+
+=== End SHACL ===
+

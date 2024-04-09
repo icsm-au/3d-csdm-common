@@ -1,0 +1,47 @@
+Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
+Generated 2024-02-13T01:41:20.365269+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using collection-sensor-details-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD collection-sensor-details-fail.jsonld created
+Output Turtle collection-sensor-details-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'DifferentialGPS' should not be valid under {'const': 'DifferentialGPS'}
+
+Failed validating 'not' in schema[1]['properties']['sensorType']:
+    {'not': {'const': 'DifferentialGPS'}}
+
+On instance['sensorType']:
+    'DifferentialGPS'
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/csdm/features/SurveyObservations/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/features/SurveyObservations/rules.shacl:
+ - Shape :testRequiredProperties: <file:///github/workspace/vectorObservations>/sosa:hasMember
+
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember
+
+=== End SHACL ===
+

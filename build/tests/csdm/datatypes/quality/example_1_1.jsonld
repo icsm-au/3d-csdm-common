@@ -1,0 +1,7 @@
+{
+  "distanceAccuracy": 0.000100138048,
+  "angleAccuracy": 0.028154691543,
+  "distanceAccuracyClass": "http://any.valid/",
+  "angleAccuracyClass": "http://any.valid/",
+  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/context.jsonld"
+}

@@ -1,0 +1,746 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Cadastral Survey Data Model",
+  "$defs": {
+    "coderef": {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+    },
+    "coderefList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/coderef"
+      }
+    },
+    "linkWithRole": {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})?$"
+    },
+    "AnnotationSet": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/linkWithRole"
+          },
+          {
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "role": {
+                "$ref": "#/$defs/coderef"
+              }
+            },
+            "required": [
+              "description"
+            ]
+          }
+        ]
+      }
+    },
+    "FeatureCollectionOptions": {
+      "anyOf": [
+        {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/featurecollection.json"
+        },
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json"
+        },
+        {
+          "$ref": "https://geojson.org/schema/FeatureCollection.json"
+        },
+        {
+          "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json"
+        }
+      ]
+    },
+    "TopoFeatureCollection": {
+      "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json"
+    },
+    "SOSAObsCollection": {
+      "$ref": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json"
+    },
+    "TopoLine": {
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json"
+        }
+      ]
+    },
+    "TopoArc": {
+      "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json"
+    },
+    "SubtendedAngleVector": {
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json"
+        },
+        {
+          "properties": {
+            "topology": {
+              "allOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json"
+                },
+                {
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "SubtendedAngle"
+                    },
+                    "references": {
+                      "minItems": 3,
+                      "maxItems": 3
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "topology"
+          ]
+        }
+      ]
+    },
+    "TopoVector": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TopoLine"
+        },
+        {
+          "$ref": "#/$defs/TopoArc"
+        },
+        {
+          "$ref": "#/$defs/SubtendedAngleVector"
+        }
+      ]
+    },
+    "CSDmeta": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "x-jsonld-id": "rdfs:label"
+        },
+        "bearingRotation": {
+          "type": "number",
+          "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/bearingRotation"
+        },
+        "annotations": {
+          "$ref": "#/$defs/AnnotationSet",
+          "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/annotations"
+        }
+      },
+      "required": [
+        "name",
+        "bearingRotation"
+      ]
+    },
+    "provenanceOptions": {
+      "anyOf": [
+        {
+          "properties": {
+            "has_provenance": {
+              "anyOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json#/$defs/Prov"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "has_provenance"
+          ]
+        },
+        {
+          "properties": {
+            "wasGeneratedBy": {
+              "$ref": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json#/$defs/Activity"
+            }
+          },
+          "required": [
+            "wasGeneratedBy"
+          ]
+        }
+      ]
+    },
+    "SurveyPointCollection": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/FeatureCollectionOptions"
+        },
+        {
+          "properties": {
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "../SurveyFeatures/schema.json"
+                  },
+                  {
+                    "properties": {
+                      "featureType": {
+                        "enum": [
+                          "SurveyMark",
+                          "CadastralMark",
+                          "GeodeticReferenceMark",
+                          "BoundaryMark",
+                          "SurveyPoint",
+                          "OccupationMark"
+                        ],
+                        "x-jsonld-id": "@type"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "VectorFeatures": {
+      "properties": {
+        "features": {
+          "items": {
+            "$ref": "#/$defs/TopoVector"
+          }
+        }
+      }
+    },
+    "ParcelProperties": {
+      "properties": {
+        "properties": {
+          "properties": {
+            "appellation": {
+              "$ref": "../../datatypes/compoundName/schema.json",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/appellation"
+            },
+            "parcelType": {
+              "$ref": "#/$defs/coderef",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/type",
+              "x-jsonld-type": "@id"
+            },
+            "parcelState": {
+              "$ref": "#/$defs/coderef",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/state",
+              "x-jsonld-type": "@id"
+            },
+            "address": {
+              "type": "object",
+              "x-jsonld-id": "https://schema.org/address"
+            },
+            "parcelPurpose": {
+              "$ref": "#/$defs/coderef",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/purpose",
+              "x-jsonld-type": "@id"
+            },
+            "area": {
+              "type": "number",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/surfaceArea"
+            },
+            "floor": {
+              "type": "string",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/floor"
+            },
+            "zmin": {
+              "type": "number",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/zmin"
+            },
+            "zmax": {
+              "type": "number",
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/zmax"
+            },
+            "interests": {
+              "type": "array",
+              "additionalProperties": false,
+              "items": {
+                "properties": {
+                  "interestLink": {
+                    "$ref": "#/$defs/coderef",
+                    "x-jsonld-type": "@id",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interestLink"
+                  },
+                  "interestName": {
+                    "type": "string",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interestName"
+                  },
+                  "interestType": {
+                    "$ref": "#/$defs/coderef",
+                    "x-jsonld-type": "@id",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interestType"
+                  },
+                  "dateInForce": {
+                    "$ref": "#/$defs/dateTime",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interestDateInForce"
+                  },
+                  "dateExpires": {
+                    "$ref": "#/$defs/dateTime",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interestDateExpires"
+                  },
+                  "statuteLink": {
+                    "$ref": "#/$defs/coderef",
+                    "x-jsonld-type": "@id",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/statuteLink"
+                  },
+                  "statuteName": {
+                    "type": "string",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/statuteName"
+                  },
+                  "benefitedPartyName": {
+                    "type": "string",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/benefitedPartyName"
+                  },
+                  "benefitedPartyLink": {
+                    "$ref": "#/$defs/coderef",
+                    "x-jsonld-type": "@id",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/benefitedPartyLink"
+                  },
+                  "originalSurveyLink": {
+                    "$ref": "#/$defs/coderef",
+                    "x-jsonld-type": "@id",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/originalSurveyLink"
+                  },
+                  "referencedParcel": {
+                    "$ref": "#/$defs/coderef",
+                    "x-jsonld-type": "@id",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/referencedParcel"
+                  },
+                  "burdenedParcels": {
+                    "$ref": "#/$defs/coderefList",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/burdened",
+                    "x-jsonld-container": "@set"
+                  },
+                  "benefitedParcels": {
+                    "$ref": "#/$defs/coderefList",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/benefited",
+                    "x-jsonld-container": "@set"
+                  },
+                  "description": {
+                    "type": "string",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interestDescription"
+                  },
+                  "entitlementPortion": {
+                    "type": "string",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/entitlementPortion"
+                  },
+                  "liabilityPortion": {
+                    "type": "string",
+                    "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/liabilityPortion"
+                  }
+                },
+                "required": [
+                  "interestLink",
+                  "interestType"
+                ]
+              },
+              "required": [
+                "appellation",
+                "parcelType",
+                "parcelState",
+                "parcelPurpose"
+              ],
+              "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/interest",
+              "x-jsonld-container": "@set"
+            }
+          },
+          "x-jsonld-id": "@nest"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/FeatureCollectionOptions"
+    },
+    {
+      "properties": {
+        "time": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/time.json"
+        }
+      }
+    },
+    {
+      "$ref": "#/$defs/CSDmeta"
+    },
+    {
+      "$ref": "#/$defs/provenanceOptions"
+    }
+  ],
+  "properties": {
+    "horizontalCRS": {
+      "$ref": "#/$defs/coderef",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/horizontalCRS",
+      "x-jsonld-type": "@id"
+    },
+    "compoundCRS": {
+      "$ref": "#/$defs/coderef",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/compoundCRS",
+      "x-jsonld-type": "@id"
+    },
+    "verticalDatum": {
+      "$ref": "#/$defs/coderef",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/verticalDatum",
+      "x-jsonld-type": "@id"
+    },
+    "surveyDescription": {
+      "type": "string",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/surveyDescription"
+    },
+    "surveyDescriptors": {
+      "$ref": "../../datatypes/compoundName/schema.json",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/surveyDescriptors"
+    },
+    "purpose": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/coderef"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coderef"
+          }
+        }
+      ],
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/purpose",
+      "x-jsonld-type": "@id"
+    },
+    "surveyType": {
+      "$ref": "#/$defs/coderef",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/surveyType",
+      "x-jsonld-type": "@id"
+    },
+    "referencedCSDs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/$defs/CSDmeta"
+          },
+          {
+            "properties": {
+              "id": {
+                "$ref": "#/$defs/coderef"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          }
+        ]
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/referencedCSD"
+    },
+    "adminUnit": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/coderef"
+        },
+        {
+          "$ref": "#/$defs/linkWithRole"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coderef"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/linkWithRole"
+          }
+        }
+      ],
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/adminUnit",
+      "x-jsonld-container": "@set"
+    },
+    "supportingDocuments": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/coderef"
+        },
+        {
+          "$ref": "#/$defs/linkWithRole"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coderef"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/linkWithRole"
+          }
+        }
+      ],
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/supportingDocuments",
+      "x-jsonld-container": "@set"
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SurveyPointCollection"
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/points"
+    },
+    "observedVectors": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/TopoFeatureCollection"
+          },
+          {
+            "$ref": "#/$defs/VectorFeatures"
+          },
+          {
+            "anyOf": [
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "ObservedVector",
+                      "surv:ObservedVector"
+                    ],
+                    "x-jsonld-id": "@type"
+                  }
+                },
+                "required": [
+                  "featureType"
+                ]
+              },
+              {
+                "properties": {
+                  "features": {
+                    "items": {
+                      "properties": {
+                        "featureType": {
+                          "enum": [
+                            "ObservedVector",
+                            "surv:ObservedVector",
+                            "SubtendedAngle",
+                            "surv:SubtendedAngle"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "featureType"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/observedVectors"
+    },
+    "adoptedVectors": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/TopoFeatureCollection"
+          },
+          {
+            "anyOf": [
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "AdoptedVector",
+                      "surv:AdoptedVector"
+                    ],
+                    "x-jsonld-id": "@type"
+                  }
+                },
+                "required": [
+                  "featureType"
+                ]
+              },
+              {
+                "properties": {
+                  "features": {
+                    "items": {
+                      "properties": {
+                        "featureType": {
+                          "enum": [
+                            "AdoptedVector",
+                            "surv:AdoptedVector"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "featureType"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/adoptedVectors"
+    },
+    "parcels": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/FeatureCollectionOptions"
+          },
+          {
+            "properties": {
+              "featureType": {
+                "enum": [
+                  "PrimaryParcel",
+                  "surv:PrimaryParcel",
+                  "SecondaryParcel",
+                  "surv:SecondaryParcel"
+                ],
+                "x-jsonld-id": "@type"
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ParcelProperties"
+                }
+              }
+            },
+            "required": [
+              "featureType"
+            ]
+          },
+          {
+            "oneOf": [
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "PrimaryParcel",
+                      "surv:PrimaryParcel"
+                    ],
+                    "x-jsonld-id": "@type"
+                  }
+                },
+                "required": [
+                  "featureType"
+                ]
+              },
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "SecondaryParcel",
+                      "surv:SecondaryParcel"
+                    ],
+                    "x-jsonld-id": "@type"
+                  },
+                  "features": {
+                    "type": "array",
+                    "items": {
+                      "properties": {
+                        "properties": {
+                          "required": [
+                            "interests"
+                          ],
+                          "x-jsonld-id": "@nest"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/parcels"
+    },
+    "vectorObservations": {
+      "type": "array",
+      "items": {
+        "$ref": "../SurveyObservations/schema.json#/$defs/SurveyVectorObsCollection"
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/vectorObservations"
+    },
+    "adoptedObservations": {
+      "type": "array",
+      "items": {
+        "$ref": "../SurveyObservations/schema.json#/$defs/SurveyVectorObsCollection"
+      }
+    },
+    "occupationObservations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SOSAObsCollection"
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/occupationObservations"
+    },
+    "occupationFeatures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/FeatureCollectionOptions"
+      },
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/container/occupationFeatures"
+    }
+  },
+  "required": [
+    "surveyType",
+    "time",
+    "purpose"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "horizontalCRS"
+      ]
+    },
+    {
+      "required": [
+        "compoundCRS"
+      ]
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "CSD": "https://linked.data.gov.au/def/csdm/container/CSD",
+    "locality": "https://linked.data.gov.au/def/csdm/csd/locality",
+    "PrimaryParcel": {
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/PrimaryParcel",
+      "x-jsonld-type": "@id"
+    },
+    "SecondaryParcel": {
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/SecondaryParcel",
+      "x-jsonld-type": "@id"
+    },
+    "parcelQualityClass": {
+      "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcels/qualityClass",
+      "x-jsonld-type": "@id"
+    },
+    "terrainIntersectionCurve": "https://linked.data.gov.au/def/csdm/parcels/terrainIntersectionCurve"
+  },
+  "x-jsonld-prefixes": {
+    "container": "https://linked.data.gov.au/def/csdm/container/",
+    "sdo": "https://schema.org/",
+    "csd": "https://linked.data.gov.au/def/csdm/csd/",
+    "parcel": "https://linked.data.gov.au/def/csdm/parcels/",
+    "surv": "https://linked.data.gov.au/def/csdm/surveyfeatures/"
+  }
+}

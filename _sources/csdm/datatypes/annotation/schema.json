@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "linkWithRole": {
+      "$ref": "bblocks://ogc.geo.json-fg.link-role"
+    },
+    "codeRef": {
+      "$ref": "bblocks://ogc.ogc-utils.iri-or-curie"
+    },
+    "Options": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/linkWithRole"
+        },
+        {
+          "properties": {
+            "role": {
+              "$ref": "#/$defs/codeRef"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "description"
+          ]
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "AnnotationSet": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Options"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Options"
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/AnnotationSet"
+    }
+  ]
+}

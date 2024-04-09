@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
+    "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
+    "surveyable": "https://linked.data.gov.au/def/csdm/observedProperties/",
+    "surveyproc": "https://linked.data.gov.au/def/csdm/observationProcedures/",
+    "nz-surveypoint-purpose": "https://linked.data.gov.au/def/csdm/nz-surveypoint-purpose/",
+    "nz-surveypoint-state": "https://linked.data.gov.au/def/csdm/nz-surveypoint-state/",
+    "icsm-survey-type": "https://linked.data.gov.au/def/csdm/icsm-survey-type/",
+    "nz-monument-form": "https://linked.data.gov.au/def/csdm/nz-monument-form/",
+    "nz-monument-condition": "https://linked.data.gov.au/def/csdm/nz-monument-condition/",
+    "nz-monument-state": "https://linked.data.gov.au/def/csdm/nz-monument-state/",
+    "registered-surveyors": "https://example.org/surveyors/",
+    "icsm-jurisdictions": "https://linked.data.gov.au/def/jurisdictions/"
+  },
+  "id": "P1",
+  "type": "Feature",
+  "featureType": "BoundaryMark",
+  "note": "All survey marks will have a monumented state - a physical monument may be absent however using a monument type which is an explicit statement about the state",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      1.1,
+      2.7
+    ]
+  },
+  "properties": {
+    "purpose": "nz-surveypoint-purpose:boundary",
+    "state": "nz-surveypoint-state:original",
+    "monumentedBy": {
+      "form": "nz-monument-form:pin",
+      "condition": "nz-monument-condition:fair",
+      "state": "nz-monument-state:present"
+    },
+    "name": {
+      "label": "IS I - DP 3333",
+      "hasPart": [
+        {
+          "type": "Source",
+          "label": "DP 3333"
+        },
+        {
+          "type": "Stamp",
+          "label": "IS I"
+        }
+      ]
+    }
+  }
+}

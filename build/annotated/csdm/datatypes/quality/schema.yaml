@@ -1,0 +1,19 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Survey Vector Observation Quality
+properties:
+  angleAccuracy:
+    type: number
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure
+  distanceAccuracy:
+    type: number
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyMeasure
+  distanceAccuracyClass:
+    type: string
+    x-jsonld-type: '@id'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass
+  angleAccuracyClass:
+    type: string
+    x-jsonld-type: '@id'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass
+x-jsonld-prefixes:
+  csdm: https://linked.data.gov.au/def/csdm/

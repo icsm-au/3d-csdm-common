@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
+    "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",
+    "distanceAccuracyClass": {
+      "@type": "@id",
+      "@id": "csdm:surveyobs/distanceAccuracyClass"
+    },
+    "angleAccuracyClass": {
+      "@type": "@id",
+      "@id": "csdm:surveyobs/angleAccuracyClass"
+    },
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "@version": 1.1
+  }
+}

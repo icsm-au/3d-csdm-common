@@ -1,0 +1,16 @@
+{
+  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/context.jsonld",
+  "@graph": [
+    {
+      "description": "Annotation with link and role",
+      "href": "http://example.org/aDocument",
+      "role": "http://example.org/myReason",
+      "rel": "related"
+    },
+    {
+      "description": "Annotation with role",
+      "role": "http://example.org/myReason"
+    },
+    "Plain text annotation"
+  ]
+}

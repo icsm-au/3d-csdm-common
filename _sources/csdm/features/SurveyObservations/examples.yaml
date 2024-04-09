@@ -1,0 +1,48 @@
+- title: New 2D vector
+  content: |-
+    An example observation of a vector based on bearing and distance - in 2D
+
+  base-output-filename: newvector
+  snippets:
+
+    - language: json
+      ref: examples/newvector.json
+
+- title: New 3D vector
+  content: |-
+    An example observation of a vector based on bearing,pitch (azimuth angle) and distance - in 3D
+
+  base-output-filename: newvector-3d
+  snippets:
+
+    - language: json
+      ref: examples/newvector-3d.json
+
+
+- title: Distance (Adopted bearing)
+  content: |-
+    Example Survey Observation - vector only distance
+    
+
+  snippets:
+    - language: json
+      ref: examples/onlydistance.json
+
+
+- title: Bearing (Adopted distance)
+  content: |-
+    Example Survey Observation - vector only bearing
+
+  snippets:
+    - language: json
+      ref: examples/onlybearing.json
+
+
+- title: Observation Collection
+  content: |-
+    Example Collection of Survey Observations
+  base-output-filename: collection
+  snippets:
+    - language: json
+      ref: examples/collection.json
+      base-uri: http://www.example.com/features/

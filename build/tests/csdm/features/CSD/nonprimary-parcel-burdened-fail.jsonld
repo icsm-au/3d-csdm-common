@@ -1,0 +1,805 @@
+{
+  "@context": [
+    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/context.jsonld",
+    {
+      "@base": "http://example.org/base-for-csd-object-ids/",
+      "base": "http://example.org/base-for-csd-object-ids/",
+      "vocabs": "https://linked.data.gov.au/def/csdm/",
+      "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
+      "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+      "wa-parcel-type": "vocabs:wa-parcel-type/",
+      "wa-nonprimary-parcel-type": "nz-secondary-parcel-type/",
+      "wa-survey-purpose": "vocabs:wa-survey-purpose/",
+      "wa-survey-type": "vocabs:wa-survey-type/",
+      "wa-monument-form": "vocabs:wa-monument-form/",
+      "wa-monument-condition": "vocabs:wa-monument-condition/",
+      "wa-monument-state": "vocabs:wa-monument-state/",
+      "wa-equipment-type": "vocabs:wa-equipment-type/",
+      "wa-vector-purpose": "vocabs:wa-vector-purpose/",
+      "wa-nonprimary-parcel-purpose": "vocabs:wa-nonprimary-parcel-purpose/",
+      "wa-locality": "vocabs:wa-locality/",
+      "wa-local-government": "vocabs:local-government/",
+      "registered-surveyors": "https://wa.gov.au/surveyors/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "eg1": "https://linked.data.gov.au/def/csdm/wa-surveyactivities/",
+      "icsm": "https://linked.data.gov.au/def/csdm/",
+      "epsg": "http://www.opengis.net/def/crs/EPSG/0/",
+      "surveytype": "icsm:surveytypes/",
+      "icsm-jurisdictions": "icsm:jurisdictions/",
+      "surveyable": "icsm:observedProperties/",
+      "surveyproc": "icsm:observationProcedures/",
+      "icsm-survey-type": "icsm:icsm-survey-type/",
+      "surv": "icsm:surveyfeatures/",
+      "icsm-line-purpose": "icsm:survlinepurp/",
+      "icsm-procedure-used": "icsm:icsm-procedure-used/",
+      "icsm-monument-condition": "icsm:icsm-monument-condition/",
+      "icsm-surveypoint-purpose": "icsm:icsm-surveypoint-purpose/",
+      "icsm-state": "icsm:icsm-state/",
+      "icsm-parcel-state": "icsm:icsm-parcel-state/",
+      "icsm-angle-type": "icsm:icsm-angle-type/",
+      "icsm-equipment-type": "icsm:icsm-equipment-type/",
+      "icsm-distance-type": "icsm:icsm-distance-type/",
+      "icsm-arc-orientation": "icsm:arc-orientation/",
+      "icsm-admin-unit-type": "icsm:admin-unit-type/"
+    }
+  ],
+  "id": "DP_422532",
+  "name": "DP 422532",
+  "description": "Nonprimary Parcel Example - DP 422532",
+  "type": "FeatureCollection",
+  "featureType": "CSD",
+  "purpose": "wa-survey-purpose:subdivision",
+  "time": {
+    "date": "2022-05-22"
+  },
+  "horizontalCRS": "EPSG:8024",
+  "bearingRotation": 0.0,
+  "wasGeneratedBy": {
+    "id": "DP-1-S2",
+    "endedAtTime": "2029-01-01T01:02:03Z"
+  },
+  "surveyType": "wa-survey-type:c",
+  "surveyDescription": "Lots 210 - 232, 240, Roads, 9005 & Easements",
+  "adminUnit": [
+    {
+      "href": "wa-local-government:shire-of-east-pilbara",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    },
+    {
+      "href": "wa-locality:marble-bar",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    }
+  ],
+  "features": [],
+  "referencedCSDs": [
+    {
+      "id": "DP_422526",
+      "name": "DP 422526",
+      "adminUnit": "wa-local-government:karlkurla",
+      "bearingRotation": 0.0,
+      "time": {
+        "date": "2013-03-10"
+      }
+    }
+  ],
+  "points": [
+    {
+      "id": "BoundaryMark",
+      "type": "FeatureCollection",
+      "featureType": "BoundaryMarks",
+      "features": [
+        {
+          "id": "17876563",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54728.759,
+              398664.373
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:1",
+            "ptQualityMeasure": 0.013,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:new-mark"
+            }
+          }
+        },
+        {
+          "id": "17876564",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54693.76,
+              398663.954
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:2",
+            "ptQualityMeasure": 0.014,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:new-mark"
+            }
+          }
+        },
+        {
+          "id": "17876565",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54729.051,
+              398639.973
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:1",
+            "ptQualityMeasure": 0.013,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:new-mark"
+            }
+          }
+        },
+        {
+          "id": "17876566",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54695.552,
+              398639.572
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:21",
+            "ptQualityMeasure": 0.013,
+            "comment": null,
+            "monumentedBy": {
+              "state": "wa-monument-state:unmarked"
+            }
+          }
+        },
+        {
+          "id": "17876567",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54694.052,
+              398639.554
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:2",
+            "ptQualityMeasure": 0.013,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:new-mark"
+            }
+          }
+        },
+        {
+          "id": "17876568",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54729.343,
+              398615.573
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:1",
+            "ptQualityMeasure": 0.01,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:new-mark"
+            }
+          }
+        },
+        {
+          "id": "17876569",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54695.844,
+              398615.172
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:21",
+            "ptQualityMeasure": 0.011,
+            "comment": null,
+            "monumentedBy": {
+              "state": "wa-monument-state:unmarked"
+            }
+          }
+        },
+        {
+          "id": "17876570",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54694.344,
+              398615.154
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:2",
+            "ptQualityMeasure": 0.011,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:new-mark"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "vectorObservations": [
+    {
+      "id": "vectorobservation:theodolite+edm",
+      "type": "FeatureCollection",
+      "featureType": "sosa:ObservationCollection",
+      "usedProcedure": "surveyproc:m",
+      "properties": {
+        "resultTime": "2022-05-22T00:00:00",
+        "observedProperty": "surveyable:VectorDetermination",
+        "madeBySensor": {
+          "sensorType": "wa-equipment-type:t-edm"
+        }
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220170",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 35.0,
+              "angle": 269.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220171",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 24.4,
+              "angle": 359.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220172",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 33.5,
+              "angle": 269.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220173",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 24.4,
+              "angle": 359.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220174",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 24.4,
+              "angle": 359.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220175",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 33.5,
+              "angle": 269.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220176",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 24.4,
+              "angle": 359.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220189",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 24.4,
+              "angle": 359.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220191",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 1.5,
+              "angle": 269.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "20220192",
+            "resultTime": "2022-05-22T00:00:00",
+            "hasResult": {
+              "distance": 1.5,
+              "angle": 269.31417325099216
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "fromSurveyDistance": null,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.0833333,
+            "fromSurveyBearing": null
+          }
+        }
+      ]
+    }
+  ],
+  "observedVectors": [
+    {
+      "id": "observedVectors",
+      "type": "FeatureCollection",
+      "featureType": "ObservedVector",
+      "features": [
+        {
+          "id": "20220170",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876563",
+              "17876564"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220171",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876565",
+              "17876563"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220172",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876565",
+              "17876566"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220173",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876564",
+              "17876567"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220174",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876565",
+              "17876568"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220175",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876568",
+              "17876569"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220176",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876570",
+              "17876567"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220189",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876569",
+              "17876566"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:E",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220191",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876569",
+              "17876570"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "20220192",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "17876566",
+              "17876567"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        }
+      ]
+    }
+  ],
+  "parcels": [
+    {
+      "id": "PrimaryParcels",
+      "type": "FeatureCollection",
+      "featureType": "PrimaryParcel",
+      "properties": null,
+      "features": [
+        {
+          "id": "12595522",
+          "type": "Feature",
+          "featureType": "PrimaryParcel",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              [
+                "20220170",
+                "20220171",
+                "20220172",
+                "20220192",
+                "20220173"
+              ]
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "label": "Lot 215 DP 572532",
+              "hasPart": [
+                {
+                  "type": "LotType",
+                  "label": "Lot"
+                },
+                {
+                  "type": "LotNumber",
+                  "label": "215"
+                },
+                {
+                  "type": "PlanType",
+                  "label": "DP"
+                },
+                {
+                  "type": "PlanNumber",
+                  "label": "572532"
+                }
+              ]
+            },
+            "area": 854,
+            "parcelType": "wa-parcel-type:F",
+            "parcelPurpose": "wa-parcel-purpose:1",
+            "parcelState": "wa-parcel-state:created",
+            "interests": [
+              {
+                "interestLink": "Vol. 12259 Fol. 643",
+                "interestType": "wa-interest-type:fh"
+              }
+            ]
+          }
+        },
+        {
+          "id": "12595523",
+          "type": "Feature",
+          "featureType": "PrimaryParcel",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              [
+                "20220192",
+                "20220172",
+                "20220174",
+                "20220175",
+                "20220191",
+                "20220176"
+              ]
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "label": "Lot 216 DP 572532",
+              "hasPart": [
+                {
+                  "type": "LotType",
+                  "label": "Lot"
+                },
+                {
+                  "type": "LotNumber",
+                  "label": "216"
+                },
+                {
+                  "type": "PlanType",
+                  "label": "DP"
+                },
+                {
+                  "type": "PlanNumber",
+                  "label": "572532"
+                }
+              ]
+            },
+            "area": 854,
+            "parcelType": "wa-parcel-type:F",
+            "parcelPurpose": "wa-parcel-purpose:1",
+            "parcelState": "wa-parcel-state:created",
+            "interests": [
+              {
+                "interestLink": "BBBBBB"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "SecondaryParcels",
+      "type": "FeatureCollection",
+      "featureType": "SecondaryParcel",
+      "properties": null,
+      "features": [
+        {
+          "id": "12595541",
+          "type": "Feature",
+          "featureType": "SecondaryParcel",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              [
+                "20220192",
+                "20220189",
+                "20220191",
+                "20220176"
+              ]
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "label": "D5"
+            },
+            "parcelType": "wa-nonprimary-parcel-type:X",
+            "statuteLink": "wa-nonprimary-parcel-purpose:34",
+            "parcelState": "wa-parcel-state:created",
+            "parcelPurpose": "wa-nonprimary-parcel-purpose:429",
+            "comments": null
+          }
+        }
+      ]
+    }
+  ]
+}

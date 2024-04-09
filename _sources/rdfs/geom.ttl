@@ -1,0 +1,15 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix geom: <https://data.surroundaustralia.com/def/csdm/geom/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+geom:Point a rdfs:Class; rdfs:label "Point"@en; rdfs:subClassOf geo:
+geom:srsName a rdf:Property; rdfs:label "SRS name"@en;
+  rdfs:domain geom:Point; rdfs:range ESRI:Projection.
+geom:srsDimension a rdf:Property; rdfs:label "SRS dimension"@en;
+  rdfs:domain geom:Point; rdfs:range xsd:integer.
+geom:pos a rdf:Property; rdfs:label "position"@en;
+  rdfs:domain geom:Point; rdfs:range rdfs:Literal . # 2 whitespace-seperated floats.
+

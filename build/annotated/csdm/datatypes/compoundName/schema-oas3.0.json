@@ -1,0 +1,60 @@
+{
+  "x-defs": {
+    "icsm.csdm.datatypes.compoundName": {
+      "description": "Compound Name",
+      "properties": {
+        "label": {
+          "anyOf": [
+            {
+              "nullable": true
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "template": {
+          "type": "string"
+        },
+        "hasPart": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label"
+              },
+              "type": {
+                "type": "string",
+                "x-jsonld-id": "https://linked.data.gov.au/def/csdm/commonpatterns/namePartType"
+              }
+            },
+            "required": [
+              "label"
+            ]
+          },
+          "x-jsonld-id": "http://purl.org/dc/terms/hasPart"
+        }
+      },
+      "x-jsonld-extra-terms": {
+        "name": "https://linked.data.gov.au/def/csdm/commonpatterns/name",
+        "CompoundName": "https://linked.data.gov.au/def/csdm/commonpatterns/CompoundName"
+      },
+      "x-jsonld-prefixes": {
+        "dct": "http://purl.org/dc/terms/",
+        "commonpatterns": "https://linked.data.gov.au/def/csdm/commonpatterns/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "csdm": "https://linked.data.gov.au/def/csdm/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema-oas3.0.json"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.compoundName"
+    }
+  ]
+}

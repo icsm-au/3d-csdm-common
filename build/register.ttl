@@ -1,0 +1,99 @@
+@prefix bblocks: <http://example.com/ogc/def/bblocks/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bblocks:icsm.csdm a bblocks:Schema ;
+    rdfs:label "Cadastral Survey Data Model" ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/schema.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/schema.yaml> ;
+    bblocks:inRegister bblocks:icsm-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "Collection of building blocks.. " ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-05-08"^^xsd:date ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/index.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/index.md>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/> .
+
+bblocks:icsm.csdm.csdm.datatypes.compoundName a bblocks:Schema ;
+    rdfs:label "Compound Name" ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/datatypes/compoundName/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/datatypes/compoundName/schema.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/datatypes/compoundName/schema.yaml> ;
+    bblocks:inRegister bblocks:icsm-csdm ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template." ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-24-05"^^xsd:date ;
+    dct:source [ rdfs:label "CSDM model" ;
+            rdfs:seeAlso <https://github.com/icsm-au/3d-csdm> ] ;
+    rdfs:seeAlso <https://github.com/icsm-au/3d-csdm-schema>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/csdm/datatypes/compoundName/index.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/csdm/datatypes/compoundName/index.md>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/csdm/datatypes/compoundName/> .
+
+bblocks:icsm.csdm.csdm.features.CSD a bblocks:Schema ;
+    rdfs:label "Cadastral Survey Data Model" ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/CSD/schema.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/CSD/schema.yaml> ;
+    bblocks:inRegister bblocks:icsm-building-block-register ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "CSDM container for survey features and observations" ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-05-08"^^xsd:date ;
+    dct:source [ rdfs:label "Semantic Sensor Network Ontology" ;
+            rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ] ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/csdm/features/CSD/index.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/csdm/features/CSD/index.md>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/csdm/features/CSD/> .
+
+bblocks:icsm.csdm.csdm.features.SurveyPoint a bblocks:Schema ;
+    rdfs:label "Survey Point" ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/SurveyPoint/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/SurveyPoint/schema.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/annotated/csdm/csdm/features/SurveyPoint/schema.yaml> ;
+    bblocks:inRegister bblocks:icsm-csdm ;
+    bblocks:maturity <http://example.com/ogc/def/bblocks/maturity/development> ;
+    bblocks:scope <http://example.com/ogc/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/valid> ;
+    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description "Survey Point Feature (Abstract), supports common geometry and naming patterns for all points on a survey." ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-24-05"^^xsd:date ;
+    dct:source [ rdfs:label "Sample source document" ;
+            rdfs:seeAlso <https://example.com/sources/1> ] ;
+    rdfs:seeAlso <https://github.com/icsm-au/3d-csdm-schema>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/json-full/csdm/csdm/features/SurveyPoint/index.json>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/markdown/csdm/csdm/features/SurveyPoint/index.md>,
+        <https://raw.githubusercontent.com/icsm-au/3d-csdm-schema/main/build/generateddocs/slate-build/csdm/csdm/features/SurveyPoint/> .
+
+[] a prov:Activity ;
+    prov:endedAtTime "2023-05-26T01:03:24.309966"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-26T01:03:24.190168"^^xsd:dateTime ;
+    prov:used [ a prov:Entity ;
+            dct:format "application/json" ;
+            rdfs:seeAlso <file:///github/workspace/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+    prov:wasAssociatedWith [ a prov:Agent,
+                schema:SoftwareApplication ;
+            rdfs:label "OGC-NA tools" ;
+            dct:hasVersion "0.0.0" ;
+            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+

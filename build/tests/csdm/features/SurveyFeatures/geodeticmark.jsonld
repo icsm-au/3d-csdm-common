@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+    {
+      "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
+      "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
+      "surveyable": "https://linked.data.gov.au/def/csdm/observedProperties/",
+      "surveyproc": "https://linked.data.gov.au/def/csdm/observationProcedures/",
+      "nz-surveypoint-purpose": "https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/",
+      "icsm-survey-type": "https://linked.data.gov.au/def/csdm/icsm-survey-type/",
+      "nz-monument-form": "https://linked.data.gov.au/def/csdm/nz-monument-form/",
+      "nz-monument-condition": "https://linked.data.gov.au/def/csdm/nz-monument-condition/",
+      "nz-monument-state": "https://linked.data.gov.au/def/csdm/nz-monument-state/",
+      "registered-surveyors": "https://example.org/surveyors/",
+      "icsm-jurisdictions": "https://linked.data.gov.au/def/jurisdictions/"
+    }
+  ],
+  "id": "P2",
+  "type": "Feature",
+  "featureType": "GeodeticReferenceMark",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      2.1,
+      3.7
+    ]
+  },
+  "properties": {
+    "name": {
+      "label": "IS II - DP 3333",
+      "hasPart": [
+        {
+          "type": "Source",
+          "label": "DP 3333"
+        },
+        {
+          "type": "Stamp",
+          "label": "IS II"
+        }
+      ]
+    },
+    "purpose": "nz-surveypoint-purpose:geodeticref",
+    "monumentedBy": {
+      "form": "nz-monument-form:pin",
+      "condition": "nz-monument-condition:fair",
+      "state": "nz-monument-state:present"
+    },
+    "geodeticid": "XX 33455"
+  }
+}

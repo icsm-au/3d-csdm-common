@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/context.jsonld",
+    {
+      "@base": "http://example.org/base-for-csd-object-ids/",
+      "base": "http://example.org/base-for-csd-object-ids/",
+      "vocabs": "https://linked.data.gov.au/def/csdm/",
+      "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
+      "wa-survey-purpose": "vocabs:wa-survey-purpose/",
+      "wa-survey-type": "vocabs:wa-survey-type/",
+      "wa-monument-form": "vocabs:wa-monument-form/",
+      "wa-monument-condition": "vocabs:wa-monument-condition/",
+      "wa-monument-state": "vocabs:wa-monument-state/",
+      "wa-equipment-type": "vocabs:wa-equipment-type/",
+      "wa-vector-purpose": "vocabs:wa-vector-purpose/",
+      "wa-nonprimary-parcel-purpose": "vocabs:wa-nonprimary-parcel-purpose/",
+      "wa-locality": "vocabs:wa-locality/",
+      "wa-local-government": "vocabs:local-government/",
+      "registered-surveyors": "https://wa.gov.au/surveyors/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "eg1": "https://linked.data.gov.au/def/csdm/wa-surveyactivities/",
+      "icsm": "https://linked.data.gov.au/def/csdm/",
+      "epsg": "http://www.opengis.net/def/crs/EPSG/0/",
+      "surveytype": "icsm:surveytypes/",
+      "icsm-jurisdictions": "icsm:jurisdictions/",
+      "surveyable": "icsm:observedProperties/",
+      "surveyproc": "icsm:observationProcedures/",
+      "icsm-survey-type": "icsm:icsm-survey-type/",
+      "surv": "icsm:surveyfeatures/",
+      "icsm-line-purpose": "icsm:survlinepurp/",
+      "icsm-procedure-used": "icsm:icsm-procedure-used/",
+      "icsm-monument-condition": "icsm:icsm-monument-condition/",
+      "icsm-surveypoint-purpose": "icsm:icsm-surveypoint-purpose/",
+      "icsm-state": "icsm:icsm-state/",
+      "icsm-parcel-state": "icsm:icsm-parcel-state/",
+      "icsm-angle-type": "icsm:icsm-angle-type/",
+      "icsm-equipment-type": "icsm:icsm-equipment-type/",
+      "icsm-distance-type": "icsm:icsm-distance-type/",
+      "icsm-arc-orientation": "icsm:arc-orientation/"
+    }
+  ],
+  "id": "DP_422532",
+  "description": "Western-Australia-Supporting-Documents-Example",
+  "name": "DP 422532",
+  "type": "FeatureCollection",
+  "featureType": "CSD",
+  "tenureType": "wa-parcel-type:freehold",
+  "planType": "wa-survey-type:deposited-plan",
+  "purpose": "wa-survey-purpose:subdivision",
+  "surveyType": "wa-survey-type:SSA",
+  "time": {
+    "date": "2022-05-22"
+  },
+  "horizontalCRS": "EPSG:8024",
+  "bearingRotation": 0.0,
+  "surveyDescription": "Lots 210 - 232, 240, Roads, 9005 & Easements",
+  "adminUnit": [
+    {
+      "href": "wa-local-government:city-of-kalgoorlie-boulder",
+      "rel": "related",
+      "role": "localGovernment"
+    },
+    {
+      "href": "wa-locality:karlkurla",
+      "rel": "related",
+      "role": "locality"
+    }
+  ],
+  "wasGeneratedBy": {
+    "id": "DP-1-S2",
+    "endedAtTime": "2029-01-01T01:02:03Z"
+  },
+  "features": [],
+  "referencedCSDs": [
+    {
+      "id": "DP_422526",
+      "name": "DP 422526",
+      "adminUnit": {
+        "href": "wa-locality:hyden",
+        "rel": "related",
+        "role": "locality"
+      },
+      "bearingRotation": 0.0,
+      "time": {
+        "date": "2013-03-10"
+      }
+    }
+  ],
+  "points": [],
+  "observedVectors": [],
+  "vectorObservations": [],
+  "parcels": [],
+  "supportingDocuments": [
+    {
+      "title": "DP 422532",
+      "href": "https://wa.gov.au/deposited-plans/DP422532_simple.pdf",
+      "role": "wa-survey-documentation-type:2d-plan",
+      "rel": "related"
+    },
+    {
+      "title": "DP 422532 Survey Sheets",
+      "href": "https://wa.gov.au/survey-sheet/Survey&nbsp;sheet_DP422532.pdf",
+      "role": "wa-survey-documentation-type:2d-pss",
+      "rel": "related"
+    },
+    {
+      "title": "Field Book 157243",
+      "href": "https://wa.gov.au/field-book/Survey&nbsp;sheet_FB157243.pdf",
+      "role": "wa-survey-documentation-type:fb",
+      "rel": "related"
+    }
+  ],
+  "annotations": []
+}

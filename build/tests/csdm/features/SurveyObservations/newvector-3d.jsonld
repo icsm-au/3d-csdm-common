@@ -1,0 +1,26 @@
+{
+  "type": "Feature",
+  "geometry": null,
+  "time": null,
+  "place": null,
+  "properties": {
+    "hasFeatureOfInterest": "l973158",
+    "observedProperty": "pose",
+    "resultTime": "2023-05-22T16:41:00",
+    "madeBySensor": {
+      "sensorType": "DifferentialGPS",
+      "baseSensor": "gps+38666",
+      "roverSensor": "gps+37544"
+    },
+    "hasResult": {
+      "pose": {
+        "angles": {
+          "yaw": 231.38,
+          "pitch": -0.001
+        },
+        "distance": 333207.1
+      }
+    }
+  },
+  "@context": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+}

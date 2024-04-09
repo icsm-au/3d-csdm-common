@@ -1,0 +1,42 @@
+- title: Example Survey Points
+  content: |-
+    An example Survey Point showing use of GeoJSON geometry and compound names.
+    Note that the in FG-JSON "place" is used as a geometry element since "geometry" is defined to be WGS84,
+     however by "prior agreement" an alternative CRS can be defined.
+
+    Either geometry will inherit its CRS from the container's defaults.
+    3D wil require an extended model however - possibly by extending FG-JSON - or adding explicit topology.
+
+  base-output-filename: surveymark
+  snippets:
+    - language: json
+      ref: examples/surveymark.json
+
+- title: Example Geodetic Mark
+  content: |-
+    An example Geodetic Mark extending Survey Point with additional geodeticid attribute
+
+  base-output-filename: geodeticmark
+  snippets:
+    - language: json
+      ref: examples/geodeticmark.json
+
+- title: Example Monument
+  content: |-
+    A monument as a standalone object
+
+  base-output-filename: monument
+  snippets:
+    - language: json
+      ref: examples/monument.json
+
+- title: Vectors
+  content: |-
+    An example vector (line between two points) using the topo-line schema from the generalised topo-feature module
+
+  base-output-filename: surveyvectors
+  snippets:
+    - language: json
+      ref: examples/surveyvectors.json
+      shacl-closure:
+        - examples/points.ttl

@@ -1,0 +1,131 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Survey Vector Observation
+$defs:
+  coderef:
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+  SensorType:
+    allOf:
+    - properties:
+        sensorType:
+          $ref: '#/$defs/coderef'
+      required:
+      - sensorType
+    - oneOf:
+      - properties:
+          sensorType:
+            const: DifferentialGPS
+          baseSensor:
+            type: string
+          roverSensor:
+            type: string
+        required:
+        - baseSensor
+        - roverSensor
+      - properties:
+          sensorType:
+            not:
+              const: DifferentialGPS
+  angles:
+    type: object
+    description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation
+      - only yaw is mandatory allowing basic 2D applications'
+    properties:
+      yaw:
+        type: number
+      pitch:
+        type: number
+      roll:
+        type: number
+    required:
+    - yaw
+  pose-lenient:
+    description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation'
+    type: object
+    properties:
+      angles:
+        $ref: '#/$defs/angles'
+    required:
+    - angles
+  SurveyVectorObsProps:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml
+    - type: object
+      properties:
+        hasResultQuality:
+          $ref: ../../datatypes/quality/schema.json
+        hasResult:
+          properties:
+            pose:
+              $ref: '#/$defs/pose-lenient'
+              x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/pose
+            angle:
+              type: number
+            distance:
+              type: number
+              x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/distance
+          anyOf:
+          - required:
+            - pose
+          - required:
+            - distance
+          - required:
+            - angle
+          x-jsonld-id: sosa:hasResult
+      required:
+      - hasResult
+  SurveyVectorObsFeature:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml
+    - properties:
+        properties:
+          $ref: '#/$defs/SurveyVectorObsProps'
+  SurveyVectorObsCollection:
+    allOf:
+    - $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml
+    - properties:
+        features:
+          type: array
+          items:
+            $ref: '#/$defs/SurveyVectorObsFeature'
+          x-jsonld-id: sosa:hasMember
+          x-jsonld-container: '@set'
+        properties:
+          properties:
+            angleType:
+              $ref: '#/$defs/coderef'
+              x-jsonld-type: '@id'
+              x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/angleType
+              x-jsonld-base: https://linked.data.gov.au/def/csdm/defs/angletypes/
+            distanceType:
+              $ref: '#/$defs/coderef'
+              x-jsonld-type: '@id'
+              x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/distanceType
+              x-jsonld-base: https://linked.data.gov.au/def/csdm/defs/distancetypes/
+            madeBySensor:
+              $ref: '#/$defs/SensorType'
+              x-jsonld-id: sosa:madeBySensor
+              x-jsonld-base: https://linked.data.gov.au/def/csdm/sensors/Sensor
+            observedProperty:
+              $ref: '#/$defs/coderef'
+              x-jsonld-id: sosa:observedProperty
+              x-jsonld-type: '@id'
+              x-jsonld-base: https://linked.data.gov.au/def/csdm/property/
+          required:
+          - madeBySensor
+          - observedProperty
+          not:
+            required:
+            - hasResult
+anyOf:
+- $ref: '#/$defs/SurveyVectorObsFeature'
+- $ref: '#/$defs/SurveyVectorObsCollection'
+x-jsonld-prefixes:
+  csdm: https://linked.data.gov.au/def/csdm/
+  surv: https://linked.data.gov.au/def/csdm/surveyfeatures/
+  geopose: https://linked.data.gov.au/def/csdm/utils/geopose/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dct: http://purl.org/dc/terms/
+  angletype: https://linked.data.gov.au/def/csdm/defs/angletypes/
+  distancetype: https://linked.data.gov.au/def/csdm/defs/distancetypes/
+  surveyproc: https://linked.data.gov.au/def/csdm/defs/surveyprocedures/
+  surveyable: https://linked.data.gov.au/def/csdm/defs/surveyableproperties/

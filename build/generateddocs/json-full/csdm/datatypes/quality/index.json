@@ -1,0 +1,64 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.datatypes.quality",
+  "name": "SurveyQuality",
+  "abstract": "A extensible quality descriptor object with standard properties for survey point and vector observations.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2024-02-08",
+  "link": "https://github.com/icsm-au/3d-csdm-schema",
+  "sources": [
+    {
+      "title": "CSDM model",
+      "link": "https://github.com/icsm-au/3d-csdm"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "utils"
+  ],
+  "shaclRules": {},
+  "ldContext": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/context.jsonld",
+  "schema": {
+    "application/yaml": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.yaml",
+    "application/json": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json"
+  },
+  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/context.jsonld",
+  "sourceSchema": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/schema.json",
+  "sourceFiles": "https://icsm-au.github.io/3d-csdm-schema/_sources/csdm/datatypes/quality/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/icsm-au/3d-csdm-schema/blob/main/build/tests/csdm/datatypes/quality/",
+  "examples": [
+    {
+      "title": "Example Quality Object",
+      "content": "Example quality object.\n \nSchema checking is limited to datatypes of present properties as all are optional.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "example.json",
+          "base-uri": "http://www.example.com/namedobjects/",
+          "code": "{\n  \"distanceAccuracy\": 0.000100138048,\n  \"angleAccuracy\": 0.028154691543,\n  \"distanceAccuracyClass\": \"http://any.valid/\",\n  \"angleAccuracyClass\": \"http://any.valid/\"\n}",
+          "url": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/quality/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"distanceAccuracy\": 0.000100138048,\n  \"angleAccuracy\": 0.028154691543,\n  \"distanceAccuracyClass\": \"http://any.valid/\",\n  \"angleAccuracyClass\": \"http://any.valid/\",\n  \"@context\": \"https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/context.jsonld\"\n}",
+          "url": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/quality/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns1:angleAccuracyClass <http://any.valid/> ;\n    ns1:angleAccuracyMeasure 2.815469e-02 ;\n    ns1:distanceAccuracyClass <http://any.valid/> ;\n    ns1:distanceAccuracyMeasure 1.00138e-04 .\n\n",
+          "url": "https://icsm-au.github.io/3d-csdm-schema/build/tests/csdm/datatypes/quality/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Survey Vector Observation Quality\nproperties:\n  angleAccuracy:\n    type: number\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure\n  distanceAccuracy:\n    type: number\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyMeasure\n  distanceAccuracyClass:\n    type: string\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass\n  angleAccuracyClass:\n    type: string\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass\nx-jsonld-prefixes:\n  csdm: https://linked.data.gov.au/def/csdm/\n",
+  "gitRepository": "https://github.com/icsm-au/3d-csdm-schema",
+  "gitPath": "_sources/csdm/datatypes/quality"
+}

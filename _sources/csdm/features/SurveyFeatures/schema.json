@@ -1,0 +1,323 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Survey Features",
+  "$defs": {
+    "coderef": {
+      "$ref": "bblocks://ogc.ogc-utils.iri-or-curie"
+    },
+    "nullableString": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "TopoLine": {
+      "$ref": "bblocks://ogc.geo.topo.features.topo-line"
+    },
+    "FeatureOptions": {
+      "anyOf": [
+        {
+          "$ref": "bblocks://ogc.geo.json-fg.feature"
+        },
+        {
+          "$ref": "bblocks://ogc.geo.json-fg.feature-lenient"
+        },
+        {
+          "$ref": "https://geojson.org/schema/Feature.json"
+        }
+      ]
+    },
+    "SurveyPointProperties": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "../../datatypes/compoundName/schema.json"
+        },
+        "purpose": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/coderef"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/coderef"
+              }
+            }
+          ]
+        },
+        "has_provenance": {
+          "$ref": "bblocks://ogc.ogc-utils.prov"
+        },
+        "ptQuality": {
+          "$ref": "#/$defs/coderef"
+        },
+        "ptQualityMeasure": {
+          "type": "number"
+        },
+        "comment": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "required": [
+        "purpose"
+      ]
+    },
+    "OccupationMark": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/FeatureOptions"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "featureType": {
+              "const": "OccupationMark"
+            },
+            "properties": {
+              "$ref": "#/$defs/OccupationMarkProperties"
+            }
+          }
+        }
+      ],
+      "required": [
+        "featureType"
+      ]
+    },
+    "OccupationMarkProperties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/SurveyPointProperties"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "age": {
+              "type": "string",
+              "description": "A string that may be constrained to a number or range using a regex"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "age"
+          ]
+        }
+      ]
+    },
+    "SurveyMarkProperties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/SurveyPointProperties"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "monumentedBy": {
+              "$ref": "#/$defs/Monument"
+            }
+          },
+          "required": [
+            "monumentedBy"
+          ]
+        }
+      ]
+    },
+    "GeodeticReferenceMark": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/FeatureOptions"
+        }
+      ],
+      "properties": {
+        "featureType": {
+          "const": "GeodeticReferenceMark"
+        },
+        "properties": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/GeodeticReferenceMarkProperties"
+            }
+          ]
+        }
+      },
+      "required": [
+        "featureType"
+      ]
+    },
+    "GeodeticReferenceMarkProperties": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/SurveyMarkProperties"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geodeticid": {
+              "$ref": "../../datatypes/compoundName/schema.json"
+            }
+          },
+          "required": [
+            "geodeticid"
+          ]
+        }
+      ]
+    },
+    "CadastralMark": {
+      "properties": {
+        "featureType": {
+          "const": "CadastralMark"
+        },
+        "properties": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/SurveyMarkProperties"
+            }
+          ]
+        }
+      },
+      "required": [
+        "featureType"
+      ]
+    },
+    "BoundaryMark": {
+      "properties": {
+        "featureType": {
+          "const": "BoundaryMark"
+        },
+        "properties": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/SurveyMarkProperties"
+            }
+          ]
+        }
+      },
+      "required": [
+        "featureType"
+      ]
+    },
+    "Monument": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "$ref": "#/$defs/coderef"
+        },
+        "form": {
+          "$ref": "#/$defs/coderef"
+        },
+        "replaces": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "state": {
+          "$ref": "#/$defs/coderef"
+        }
+      },
+      "required": [
+        "state"
+      ]
+    },
+    "SurveyedVector": {
+      "x-json-comment": "featureType is not defined - this is abstract and overidden by subclasses",
+      "allOf": [
+        {
+          "$ref": "#/$defs/TopoLine"
+        },
+        {
+          "featureType": {
+            "const": "SurveyedVector"
+          }
+        },
+        {
+          "properties": {
+            "properties": {
+              "$ref": "#/$defs/SurveyedVectorProperties"
+            }
+          },
+          "required": [
+            "featureType"
+          ]
+        }
+      ]
+    },
+    "SurveyedVectorProperties": {
+      "type": "object",
+      "properties": {
+        "distance": {
+          "type": "number"
+        },
+        "vectorPurpose": {
+          "$ref": "#/$defs/coderef"
+        },
+        "comment": {
+          "$ref": "#/$defs/nullableString"
+        }
+      },
+      "required": [ "vectorPurpose"]
+    },
+    "AdoptedVector": {
+      "x-json-comment": "featureType is not defined - this is abstract and overidden by subclasses",
+      "allOf": [
+        {
+          "$ref": "#/$defs/TopoLine"
+        },
+        {
+          "featureType": {
+            "const": "AdoptedVector"
+          }
+        },
+        {
+          "properties": {
+            "properties": {
+              "$ref": "#/$defs/AdoptedVectorProperties"
+            }
+          },
+          "required": [
+            "featureType"
+          ]
+        }
+      ]
+    },
+    "AdoptedVectorProperties": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/SurveyedVectorProperties"
+        },
+        {
+          "properties": {
+            "fromSurvey": {
+              "$ref": "#/$defs/coderef"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/BoundaryMark"
+    },
+    {
+      "$ref": "#/$defs/OccupationMark"
+    },
+    {
+      "$ref": "#/$defs/CadastralMark"
+    },
+    {
+      "$ref": "#/$defs/GeodeticReferenceMark"
+    },
+    {
+      "$ref": "#/$defs/Monument"
+    },
+    {
+      "$ref": "#/$defs/SurveyedVector"
+    }
+  ]
+}

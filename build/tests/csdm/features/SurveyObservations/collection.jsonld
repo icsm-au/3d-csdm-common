@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/context.jsonld",
+    {}
+  ],
+  "id": "vectorObservations",
+  "type": "FeatureCollection",
+  "featureType": "sosa:ObservationCollection",
+  "time": null,
+  "properties": {
+    "resultTime": "2023-05-24T00:00:00",
+    "observedProperty": "surveyable:VectorDetermination",
+    "usedProcedure": "surveyproc:traverse",
+    "angleType": "angletype:bearing",
+    "distanceType": "distancetype:ellipsoidal",
+    "madeBySensor": {
+      "sensorType": "DifferentialGPS",
+      "baseSensor": "gps+38666",
+      "roverSensor": "gps+37544"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "hasFeatureOfInterest": "l973158",
+        "hasResult": {
+          "pose": {
+            "angles": {
+              "yaw": 231.38,
+              "pitch": -0.001
+            },
+            "distance": 333207.1
+          }
+        }
+      }
+    }
+  ]
+}

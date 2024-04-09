@@ -1,0 +1,9 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+[] a geojson:Feature ;
+    sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
+    sosa:hasResult [ ] ;
+    sosa:madeBySensor [ ] ;
+    sosa:resultTime "2023-05-22T16:41:00" .
+

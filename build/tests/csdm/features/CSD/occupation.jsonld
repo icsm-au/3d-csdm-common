@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/context.jsonld",
+    {
+      "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
+      "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
+      "surveyable": "https://linked.data.gov.au/def/csdm/observedProperties/",
+      "surveyproc": "https://linked.data.gov.au/def/csdm/observationProcedures/",
+      "nz-surveypoint-purpose": "https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/",
+      "nz-line-purpose": "https://linked.data.gov.au/def/csdm/nz-linepurpose/",
+      "icsm-survey-type": "https://linked.data.gov.au/def/csdm/icsm-survey-type/",
+      "nz-monument-form": "https://linked.data.gov.au/def/csdm/nz-monument-form/",
+      "nz-monument-condition": "https://linked.data.gov.au/def/csdm/nz-monument-condition/",
+      "nz-monument-state": "https://linked.data.gov.au/def/csdm/nz-monument-state/",
+      "registered-surveyors": "https://example.org/surveyors/",
+      "icsm-jurisdictions": "https://linked.data.gov.au/def/jurisdictions/",
+      "epsg": "http://www.opengis.net/def/crs/EPSG/0/"
+    }
+  ],
+  "id": "LT_584372",
+  "name": "LT 584372",
+  "description": "New Zealand Occupation Example",
+  "type": "FeatureCollection",
+  "featureType": "csd:CSD",
+  "purpose": "nz-survey-purpose:lts",
+  "surveyType": "nz-survey-type:ltp",
+  "time": {
+    "date": "2022-10-29"
+  },
+  "horizontalCRS": "epsg:2106",
+  "bearingRotation": 0.0,
+  "surveyDescription": "Lots 1 and 2 being adverse possession over parts of Sections 8 and 9 Block XXIV Mamaku Village",
+  "adminUnit": [],
+  "surveyClass": "nz-survey-class:A",
+  "has_provenance": [],
+  "features": [],
+  "referencedCSDs": [],
+  "points": [
+    {
+      "id": "OccupationMarks",
+      "type": "FeatureCollection",
+      "featureType": "OccupationMark",
+      "features": [
+        {
+          "id": "4494877",
+          "type": "Feature",
+          "featureType": "OccupationMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              762376.024,
+              366412.431
+            ]
+          },
+          "topology": [
+            {
+              "type": "Touches",
+              "references": [
+                "964009"
+              ]
+            }
+          ],
+          "properties": {
+            "name": {
+              "label": "Post II LT 584372",
+              "hasPart": [
+                {
+                  "type": "PlanType",
+                  "label": "LT"
+                },
+                {
+                  "type": "PlanStamp",
+                  "label": "584372"
+                },
+                {
+                  "type": "MarkType",
+                  "label": "Post"
+                },
+                {
+                  "type": "MarkStamp",
+                  "label": "II"
+                }
+              ]
+            },
+            "purpose": "nz-surveypoint-purpose:occupation",
+            "fromSurvey": "LT_584372",
+            "note": "Wooden Post",
+            "age": "40+ years"
+          }
+        }
+      ]
+    }
+  ],
+  "vectorObservations": [],
+  "observedVectors": [],
+  "parcels": [],
+  "occupationFeatures": [
+    {
+      "id": "occupation-example",
+      "type": "FeatureCollection",
+      "date": "2022-10-29T00:00:00",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "id": "964009",
+            "name": "fence",
+            "desc": "Post & wire fence",
+            "age": "40+ years"
+          },
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                176.08263977,
+                -38.09875775
+              ],
+              [
+                176.0831891,
+                -38.09945669
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "supportingDocuments": [],
+  "annotations": []
+}

@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@base": "https://linked.data.gov.au/def/csdm/csd-example/",
+    "eg1": "https://linked.data.gov.au/def/csdm/csd-example/",
+    "surveyable": "https://linked.data.gov.au/def/csdm/observedProperties/",
+    "surveyproc": "https://linked.data.gov.au/def/csdm/observationProcedures/",
+    "nz-surveypoint-purpose": "https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/",
+    "icsm-survey-type": "https://linked.data.gov.au/def/csdm/icsm-survey-type/",
+    "nz-monument-form": "https://linked.data.gov.au/def/csdm/nz-monument-form/",
+    "nz-monument-condition": "https://linked.data.gov.au/def/csdm/nz-monument-condition/",
+    "nz-monument-state": "https://linked.data.gov.au/def/csdm/nz-monument-state/",
+    "registered-surveyors": "https://example.org/surveyors/",
+    "icsm-jurisdictions": "https://linked.data.gov.au/def/jurisdictions/"
+  },
+  "id": "P1P3",
+  "type": "Feature",
+  "featureType": "ObservedVector",
+  "geometry": null,
+  "topology": {
+    "type": "LineString",
+    "references": [
+      "P1",
+      "P3"
+    ]
+  },
+  "properties": {
+    "fromSurvey": "csdref-1",
+    "vectorPurpose": "code:aPurpose",
+    "distance": 3.444
+  }
+}

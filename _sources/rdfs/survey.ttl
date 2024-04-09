@@ -1,0 +1,113 @@
+@prefix surv: <https://data.surroundaustralia.com/def/csdm/surveyfeatures/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix geom: <https://data.surroundaustralia.com/def/csdm/geom/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+# FIXME: Add descriptions (rdfs:comment).
+surv:surveyPoint a rdfs:Class; rdfs:subClassOf sf:Point, geo:Geometry; # Per-convention should've been upper-camelcase.
+    rdfs:label "Survey Point"@en .
+
+surv:hasPointQuality a rdf:Property; rdfs:label "has point quality" ;
+    rdfs:domain surv:surveyPoint; rdfs:range surv:Accuracy .
+
+surv:hasPurpose a rdf:Property; rdfs:label "has purpose" ;
+    rdfs:domain surv:surveyPoint; rdfs:range surv:Purpose .
+
+surv:hasProvenance a rdf:Property; rdfs:label "has provenance" ;
+    rdfs:domain surv:surveyPoint .
+
+surv:Accuracy a rdfs:Class; rdfs:label "Accuracy" .
+surv:Purpose a rdfs:Class; rdfs:label "Purpose" .
+
+surv:surveyMark a rdfs:Class; rdfs:subClassOf surv:surveyPoint;
+    rdfs:label "Survey Mark"@en .
+
+surv:cadastralMark a rdfs:Class; rdfs:subClassOf surv:surveyMark;
+    rdfs:label "Cadastral Mark"@en .
+    
+surv:monumentForm a rdf:Property; rdfs:label "monument has form of"@en ;
+    rdfs:domain surv:cadastralMark; rdfs:range surv:MonumentForm .
+
+surv:monumentCondition a rdf:Property; rdfs:label "monument is in condition"@en ;
+    rdfs:domain surv:cadastralMark; rdfs:range surv:MonumentCondition .
+
+surv:markState a rdf:Property; rdfs:label "mark has state"@en ;
+    rdfs:domain surv:cadastralMark; rdfs:range surv:MarkState .
+
+surv:geodeticReferenceMark a rdfs:Class; rdfs:subClassOf surv:surveyMark;
+    rdfs:label "Geodetic Reference Mark"@en .
+surv:boundaryMark a rdfs:Class; rdfs:subclassOf surv:surveyMark;
+    rdfs:label "Boundary Mark"@en .
+
+surv:MonumentForm a rdfs:Class; rdfs:label "Monument Form"@en .
+surv:MonumentCondition a rdfs:Class; rdfs:label "Monument Condition"@en .
+surv:MarkState a rdfs:Class; rdfs:label "Mark State"@en .
+
+
+surv:vectorObservationCollection a rdfs:Class; rdfs:label "Vector Observation Collection"@en.
+
+surv:hasAngleQuality a rdf:Property; rdfs:label "has angle quality"@en;
+    rdfs:domain surv:vectorObservationCollection; rdfs:range xsd:float .
+surv:hasDistanceQuality a rdf:Property; rdfs:label "has distance quality"@en;
+    rdfs:domain surv:vectorObservationCollection; rdfs:range xsd:float .
+surv:sensorOperator a rdf:Property; rdfs:label "sensor operator"@en;
+    rdfs:domain surv:vectorObservationCollection; rdfs:range foaf:Individual .
+surv:inputRawObservation a rdf:Property; rdfs:label "input raw observation"@en;
+    rdfs:domain surv:vectorObservationCollection; rdfs:range surv:vectorDetermination .
+
+surv:vectorDetermination a rdfs:Class; rdfs:label "Vector Determination"@en .
+
+surv:hasDistance a rdf:Property; rdfs:label "has distance"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range surv:Distance .
+surv:Distance a rdfs:Class; rdfs:label "Distance"@en .
+surv:distType a rdf:Property; rdfs:label "distance type"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range surv:DistanceType.
+surv:DistanceType a rdfs:Class; rdfs:label "Distance Type"@en.
+surv:hashorizontalAngle a rdf:Property; rdfs:label "has horizontal angle"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range surv:Angle.
+surv:Angle a rdfs:Class; rdfs:label "Angle"@en.
+surv:hasVerticalAngle a rdf:Property; rdfs:label "has vertical angle"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range surv:Angle.
+surv:resultTime a rdf:Property; rdfs:label "result time"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range xsd:timestamp.
+surv:instrumentHeight a rdf:Property; rdfs:label "instrument height"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range xsd:float.
+surv:targetHeight a rdf:Property; rdfs:label "target height"@en;
+    rdfs:domain surv:vectorDetermination; rdfs:range xsd:float.
+
+
+surv:surveyedVector a rdfs:Class; rdfs:subClassOf surv:surveyPoint;
+    rdfs:label "Surveyed Vector"@en.
+surv:vectorType a rdf:Property; rdfs:label "vector type"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range surv:VectorType.
+surv:VectorType a rdfs:Class; rdfs:label "Vector Type"@en.
+surv:distance a rdf:Property; rdfs:label "distance"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range surv:Distance.
+surv:Distance a rdfs:Class; rdfs:label "Distance".
+surv:distType a rdf:Property; rdfs:label "distance type"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range surv:DistType.
+surv:DistType a rdfs:Class; rdfs:label "distance type"@en.
+surv:horizontalAngle a rdf:Property; rdfs:label "horizontal angle"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range surv:Angle.
+surv:verticalAngle a rdf:Property; rdfs:label "vertical angle"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range surv:Angle.
+suv:dX a rdf:Property; rdfs:label "diff X"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range xsd:float.
+surv:dY a rdf:Property; rdfs:label "diff Y"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range xsd:float.
+surv:dZ a rdf:Property; rdfs:label "diff Z"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range xsd:float.
+surv:azProv a rdf:Property; rdfs:label "AZ provenance"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range rdf:langString.
+surv:distProv a rdf:Property; rdfs:label "distance provenance"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range rdf:langString.
+surv:vectorMeasurementSource a rdf:Property; rdfs:label "vector measurement's source"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range surv:vectorObservationCollection.
+surv:angleAccClass a rdf:Property; rdfs:label "angle's accumulator class"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range xsd:string.
+surv:distAccClass a rdf:Property; rdfs:label "distance's accumulator class"@en;
+    rdfs:domain surv:surveyedVector; rdfs:range xsd:string.

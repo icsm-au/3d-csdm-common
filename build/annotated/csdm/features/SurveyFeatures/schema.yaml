@@ -1,0 +1,224 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Survey Features
+$defs:
+  coderef:
+    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+  nullableString:
+    oneOf:
+    - type: string
+    - type: 'null'
+  TopoLine:
+    $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
+  FeatureOptions:
+    anyOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.yaml
+    - $ref: https://geojson.org/schema/Feature.json
+  SurveyPointProperties:
+    type: object
+    properties:
+      name:
+        $ref: ../../datatypes/compoundName/schema.json
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/commonpatterns/name
+        x-jsonld-type: '@id'
+      purpose:
+        oneOf:
+        - $ref: '#/$defs/coderef'
+        - type: array
+          items:
+            $ref: '#/$defs/coderef'
+        x-jsonld-type: '@id'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/purpose
+      has_provenance:
+        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml
+      ptQuality:
+        $ref: '#/$defs/coderef'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/commonpatterns/qualityClass
+        x-jsonld-type: '@id'
+      ptQualityMeasure:
+        type: number
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/commonpatterns/qualityMeasure
+        x-jsonld-type: '@id'
+      comment:
+        $ref: '#/$defs/nullableString'
+        x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment
+    required:
+    - purpose
+  OccupationMark:
+    allOf:
+    - $ref: '#/$defs/FeatureOptions'
+    - type: object
+      properties:
+        featureType:
+          const: OccupationMark
+        properties:
+          $ref: '#/$defs/OccupationMarkProperties'
+    required:
+    - featureType
+  OccupationMarkProperties:
+    allOf:
+    - $ref: '#/$defs/SurveyPointProperties'
+    - type: object
+      properties:
+        age:
+          type: string
+          description: A string that may be constrained to a number or range using
+            a regex
+          x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/age
+        note:
+          type: string
+          x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment
+      required:
+      - age
+  SurveyMarkProperties:
+    allOf:
+    - $ref: '#/$defs/SurveyPointProperties'
+    - type: object
+      properties:
+        monumentedBy:
+          $ref: '#/$defs/Monument'
+          x-jsonld-type: '@id'
+          x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/monumentedBy
+      required:
+      - monumentedBy
+  GeodeticReferenceMark:
+    allOf:
+    - $ref: '#/$defs/FeatureOptions'
+    properties:
+      featureType:
+        const: GeodeticReferenceMark
+      properties:
+        allOf:
+        - $ref: '#/$defs/GeodeticReferenceMarkProperties'
+    required:
+    - featureType
+  GeodeticReferenceMarkProperties:
+    type: object
+    allOf:
+    - $ref: '#/$defs/SurveyMarkProperties'
+    - type: object
+      properties:
+        geodeticid:
+          $ref: ../../datatypes/compoundName/schema.json
+          x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid
+      required:
+      - geodeticid
+  CadastralMark:
+    properties:
+      featureType:
+        const: CadastralMark
+      properties:
+        allOf:
+        - $ref: '#/$defs/SurveyMarkProperties'
+    required:
+    - featureType
+  BoundaryMark:
+    properties:
+      featureType:
+        const: BoundaryMark
+      properties:
+        allOf:
+        - $ref: '#/$defs/SurveyMarkProperties'
+    required:
+    - featureType
+  Monument:
+    type: object
+    properties:
+      condition:
+        $ref: '#/$defs/coderef'
+        x-jsonld-type: '@id'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/condition
+      form:
+        $ref: '#/$defs/coderef'
+        x-jsonld-type: '@id'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/form
+      replaces:
+        type: string
+        format: uri-reference
+        x-jsonld-type: '@id'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/replaces
+      state:
+        $ref: '#/$defs/coderef'
+        x-jsonld-type: '@id'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/state
+    required:
+    - state
+  SurveyedVector:
+    x-json-comment: featureType is not defined - this is abstract and overidden by
+      subclasses
+    allOf:
+    - $ref: '#/$defs/TopoLine'
+    - featureType:
+        const: SurveyedVector
+    - properties:
+        properties:
+          $ref: '#/$defs/SurveyedVectorProperties'
+      required:
+      - featureType
+  SurveyedVectorProperties:
+    type: object
+    properties:
+      distance:
+        type: number
+      vectorPurpose:
+        $ref: '#/$defs/coderef'
+        x-jsonld-type: '@id'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/vectorPurpose
+      comment:
+        $ref: '#/$defs/nullableString'
+        x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment
+    required:
+    - vectorPurpose
+  AdoptedVector:
+    x-json-comment: featureType is not defined - this is abstract and overidden by
+      subclasses
+    allOf:
+    - $ref: '#/$defs/TopoLine'
+    - featureType:
+        const: AdoptedVector
+    - properties:
+        properties:
+          $ref: '#/$defs/AdoptedVectorProperties'
+      required:
+      - featureType
+  AdoptedVectorProperties:
+    allOf:
+    - $ref: '#/$defs/SurveyedVectorProperties'
+    - properties:
+        fromSurvey:
+          $ref: '#/$defs/coderef'
+          x-jsonld-type: '@id'
+          x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/fromSurvey
+anyOf:
+- $ref: '#/$defs/BoundaryMark'
+- $ref: '#/$defs/OccupationMark'
+- $ref: '#/$defs/CadastralMark'
+- $ref: '#/$defs/GeodeticReferenceMark'
+- $ref: '#/$defs/Monument'
+- $ref: '#/$defs/SurveyedVector'
+x-jsonld-extra-terms:
+  place: https://purl.org/geojson/vocab#geometry
+  CadastralMark:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/CadastralMark
+    x-jsonld-type: '@id'
+  BoundaryMark:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/BoundaryMark
+    x-jsonld-type: '@id'
+  GeodeticReferenceMark:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/GeodeticReferenceMark
+    x-jsonld-type: '@id'
+  ObservedVector:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/ObservedVector
+    x-jsonld-type: '@id'
+  AdoptedVector:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/SurveyedVector
+    x-jsonld-type: '@id'
+  label: http://www.w3.org/2000/01/rdf-schema#label
+x-jsonld-prefixes:
+  geojson: https://purl.org/geojson/vocab#
+  surv: https://linked.data.gov.au/def/csdm/surveyfeatures/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  commonpatterns: https://linked.data.gov.au/def/csdm/commonpatterns/
+  csdm: https://linked.data.gov.au/def/csdm/
+  geosparql: http://www.opengis.net/ont/geosparql#
+  dct: http://purl.org/dc/terms/

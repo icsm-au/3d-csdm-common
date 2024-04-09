@@ -1,0 +1,18 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix :        <https://linked.data.gov.au/def/csdm/csd/shapes/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+:testFOIexists
+    a                  sh:NodeShape ;
+    sh:description     "Features of Interest are present for all observations - this simply checks that a Feature typed object is present" ;
+    sh:targetSubjectsOf sosa:hasFeatureOfInterest ;
+    sh:name            "FOI exists" ;
+    sh:property [ sh:path sosa:hasFeatureOfInterest ;
+    sh:nodeKind sh:IRI ;
+    sh:class geojson:Feature ; ]
+.

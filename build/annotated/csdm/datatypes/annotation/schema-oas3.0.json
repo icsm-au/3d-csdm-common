@@ -1,0 +1,151 @@
+{
+  "x-defs": {
+    "icsm.csdm.datatypes.annotation": {
+      "$defs": {
+        "linkWithRole": {
+          "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.link-role"
+        },
+        "codeRef": {
+          "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+        },
+        "Options": {
+          "anyOf": [
+            {
+              "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.annotation/$defs/linkWithRole"
+            },
+            {
+              "properties": {
+                "role": {
+                  "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.annotation/$defs/codeRef"
+                },
+                "description": {
+                  "type": "string",
+                  "x-jsonld-id": "http://purl.org/dc/terms/description"
+                }
+              },
+              "required": [
+                "description"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "AnnotationSet": {
+          "anyOf": [
+            {
+              "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.annotation/$defs/Options"
+            },
+            {
+              "nullable": true
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.annotation/$defs/Options"
+              }
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.annotation/$defs/AnnotationSet"
+        }
+      ],
+      "x-jsonld-prefixes": {
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json"
+    },
+    "ogc.geo.json-fg.link-role": {
+      "description": "annotated link with role and conformance",
+      "$defs": {
+        "coderef": {
+          "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+        },
+        "coderefs": {
+          "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
+        },
+        {
+          "properties": {
+            "role": {},
+            "conformsTo": {}
+          },
+          "required": [
+            "role"
+          ]
+        }
+      ],
+      "x-jsonld-prefixes": {
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json"
+    },
+    "ogc.ogc-utils.iri-or-curie": {
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+    },
+    "ogc.ogc-utils.json-link": {
+      "description": "JSON Link",
+      "type": "object",
+      "required": [
+        "href",
+        "rel"
+      ],
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri-reference",
+          "x-jsonld-type": "@id",
+          "x-jsonld-id": "http://www.w3.org/ns/oa#hasTarget"
+        },
+        "rel": {
+          "type": "string",
+          "x-jsonld-id": "http://www.iana.org/assignments/relation",
+          "x-jsonld-type": "@id",
+          "x-jsonld-base": "http://www.iana.org/assignments/relation/"
+        },
+        "anchor": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "x-jsonld-id": "http://purl.org/dc/terms/type"
+        },
+        "hreflang": {
+          "type": "string",
+          "x-jsonld-id": "http://purl.org/dc/terms/language"
+        },
+        "title": {
+          "type": "string",
+          "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "length": {
+          "type": "integer",
+          "x-jsonld-id": "http://purl.org/dc/terms/extent"
+        }
+      },
+      "x-jsonld-prefixes": {
+        "oa": "http://www.w3.org/ns/oa#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/annotation/schema-oas3.0.json#/x-defs/icsm.csdm.datatypes.annotation"
+    }
+  ]
+}

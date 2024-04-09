@@ -1,0 +1,18 @@
+{
+  "type": "Feature",
+  "geometry": null,
+  "time": null,
+  "place": null,
+  "properties": {
+    "hasFeatureOfInterest": "l973158",
+    "resultTime": "2023-05-22T16:41:00",
+    "madeBySensor": {
+      "sensorType": "DifferentialGPS",
+      "baseSensor": "gps+38666",
+      "roverSensor": "gps+37544"
+    },
+    "hasResult": {
+      "something": "else"
+    }
+  }
+}

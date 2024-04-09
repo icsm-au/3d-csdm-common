@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "featureType": "SurveyVector",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "l566592",
+      "geometry": null,
+      "topology": {
+        "type": "Linestring",
+        "references": [
+          {
+            "$ref": "#/features/11745160"
+          },
+          {
+            "$ref": "#/features/44438418"
+          }
+        ]
+      },
+      "properties": {
+        "purpose": "radiation"
+      }
+    }
+  ]
+}

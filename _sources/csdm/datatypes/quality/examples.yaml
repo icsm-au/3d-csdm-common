@@ -1,0 +1,10 @@
+- title: Example Quality Object
+  content: |-
+   Example quality object.
+    
+   Schema checking is limited to datatypes of present properties as all are optional.
+
+  snippets:
+    - language: json
+      ref: example.json
+      base-uri: http://www.example.com/namedobjects/

@@ -1,0 +1,648 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Cadastral Survey Data Model",
+  "$defs": {
+    "coderef": {
+      "$ref": "bblocks://ogc.ogc-utils.iri-or-curie"
+    },
+    "coderefList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/coderef"
+      }
+    },
+    "linkWithRole": {
+      "$ref": "bblocks://ogc.geo.json-fg.link-role"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})?$"
+    },
+    "AnnotationSet": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/linkWithRole"
+          },
+          {
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "role": {
+                "$ref": "#/$defs/coderef"
+              }
+            },
+            "required": [
+              "description"
+            ]
+          }
+        ]
+      }
+    },
+    "FeatureCollectionOptions": {
+      "anyOf": [
+        {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/featurecollection.json"
+        },
+        {
+          "$ref": "bblocks://ogc.geo.json-fg.feature-lenient"
+        },
+        {
+          "$ref": "https://geojson.org/schema/FeatureCollection.json"
+        },
+        {
+          "$ref": "bblocks://ogc.geo.topo.features.topo-feature-collection"
+        }
+      ]
+    },
+    "TopoFeatureCollection": {
+      "$ref": "bblocks://ogc.geo.topo.features.topo-feature-collection"
+    },
+    "SOSAObsCollection": {
+      "$ref": "bblocks://ogc.sosa.properties.observationCollection"
+    },
+    "TopoLine": {
+      "allOf": [
+        {
+          "$ref": "bblocks://ogc.geo.topo.features.topo-line"
+        }
+      ]
+    },
+    "TopoArc": {
+      "$ref": "bblocks://ogc.geo.topo.features.topo-arc"
+    },
+    "SubtendedAngleVector": {
+      "allOf": [
+        {
+          "$ref": "bblocks://ogc.geo.topo.features.topo-feature"
+        },
+        {
+          "properties": {
+            "topology": {
+              "allOf": [
+                {
+                  "$ref": "bblocks://ogc.geo.topo.datatypes.topology"
+                },
+                {
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "SubtendedAngle"
+                    },
+                    "references": {
+                      "minItems": 3,
+                      "maxItems": 3
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "topology"
+          ]
+        }
+      ]
+    },
+    "TopoVector": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TopoLine"
+        },
+        {
+          "$ref": "#/$defs/TopoArc"
+        },
+        {
+          "$ref": "#/$defs/SubtendedAngleVector"
+        }
+      ]
+    },
+    "CSDmeta": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "bearingRotation": {
+          "type": "number"
+        },
+        "annotations": {
+          "$ref": "#/$defs/AnnotationSet"
+        }
+      },
+      "required": [
+        "name",
+        "bearingRotation"
+      ]
+    },
+    "provenanceOptions": {
+      "anyOf": [
+        {
+          "properties": {
+            "has_provenance": {
+              "anyOf": [
+                {
+                  "$ref": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json#/$defs/Prov"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "has_provenance"
+          ]
+        },
+        {
+          "properties": {
+            "wasGeneratedBy": {
+              "$ref": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json#/$defs/Activity"
+            }
+          },
+          "required": [
+            "wasGeneratedBy"
+          ]
+        }
+      ]
+    },
+    "SurveyPointCollection": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/FeatureCollectionOptions"
+        },
+        {
+          "properties": {
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "../SurveyFeatures/schema.json"
+                  },
+                  {
+                    "properties": {
+                      "featureType": {
+                        "enum": [
+                          "SurveyMark",
+                          "CadastralMark",
+                          "GeodeticReferenceMark",
+                          "BoundaryMark",
+                          "SurveyPoint",
+                          "OccupationMark"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "VectorFeatures": {
+      "properties": {
+        "features": {
+          "items": {
+            "$ref": "#/$defs/TopoVector"
+          }
+        }
+      }
+    },
+    "ParcelProperties": {
+      "properties": {
+        "properties": {
+          "properties": {
+            "appellation": {
+              "$ref": "../../datatypes/compoundName/schema.json"
+            },
+            "parcelType": {
+              "$ref": "#/$defs/coderef"
+            },
+            "parcelState": {
+              "$ref": "#/$defs/coderef"
+            },
+            "address": {
+              "type": "object"
+            },
+            "parcelPurpose": {
+              "$ref": "#/$defs/coderef"
+            },
+            "area": {
+              "type": "number"
+            },
+            "floor": {
+              "type": "string"
+            },
+            "zmin": {
+              "type": "number"
+            },
+            "zmax": {
+              "type": "number"
+            },
+            "interests": {
+              "type": "array",
+              "additionalProperties": false,
+              "items": {
+                "properties": {
+                  "interestLink": {
+                    "$ref": "#/$defs/coderef"
+                  },
+                  "interestName": {
+                    "type": "string"
+                  },
+                  "interestType": {
+                    "$ref": "#/$defs/coderef"
+                  },
+                  "dateInForce": {
+                    "$ref": "#/$defs/dateTime"
+                  },
+                  "dateExpires": {
+                    "$ref": "#/$defs/dateTime"
+                  },
+                  "statuteLink": {
+                    "$ref": "#/$defs/coderef"
+                  },
+                  "statuteName": {
+                    "type": "string"
+                  },
+                  "benefitedPartyName": {
+                    "type": "string"
+                  },
+                  "benefitedPartyLink": {
+                    "$ref": "#/$defs/coderef"
+                  },
+                  "originalSurveyLink": {
+                    "$ref": "#/$defs/coderef"
+                  },
+                  "referencedParcel": {
+                    "$ref": "#/$defs/coderef"
+                  },
+                  "burdenedParcels": {
+                    "$ref": "#/$defs/coderefList"
+                  },
+                  "benefitedParcels": {
+                    "$ref": "#/$defs/coderefList"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "entitlementPortion": {
+                    "type": "string"
+                  },
+                  "liabilityPortion": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "interestLink",
+                  "interestType"
+                ]
+              },
+              "required": [
+                "appellation",
+                "parcelType",
+                "parcelState",
+                "parcelPurpose"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/FeatureCollectionOptions"
+    },
+    {
+      "properties": {
+        "time": {
+          "$ref": "https://beta.schemas.opengis.net/json-fg/time.json"
+        }
+      }
+    },
+    {
+      "$ref": "#/$defs/CSDmeta"
+    },
+    {
+      "$ref": "#/$defs/provenanceOptions"
+    }
+  ],
+  "properties": {
+    "horizontalCRS": {
+      "$ref": "#/$defs/coderef"
+    },
+    "compoundCRS": {
+      "$ref": "#/$defs/coderef"
+    },
+    "verticalDatum": {
+      "$ref": "#/$defs/coderef"
+    },
+    "surveyDescription": {
+      "type": "string"
+    },
+    "surveyDescriptors": {
+      "$ref": "../../datatypes/compoundName/schema.json"
+    },
+    "purpose": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/coderef"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coderef"
+          }
+        }
+      ]
+    },
+    "surveyType": {
+      "$ref": "#/$defs/coderef"
+    },
+    "referencedCSDs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/$defs/CSDmeta"
+          },
+          {
+            "properties": {
+              "id": {
+                "$ref": "#/$defs/coderef"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          }
+        ]
+      }
+    },
+    "adminUnit": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/coderef"
+        },
+        {
+          "$ref": "#/$defs/linkWithRole"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coderef"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/linkWithRole"
+          }
+        }
+      ]
+    },
+    "supportingDocuments": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/coderef"
+        },
+        {
+          "$ref": "#/$defs/linkWithRole"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coderef"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/linkWithRole"
+          }
+        }
+      ]
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SurveyPointCollection"
+      }
+    },
+    "observedVectors": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/TopoFeatureCollection"
+          },
+          {
+            "$ref": "#/$defs/VectorFeatures"
+          },
+          {
+            "anyOf": [
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "ObservedVector",
+                      "surv:ObservedVector"
+                    ]
+                  }
+                },
+                "required": [
+                  "featureType"
+                ]
+              },
+              {
+                "properties": {
+                  "features": {
+                    "items": {
+                      "properties": {
+                        "featureType": {
+                          "enum": [
+                            "ObservedVector",
+                            "surv:ObservedVector",
+                            "SubtendedAngle",
+                            "surv:SubtendedAngle"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "featureType"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "adoptedVectors": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/TopoFeatureCollection"
+          },
+          {
+            "anyOf": [
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "AdoptedVector",
+                      "surv:AdoptedVector"
+                    ]
+                  }
+                },
+                "required": [
+                  "featureType"
+                ]
+              },
+              {
+                "properties": {
+                  "features": {
+                    "items": {
+                      "properties": {
+                        "featureType": {
+                          "enum": [
+                            "AdoptedVector",
+                            "surv:AdoptedVector"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "featureType"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "parcels": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/FeatureCollectionOptions"
+          },
+          {
+            "properties": {
+              "featureType": {
+                "enum": [
+                  "PrimaryParcel",
+                  "surv:PrimaryParcel",
+                  "SecondaryParcel",
+                  "surv:SecondaryParcel"
+                ]
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ParcelProperties"
+                }
+              }
+            },
+            "required": [
+              "featureType"
+            ]
+          },
+          {
+            "oneOf": [
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "PrimaryParcel",
+                      "surv:PrimaryParcel"
+                    ]
+                  }
+                },
+                "required": [
+                  "featureType"
+                ]
+              },
+              {
+                "properties": {
+                  "featureType": {
+                    "enum": [
+                      "SecondaryParcel",
+                      "surv:SecondaryParcel"
+                    ]
+                  },
+                  "features": {
+                    "type": "array",
+                    "items": {
+                      "properties": {
+                        "properties": {
+                          "required": [
+                            "interests"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "vectorObservations": {
+      "type": "array",
+      "items": {
+        "$ref": "../SurveyObservations/schema.json#/$defs/SurveyVectorObsCollection"
+      }
+    },
+    "adoptedObservations": {
+      "type": "array",
+      "items": {
+        "$ref": "../SurveyObservations/schema.json#/$defs/SurveyVectorObsCollection"
+      }
+    },
+    "occupationObservations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SOSAObsCollection"
+      }
+    },
+    "occupationFeatures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/FeatureCollectionOptions"
+      }
+    }
+  },
+  "required": [
+    "surveyType",
+    "time",
+    "purpose"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "horizontalCRS"
+      ]
+    },
+    {
+      "required": [
+        "compoundCRS"
+      ]
+    }
+  ]
+}
