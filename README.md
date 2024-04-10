@@ -1,6 +1,6 @@
 # 3D Cadastral Survey Data Model (Common Model) - JSON Encoding
 
-The 3D CSDM and its sub-components are described [here](https://icsm-au.github.io/3d-csdm-schema/)
+The 3D CSDM and its sub-components are described [here](https://icsm-au.github.io/3d-csdm-common/)
 
 This repository defines an implementation of the 3D Cadastral Survey Data Model (3DCSDM) as a JSON encoding using the [OGC Building Blocks](https://github.com/opengeospatial/bblock-template) methdology.
 
@@ -8,7 +8,7 @@ The defined data exchange schema is **semantically annotated** with explicit lin
 
 The semantic annotation in turn provides the opportunity to declare explicit **profiles** of the specification for each implementing jurisdiction.
 
-Profiles are defined in a separate repository [3d-csdm-profiles](https://github.com/icsm-au/3d-csdm-profiles), leaving this specification free of jurisdiction-specific artefacts and potentially relevant for use in any jurisdiction.
+Profiles are defined in separate repositories [3d-csdm-profiles](https://github.com/icsm-au/3d-csdm-profiles), leaving this specification free of jurisdiction-specific artefacts and potentially relevant for use in any jurisdiction.
 
 **Although extension and restrictions are possible, at this stage no variations in the 3D CSDM schema have been required to define profiles for the test jurisdictions.**
 
