@@ -57,12 +57,12 @@ base:DP_422532 a container:CSD,
 base:12595522 a parcel:PrimaryParcel,
         geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 215 DP 572532" ;
-            dct:hasPart [ rdfs:label "572532" ;
+            dct:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType "LotType" ],
+                [ rdfs:label "572532" ;
                     commonpatterns:namePartType "PlanNumber" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType "LotType" ],
                 [ rdfs:label "215" ;
                     commonpatterns:namePartType "LotNumber" ] ] ;
     parcel:interest [ parcel:interestLink base: ;
@@ -77,12 +77,12 @@ base:12595522 a parcel:PrimaryParcel,
 base:12595523 a parcel:PrimaryParcel,
         geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 216 DP 572532" ;
-            dct:hasPart [ rdfs:label "216" ;
-                    commonpatterns:namePartType "LotNumber" ],
+            dct:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType "LotType" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "216" ;
+                    commonpatterns:namePartType "LotNumber" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "PlanNumber" ] ] ;
     parcel:interest [ parcel:interestLink base:BBBBBB ] ;
@@ -144,23 +144,7 @@ base:observedVectors a surv:ObservedVector,
 <vectorobservation:theodolite+edm> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220175 ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220174 ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220173 ;
+            sosa:hasFeatureOfInterest base:20220171 ;
             sosa:hasResult [ surv:distance 2.44e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00" ;
             ns1:angleAccuracyMeasure 8.33333e-02 ;
@@ -184,6 +168,30 @@ base:observedVectors a surv:ObservedVector,
             ns1:distanceAccuracyMeasure 4000 ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220176 ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220173 ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest base:20220175 ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00" ;
+            ns1:angleAccuracyMeasure 8.33333e-02 ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceAccuracyMeasure 4000 ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest base:20220191 ;
             sosa:hasResult [ surv:distance 1.5e+00 ] ;
             sosa:resultTime "2022-05-22T00:00:00" ;
@@ -192,15 +200,7 @@ base:observedVectors a surv:ObservedVector,
             ns1:distanceAccuracyMeasure 4000 ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220171 ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.33333e-02 ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest base:20220176 ;
+            sosa:hasFeatureOfInterest base:20220174 ;
             sosa:hasResult [ surv:distance 2.44e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00" ;
             ns1:angleAccuracyMeasure 8.33333e-02 ;

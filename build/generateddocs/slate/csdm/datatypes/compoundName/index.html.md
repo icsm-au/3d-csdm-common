@@ -102,10 +102,10 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-commo
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "IS II - DP 3333" ;
-    dcterms:hasPart [ rdfs:label "DP 3333" ;
-            commonpatterns:namePartType "Source" ],
-        [ rdfs:label "IS II" ;
-            commonpatterns:namePartType "Stamp" ] .
+    dcterms:hasPart [ rdfs:label "IS II" ;
+            commonpatterns:namePartType "Stamp" ],
+        [ rdfs:label "DP 3333" ;
+            commonpatterns:namePartType "Source" ] .
 
 
 ```

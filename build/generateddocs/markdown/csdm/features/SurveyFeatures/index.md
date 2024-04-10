@@ -153,10 +153,10 @@ Either geometry will inherit its CRS from the container's defaults.
 eg1:P1 a surv:BoundaryMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "IS I - DP 3333" ;
-            dct:hasPart [ rdfs:label "IS I" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP 3333" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+            dct:hasPart [ rdfs:label "DP 3333" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "IS I" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     rdfs:comment "All survey marks will have a monumented state - a physical monument may be absent however using a monument type which is an explicit statement about the state" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:fair ;
             surv:form nz-monument-form:pin ;

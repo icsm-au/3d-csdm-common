@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-04-09T02:59:45.215669+00:00
+Generated 2024-04-10T02:26:52.110705+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -53,11 +53,11 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   	Message: Less than 1 values on [ rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ; sosa:hasResult [ ] ; sosa:madeBySensor [ ] ; sosa:resultTime Literal("2023-05-22T16:41:00") ]->( [ sh:zeroOrMorePath [ sh:oneOrMorePath [ sh:alternativePath <http://recursion.too.deep> ] ] ] sosa:observedProperty )
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Na70b576ace0140d696efe3e19c80e4a3
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Na70b576ace0140d696efe3e19c80e4a3
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Na70b576ace0140d696efe3e19c80e4a3
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N0e038e89bb0a48b9a61f5987292a124a
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N0e038e89bb0a48b9a61f5987292a124a
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N0e038e89bb0a48b9a61f5987292a124a
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N0e038e89bb0a48b9a61f5987292a124a
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Na70b576ace0140d696efe3e19c80e4a3
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
 
 === End SHACL ===

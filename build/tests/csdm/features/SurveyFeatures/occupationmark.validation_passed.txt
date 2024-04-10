@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyFeatures - Survey Features
-Generated 2024-04-09T02:59:45.629789+00:00
+Generated 2024-04-10T02:26:52.669913+00:00
 === Files ===
 Using occupationmark.json from test resources
 JSON-LD context is present - uplifting
@@ -25,15 +25,15 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nd2c8fc0adf33491f90e05dff95b2b810b3: eg1:P1/geojson:geometry
- - Shape _:nd2c8fc0adf33491f90e05dff95b2b810b1: eg1:P1/geojson:geometry
+ - Shape _:n34e7bc12b86a4032adb0b302e5144c23b1: eg1:P1/geojson:geometry
+ - Shape _:n34e7bc12b86a4032adb0b302e5144c23b3: eg1:P1/geojson:geometry
 
 Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n343ec081b04a43ff93fd39c3659fd4d2b1: *none*
+ - Shape _:n132888c868be4119a578c863353e63bfb1: *none*
 
 === End SHACL ===
 

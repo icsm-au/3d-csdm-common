@@ -56,7 +56,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"IS II - DP 3333\" ;\n    dcterms:hasPart [ rdfs:label \"DP 3333\" ;\n            commonpatterns:namePartType \"Source\" ],\n        [ rdfs:label \"IS II\" ;\n            commonpatterns:namePartType \"Stamp\" ] .\n\n",
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"IS II - DP 3333\" ;\n    dcterms:hasPart [ rdfs:label \"IS II\" ;\n            commonpatterns:namePartType \"Stamp\" ],\n        [ rdfs:label \"DP 3333\" ;\n            commonpatterns:namePartType \"Source\" ] .\n\n",
           "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/compoundName/example_1_1.ttl"
         }
       ]

@@ -14,11 +14,11 @@
     dct:abstract "An annotation allowing multiple values, either links with descriptions or simple text." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/annotation/" ],
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.annotation" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/annotation/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.annotation" ],
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/annotation/" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/annotation/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -41,14 +41,14 @@
     rdfs:label "Cadastral Survey Dataset" ;
     dct:abstract "CSDM container for survey features and observations. This schema defines key metadata for a survey and uses the other components in this repository to implement details using standards based, flexible, extensible implementation patterns compatible with OGC API standards." ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/CSD/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.CSD" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/CSD/" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/CSD/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/CSD/" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.CSD" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/CSD/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-04-09"^^xsd:date ;
     dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
@@ -93,14 +93,14 @@
     rdfs:label "SurveyQuality" ;
     dct:abstract "A extensible quality descriptor object with standard properties for survey point and vector observations." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/quality/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.quality" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/quality/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/quality/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/quality/index.json" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/quality/" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-04-09"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
@@ -120,13 +120,13 @@
     dct:abstract "The set of geographic features present on a survey - these include the FeatureOfInterest for observations" ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyFeatures" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyFeatures/" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyFeatures" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-04-09"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
@@ -158,14 +158,14 @@
     rdfs:label "Survey Observations" ;
     dct:abstract "An Observation specialisation for an aspect of a survey - typically vectors with new or adopted bearings and distances." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyObservations" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyObservations/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyObservations/" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-04-09"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
@@ -197,13 +197,13 @@
     dct:abstract "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/compoundName/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.compoundName" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/compoundName/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-04-09"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
@@ -264,18 +264,18 @@ _NB Publication of these models as Linked Data would allow access to documentati
         <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-04-09T02:59:54.325406"^^xsd:dateTime ;
-    prov:startedAtTime "2024-04-09T02:59:54.201397"^^xsd:dateTime ;
+    prov:endedAtTime "2024-04-10T02:27:04.978600"^^xsd:dateTime ;
+    prov:startedAtTime "2024-04-10T02:27:04.860827"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:773504ae6265b74ae32523c3046ca4bc37e45073" ;
-            rdfs:seeAlso <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:f32544e311ba84fc1d77c3ea42e579869f0a1c77" ;
+            rdfs:seeAlso <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.43" ;
+            dct:hasVersion "0.3.44" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
 

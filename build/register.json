@@ -2,12 +2,12 @@
   "name": "3D Cadastre Survey Data Exchange Specification",
   "abstract": "This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. \n\nThe specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. \n\n  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**\n\nThe core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** \n\nThe schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  \n\nThe [set of modules comprising the specification](bblock) is implemented as a \"register\" of \"Building Blocks\" managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). \n\nThe [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) \n\n_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_\n",
   "description": "This specification defines a [JSON schema](https://json-schema.org/) compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange model.\n\nThis schema is linked to the underlying [3D Cadastre Model](https://icsm-au.github.io/3d-csdm/) using JSON-LD, which allows additional constraint rules to be specified using the [SHACL (Shapes Constraint Language) standard](https://www.w3.org/TR/shacl/).\n\n_The **[REVIEW GUIDE](https://github.com/icsm-au/3d-csdm-profiles/blob/main/REVIEW_GUIDE.md)** provides a detailed overview of all aspects of the design and testing process, and related materials._\n\nThis implementation pattern:\n\n- is supported by the OGC with a set of [open source tools](https://github.com/opengeospatial/bblock-template) and a library of building blocks based on OGC specifications.\n- simplifies development, testing and documentation of each component\n- allows for transparent, machine-readable, identification of the underlying standards each component is based on\n- allows richer machine readable specifications of implementation constraints and controlled vocabulary requirements.\n- supports explicit machine readable profile specifications to support discovery of all the different components required.\n\nThe \"semantic annotation\" capabilities of the OGC Building Block design links the schema to the conceptual and logical models.\n_NB Publication of these models as Linked Data would allow access to documentation of each element by online systems_.\n",
-  "modified": "2024-04-09T02:58:21.392726",
+  "modified": "2024-04-10T02:25:14.887374",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"7bc28ab560dbf91c352585ba69c0f3c4d356dba1",
-      "shortCommitId": "\"7bc28a",
-      "date": "2024-04-08T10:23:56+00:00\""
+      "commitId": "\"32e803263591dfa42fd4a83c5a75b4efed7108b7",
+      "shortCommitId": "\"32e803",
+      "date": "2024-04-09T11:46:45+00:00\""
     }
   },
   "gitRepository": "https://github.com/icsm-au/3d-csdm-common",
@@ -154,8 +154,8 @@
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.geo.json-fg.link-role",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.geo.json-fg.link-role"
       ],
       "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
       "schema": {
@@ -223,10 +223,10 @@
       },
       "dependsOn": [
         "ogc.sosa.properties.observationCollection",
-        "icsm.csdm.datatypes.quality",
-        "ogc.sosa.properties.observation",
         "ogc.sosa.features.observation",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.sosa.properties.observation",
+        "ogc.ogc-utils.iri-or-curie",
+        "icsm.csdm.datatypes.quality"
       ],
       "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld",
       "schema": {
@@ -293,11 +293,11 @@
       },
       "dependsOn": [
         "ogc.geo.topo.features.topo-line",
-        "ogc.ogc-utils.prov",
-        "ogc.geo.json-fg.feature-lenient",
         "ogc.geo.common.data_types.geojson",
-        "ogc.geo.json-fg.feature",
+        "ogc.geo.json-fg.feature-lenient",
         "ogc.ogc-utils.iri-or-curie",
+        "ogc.geo.json-fg.feature",
+        "ogc.ogc-utils.prov",
         "icsm.csdm.datatypes.compoundName"
       ],
       "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
@@ -358,9 +358,13 @@
       "superBBlock": false,
       "shaclRules": {
         "icsm.csdm.features.CSD": [
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
           "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/parcel_module.shapes.ttl",
-          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/container.shapes.ttl",
-          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+          "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/container.shapes.ttl"
+        ],
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
           "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
@@ -375,29 +379,25 @@
         "icsm.csdm.features.SurveyObservations": [
           "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl"
         ],
-        "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
-        ],
         "ogc.geo.topo.features.topo-arc": [
           "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
           "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.geo.topo.features.topo-line",
-        "ogc.ogc-utils.prov",
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.sosa.properties.observationCollection",
-        "icsm.csdm.features.SurveyFeatures",
-        "icsm.csdm.features.SurveyObservations",
         "ogc.geo.topo.features.topo-feature-collection",
-        "ogc.geo.topo.features.topo-arc",
-        "ogc.geo.json-fg.link-role",
-        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.properties.observationCollection",
+        "ogc.geo.topo.features.topo-feature",
+        "ogc.geo.topo.features.topo-line",
+        "ogc.geo.json-fg.feature-lenient",
+        "icsm.csdm.features.SurveyFeatures",
         "ogc.geo.topo.datatypes.topology",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.geo.json-fg.link-role",
+        "ogc.ogc-utils.prov",
         "icsm.csdm.datatypes.compoundName",
-        "ogc.geo.topo.features.topo-feature"
+        "icsm.csdm.features.SurveyObservations",
+        "ogc.geo.topo.features.topo-arc"
       ],
       "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/context.jsonld",
       "schema": {

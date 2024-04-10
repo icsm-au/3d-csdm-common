@@ -24,8 +24,8 @@
   ],
   "shaclRules": {},
   "dependsOn": [
-    "ogc.geo.json-fg.link-role",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.geo.json-fg.link-role"
   ],
   "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
   "schema": {
@@ -56,7 +56,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] dcterms:description \"Annotation with role\" ;\n    prof:hasRole <http://example.org/myReason> .\n\n[] dcterms:description \"Annotation with link and role\" ;\n    ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/myReason> ;\n    oa:hasTarget <http://example.org/aDocument> .\n\n",
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] dcterms:description \"Annotation with link and role\" ;\n    ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/myReason> ;\n    oa:hasTarget <http://example.org/aDocument> .\n\n[] dcterms:description \"Annotation with role\" ;\n    prof:hasRole <http://example.org/myReason> .\n\n",
           "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.ttl"
         }
       ]

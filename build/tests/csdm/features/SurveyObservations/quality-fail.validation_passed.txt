@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-04-09T02:59:45.201599+00:00
+Generated 2024-04-10T02:26:52.096790+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -126,11 +126,11 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N5acb8a5094224260b743fa364274f2a4
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N5acb8a5094224260b743fa364274f2a4
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N5acb8a5094224260b743fa364274f2a4
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nb995e2563578400fb537cd2829b607b7
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nb995e2563578400fb537cd2829b607b7
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nb995e2563578400fb537cd2829b607b7
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nb995e2563578400fb537cd2829b607b7
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N5acb8a5094224260b743fa364274f2a4
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
 
 === End SHACL ===

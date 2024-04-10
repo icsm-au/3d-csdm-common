@@ -37,10 +37,10 @@
   },
   "dependsOn": [
     "ogc.sosa.properties.observationCollection",
-    "icsm.csdm.datatypes.quality",
-    "ogc.sosa.properties.observation",
     "ogc.sosa.features.observation",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.sosa.properties.observation",
+    "ogc.ogc-utils.iri-or-curie",
+    "icsm.csdm.datatypes.quality"
   ],
   "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld",
   "schema": {
