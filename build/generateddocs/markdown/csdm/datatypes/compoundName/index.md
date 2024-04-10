@@ -48,7 +48,7 @@ A name with a label, but also a set of parts with roles that can be validated ag
       "label": "IS II"
     }
   ],
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld"
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld"
 }
 ```
 
@@ -59,10 +59,10 @@ A name with a label, but also a set of parts with roles that can be validated ag
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "IS II - DP 3333" ;
-    dcterms:hasPart [ rdfs:label "IS II" ;
-            commonpatterns:namePartType "Stamp" ],
-        [ rdfs:label "DP 3333" ;
-            commonpatterns:namePartType "Source" ] .
+    dcterms:hasPart [ rdfs:label "DP 3333" ;
+            commonpatterns:namePartType "Source" ],
+        [ rdfs:label "IS II" ;
+            commonpatterns:namePartType "Stamp" ] .
 
 
 ```
@@ -107,8 +107,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml)
+* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.json)
+* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml)
 
 
 # JSON-LD Context
@@ -135,7 +135,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld)
+[context.jsonld](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld)
 
 ## Sources
 

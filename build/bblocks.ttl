@@ -7,220 +7,220 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.datatypes.annotation> a skos:Concept,
+<https://icsm-au.github.io/icsm.csdm.datatypes.annotation> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Generalised annotation" ;
     dct:abstract "An annotation allowing multiple values, either links with descriptions or simple text." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.annotation" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/annotation/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/annotation/" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/annotation/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/annotation/index.json" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/annotation/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/slate-build/csdm/datatypes/annotation/" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/bblock/icsm.csdm.datatypes.annotation" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-09"^^xsd:date ;
+    dct:modified "2024-04-10"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
-    skos:inScheme <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> ;
+    skos:inScheme <https://icsm-au.github.io/3d-csdm-common/> ;
     dcat:keyword "utils" ;
-    bblocks:dependsOn <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.json-fg.link-role>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.ogc-utils.iri-or-curie> ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.json>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/context.jsonld> ;
+    bblocks:dependsOn <https://icsm-au.github.io/ogc.geo.json-fg.link-role>,
+        <https://icsm-au.github.io/ogc.ogc-utils.iri-or-curie> ;
+    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/context.jsonld> ;
+    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema.json>,
+        <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/annotation/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.features.CSD> a skos:Concept,
+<https://icsm-au.github.io/icsm.csdm.features.CSD> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Cadastral Survey Dataset" ;
     dct:abstract "CSDM container for survey features and observations. This schema defines key metadata for a survey and uses the other components in this repository to implement details using standards based, flexible, extensible implementation patterns compatible with OGC API standards." ;
     dct:created "2023-04-13T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/CSD/" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/bblock/icsm.csdm.features.CSD" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/CSD/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.CSD" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/CSD/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/CSD/index.md" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/CSD/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/slate-build/csdm/features/CSD/" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-09"^^xsd:date ;
+    dct:modified "2024-04-10"^^xsd:date ;
     dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
-    skos:inScheme <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> ;
+    skos:inScheme <https://icsm-au.github.io/3d-csdm-common/> ;
     dcat:keyword "o&m",
         "o&m&s",
         "sosa",
         "ssn" ;
-    bblocks:dependsOn <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.datatypes.compoundName>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.features.SurveyFeatures>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.features.SurveyObservations>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.json-fg.feature-lenient>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.json-fg.link-role>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.topo.datatypes.topology>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.topo.features.topo-arc>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.topo.features.topo-feature>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.topo.features.topo-feature-collection>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.topo.features.topo-line>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.ogc-utils.iri-or-curie>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.ogc-utils.prov>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.sosa.properties.observationCollection> ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/schema.json>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/CSD/schema.yaml> ;
-    bblocks:hasShaclRule <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+    bblocks:dependsOn <https://icsm-au.github.io/icsm.csdm.datatypes.compoundName>,
+        <https://icsm-au.github.io/icsm.csdm.features.SurveyFeatures>,
+        <https://icsm-au.github.io/icsm.csdm.features.SurveyObservations>,
+        <https://icsm-au.github.io/ogc.geo.json-fg.feature-lenient>,
+        <https://icsm-au.github.io/ogc.geo.json-fg.link-role>,
+        <https://icsm-au.github.io/ogc.geo.topo.datatypes.topology>,
+        <https://icsm-au.github.io/ogc.geo.topo.features.topo-arc>,
+        <https://icsm-au.github.io/ogc.geo.topo.features.topo-feature>,
+        <https://icsm-au.github.io/ogc.geo.topo.features.topo-feature-collection>,
+        <https://icsm-au.github.io/ogc.geo.topo.features.topo-line>,
+        <https://icsm-au.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://icsm-au.github.io/ogc.ogc-utils.prov>,
+        <https://icsm-au.github.io/ogc.sosa.properties.observationCollection> ;
+    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/context.jsonld> ;
+    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.json>,
+        <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml> ;
+    bblocks:hasShaclRule <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl>,
+        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl>,
+        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl>,
+        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl>,
+        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl>,
+        <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
         <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl>,
-        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/container.shapes.ttl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/shapes/parcel_module.shapes.ttl> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/CSD/context.jsonld> ;
+        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/CSD/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> rdfs:label "3D Cadastre Survey Data Model" .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.datatypes.quality> a skos:Concept,
+<https://icsm-au.github.io/icsm.csdm.datatypes.quality> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "SurveyQuality" ;
     dct:abstract "A extensible quality descriptor object with standard properties for survey point and vector observations." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/quality/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.quality" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/quality/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/quality/index.md" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/quality/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/quality/" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/slate-build/csdm/datatypes/quality/" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/bblock/icsm.csdm.datatypes.quality" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-09"^^xsd:date ;
+    dct:modified "2024-04-10"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
-    skos:inScheme <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> ;
+    skos:inScheme <https://icsm-au.github.io/3d-csdm-common/> ;
     dcat:keyword "utils" ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.json>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/quality/context.jsonld> ;
+    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/context.jsonld> ;
+    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.json>,
+        <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/quality/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.features.SurveyFeatures> a skos:Concept,
+<https://icsm-au.github.io/icsm.csdm.features.SurveyFeatures> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Survey Features" ;
     dct:abstract "The set of geographic features present on a survey - these include the FeatureOfInterest for observations" ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyFeatures/" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyFeatures" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/bblock/icsm.csdm.features.SurveyFeatures" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/slate-build/csdm/features/SurveyFeatures/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-09"^^xsd:date ;
+    dct:modified "2024-04-10"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
-    skos:inScheme <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> ;
+    skos:inScheme <https://icsm-au.github.io/3d-csdm-common/> ;
     dcat:keyword "cadastre",
         "features",
         "icsm",
         "survey" ;
-    bblocks:dependsOn <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.datatypes.compoundName>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.common.data_types.geojson>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.json-fg.feature>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.json-fg.feature-lenient>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.geo.topo.features.topo-line>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.ogc-utils.iri-or-curie>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.ogc-utils.prov> ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.json>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyFeatures/schema.yaml> ;
-    bblocks:hasShaclRule <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
-        <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyFeatures/context.jsonld> ;
+    bblocks:dependsOn <https://icsm-au.github.io/icsm.csdm.datatypes.compoundName>,
+        <https://icsm-au.github.io/ogc.geo.common.data_types.geojson>,
+        <https://icsm-au.github.io/ogc.geo.json-fg.feature>,
+        <https://icsm-au.github.io/ogc.geo.json-fg.feature-lenient>,
+        <https://icsm-au.github.io/ogc.geo.topo.features.topo-line>,
+        <https://icsm-au.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://icsm-au.github.io/ogc.ogc-utils.prov> ;
+    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/context.jsonld> ;
+    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.json>,
+        <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml> ;
+    bblocks:hasShaclRule <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl>,
+        <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+        <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/icsm> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.features.SurveyObservations> a skos:Concept,
+<https://icsm-au.github.io/icsm.csdm.features.SurveyObservations> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Survey Observations" ;
     dct:abstract "An Observation specialisation for an aspect of a survey - typically vectors with new or adopted bearings and distances." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/slate-build/csdm/features/SurveyObservations/" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.features.SurveyObservations" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/bblock/icsm.csdm.features.SurveyObservations" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/features/SurveyObservations/" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-09"^^xsd:date ;
+    dct:modified "2024-04-10"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
-    skos:inScheme <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> ;
+    skos:inScheme <https://icsm-au.github.io/3d-csdm-common/> ;
     dcat:keyword "SOSA",
         "cadastre",
         "features",
         "icsm",
         "observation",
         "survey" ;
-    bblocks:dependsOn <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.datatypes.quality>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.ogc-utils.iri-or-curie>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.sosa.features.observation>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.sosa.properties.observation>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/ogc.sosa.properties.observationCollection> ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.json>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.yaml> ;
-    bblocks:hasShaclRule <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/rules.shacl> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/context.jsonld> ;
+    bblocks:dependsOn <https://icsm-au.github.io/icsm.csdm.datatypes.quality>,
+        <https://icsm-au.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://icsm-au.github.io/ogc.sosa.features.observation>,
+        <https://icsm-au.github.io/ogc.sosa.properties.observation>,
+        <https://icsm-au.github.io/ogc.sosa.properties.observationCollection> ;
+    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld> ;
+    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.json>,
+        <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml> ;
+    bblocks:hasShaclRule <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl>,
+        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/icsm> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/icsm.csdm.datatypes.compoundName> a skos:Concept,
+<https://icsm-au.github.io/icsm.csdm.datatypes.compoundName> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Compound Name" ;
     dct:abstract "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/bblock/icsm.csdm.datatypes.compoundName" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/slate-build/csdm/datatypes/compoundName/" ],
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/slate-build/csdm/datatypes/compoundName/" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json" ] ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-common/bblock/icsm.csdm.datatypes.compoundName" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-04-09"^^xsd:date ;
+    dct:modified "2024-04-10"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
-    skos:inScheme <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> ;
+    skos:inScheme <https://icsm-au.github.io/3d-csdm-common/> ;
     dcat:keyword "utils" ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.json>,
-        <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml> ;
-    bblocks:hasShaclRule <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/context.jsonld> ;
+    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld> ;
+    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.json>,
+        <https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml> ;
+    bblocks:hasShaclRule <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://github.com/icsm-au/3d-csdm> rdfs:label "3D Cadastre Survey Data Model",
         "CSDM model" .
 
-<https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/> a skos:ConceptScheme,
+<https://icsm-au.github.io/3d-csdm-common/> a skos:ConceptScheme,
         dcat:Catalog ;
     rdfs:label "Building Blocks - 3D Cadastre Survey Data Exchange Specification" ;
     dct:abstract """This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. 
@@ -257,22 +257,22 @@ The "semantic annotation" capabilities of the OGC Building Block design links th
 _NB Publication of these models as Linked Data would allow access to documentation of each element by online systems_.
 """ ;
     skos:prefLabel "Building Blocks - 3D Cadastre Survey Data Exchange Specification" ;
-    bblocks:hasValidationReport <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/report.html> ;
+    bblocks:hasValidationReport <https://icsm-au.github.io/3d-csdm-common/build/tests/report.html> ;
     bblocks:imports <https://ogcincubator.github.io/bblock-prov-schema/build/register.json>,
         <https://ogcincubator.github.io/topo-feature/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json>,
         <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-04-10T02:27:04.978600"^^xsd:dateTime ;
-    prov:startedAtTime "2024-04-10T02:27:04.860827"^^xsd:dateTime ;
+    prov:endedAtTime "2024-04-10T06:13:12.056723"^^xsd:dateTime ;
+    prov:startedAtTime "2024-04-10T06:13:11.989523"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:f32544e311ba84fc1d77c3ea42e579869f0a1c77" ;
-            rdfs:seeAlso <https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/register.json> ] ;
+            dct:hasVersion "git:c926f67ffc1d0d372b7882648746b8566df87af9" ;
+            rdfs:seeAlso <https://icsm-au.github.io/3d-csdm-common/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

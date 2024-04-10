@@ -27,10 +27,10 @@ eg1:4494877 a eg1:OccupationMark,
     rdfs:label [ rdfs:label "Post II LT 584372" ;
             dct:hasPart [ rdfs:label "LT" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "584372" ;
-                    commonpatterns:namePartType "PlanStamp" ],
                 [ rdfs:label "II" ;
                     commonpatterns:namePartType "MarkStamp" ],
+                [ rdfs:label "584372" ;
+                    commonpatterns:namePartType "PlanStamp" ],
                 [ rdfs:label "Post" ;
                     commonpatterns:namePartType "MarkType" ] ] ;
     rdfs:comment "Wooden Post" ;

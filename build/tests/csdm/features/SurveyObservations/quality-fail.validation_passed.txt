@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-04-10T02:26:52.096790+00:00
+Generated 2024-04-10T06:13:00.058797+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -60,7 +60,7 @@ Failed validating 'anyOf' in schema:
                                                                                                'pose': {'$ref': '#/$defs/pose-lenient',
                                                                                                         'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/pose'}},
                                                                                 'x-jsonld-id': 'sosa:hasResult'},
-                                                                  'hasResultQuality': {'$ref': 'https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml'}},
+                                                                  'hasResultQuality': {'$ref': 'https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml'}},
                                                    'required': ['hasResult'],
                                                    'type': 'object'}]},
                'angles': {'description': 'Basic-YPR: Basic GeoPose using '
@@ -126,12 +126,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N5acb8a5094224260b743fa364274f2a4
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N5acb8a5094224260b743fa364274f2a4
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N5acb8a5094224260b743fa364274f2a4
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N5acb8a5094224260b743fa364274f2a4
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N92cbc9d755494ac0b472284d573450c5
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N92cbc9d755494ac0b472284d573450c5
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N92cbc9d755494ac0b472284d573450c5
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N92cbc9d755494ac0b472284d573450c5
 
 === End SHACL ===
 

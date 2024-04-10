@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.csdm.features.SurveyObservations - Survey Observations",
   "bblockName": "Survey Observations",
   "bblockId": "icsm.csdm.features.SurveyObservations",
-  "generated": "2024-04-10T02:26:52.171585+00:00",
+  "generated": "2024-04-10T06:13:00.137243+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/csdm/features/SurveyObservations/tests/collection-sensor-details-fail.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/tests/collection-sensor-details-fail.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/tests/collection-sensor-details-fail.json",
         "language": "json"
       },
       "result": true,
@@ -112,10 +112,8 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "<file:///github/workspace/vectorObservations>/sosa:hasMember"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
@@ -127,7 +125,7 @@
                     "<file:///github/workspace/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testResult>": {
@@ -135,12 +133,14 @@
                     "<file:///github/workspace/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<file:///github/workspace/vectorObservations>/sosa:hasMember"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n"
             }
           ]
         },
@@ -156,7 +156,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/csdm/features/SurveyObservations/tests/collection-sensor-extension.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/tests/collection-sensor-extension.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/tests/collection-sensor-extension.json",
         "language": "json"
       },
       "result": true,
@@ -250,10 +250,8 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "<file:///github/workspace/vectorObservations>/sosa:hasMember"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
@@ -265,7 +263,7 @@
                     "<file:///github/workspace/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testResult>": {
@@ -273,12 +271,14 @@
                     "<file:///github/workspace/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<file:///github/workspace/vectorObservations>/sosa:hasMember"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n"
             }
           ]
         },
@@ -294,7 +294,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/csdm/features/SurveyObservations/tests/collection-sensor-fail.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/tests/collection-sensor-fail.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/tests/collection-sensor-fail.json",
         "language": "json"
       },
       "result": true,
@@ -349,7 +349,7 @@
               "exception": "ValidationError",
               "errorMessage": "{'id': 'vectorObservations', 'type': 'FeatureCollection', 'featureType': 'sosa:ObservationCollection', 'time': None, 'properties': {'resultTime': '2023-05-24T16:41:00', 'observedProperty': 'surveyable:VectorDetermination', 'usedProcedure': 'surveyproc:traverse', 'angleType': 'angletype:bearing', 'distanceType': 'distancetype:ellipsoidal'}, 'features': [{'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'hasResult': {'pose': {'angles': {'yaw': 231.38, 'pitch': -0.001}, 'distance': 333207.1}}}}]} is not valid under any of the given schemas",
               "isError": true,
-              "message": "ValidationError: {'id': 'vectorObservations', 'type': 'FeatureCollection', 'featureType': 'sosa:ObservationCollection', 'time': None, 'properties': {'resultTime': '2023-05-24T16:41:00', 'observedProperty': 'surveyable:VectorDetermination', 'usedProcedure': 'surveyproc:traverse', 'angleType': 'angletype:bearing', 'distanceType': 'distancetype:ellipsoidal'}, 'features': [{'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'hasResult': {'pose': {'angles': {'yaw': 231.38, 'pitch': -0.001}, 'distance': 333207.1}}}}]} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$defs': {'SensorType': {'allOf': [{'properties': {'sensorType': {'$ref': '#/$defs/coderef'}},\n                                         'required': ['sensorType']},\n                                        {'oneOf': [{'properties': {'baseSensor': {'type': 'string'},\n                                                                   'roverSensor': {'type': 'string'},\n                                                                   'sensorType': {'const': 'DifferentialGPS'}},\n                                                    'required': ['baseSensor',\n                                                                 'roverSensor']},\n                                                   {'properties': {'sensorType': {'not': {'const': 'DifferentialGPS'}}}}]}]},\n               'SurveyVectorObsCollection': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml'},\n                                                       {'properties': {'features': {'items': {'$ref': '#/$defs/SurveyVectorObsFeature'},\n                                                                                    'type': 'array',\n                                                                                    'x-jsonld-container': '@set',\n                                                                                    'x-jsonld-id': 'sosa:hasMember'},\n                                                                       'properties': {'not': {'required': ['hasResult']},\n                                                                                      'properties': {'angleType': {'$ref': '#/$defs/coderef',\n                                                                                                                   'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                                                                                                                   'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/angleType',\n                                                                                                                   'x-jsonld-type': '@id'},\n                                                                                                     'distanceType': {'$ref': '#/$defs/coderef',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                                                                                                                      'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/distanceType',\n                                                                                                                      'x-jsonld-type': '@id'},\n                                                                                                     'madeBySensor': {'$ref': '#/$defs/SensorType',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/sensors/Sensor',\n                                                                                                                      'x-jsonld-id': 'sosa:madeBySensor'},\n                                                                                                     'observedProperty': {'$ref': '#/$defs/coderef',\n                                                                                                                          'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/property/',\n                                                                                                                          'x-jsonld-id': 'sosa:observedProperty',\n                                                                                                                          'x-jsonld-type': '@id'}},\n                                                                                      'required': ['madeBySensor',\n                                                                                                   'observedProperty']}}}]},\n               'SurveyVectorObsFeature': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml'},\n                                                    {'properties': {'properties': {'$ref': '#/$defs/SurveyVectorObsProps'}}}]},\n               'SurveyVectorObsProps': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml'},\n                                                  {'properties': {'hasResult': {'anyOf': [{'required': ['pose']},\n                                                                                          {'required': ['distance']},\n                                                                                          {'required': ['angle']}],\n                                                                                'properties': {'angle': {'type': 'number'},\n                                                                                               'distance': {'type': 'number',\n                                                                                                            'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/distance'},\n                                                                                               'pose': {'$ref': '#/$defs/pose-lenient',\n                                                                                                        'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/pose'}},\n                                                                                'x-jsonld-id': 'sosa:hasResult'},\n                                                                  'hasResultQuality': {'$ref': 'https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml'}},\n                                                   'required': ['hasResult'],\n                                                   'type': 'object'}]},\n               'angles': {'description': 'Basic-YPR: Basic GeoPose using '\n                                         'yaw, pitch, and roll to specify '\n                                         'orientation - only yaw is '\n                                         'mandatory allowing basic 2D '\n                                         'applications',\n                          'properties': {'pitch': {'type': 'number'},\n                                         'roll': {'type': 'number'},\n                                         'yaw': {'type': 'number'}},\n                          'required': ['yaw'],\n                          'type': 'object'},\n               'coderef': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml'},\n               'pose-lenient': {'description': 'Basic-YPR: Basic GeoPose '\n                                               'using yaw, pitch, and roll '\n                                               'to specify orientation',\n                                'properties': {'angles': {'$ref': '#/$defs/angles'}},\n                                'required': ['angles'],\n                                'type': 'object'}},\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'anyOf': [{'$ref': '#/$defs/SurveyVectorObsFeature'},\n               {'$ref': '#/$defs/SurveyVectorObsCollection'}],\n     'description': 'Survey Vector Observation',\n     'x-jsonld-prefixes': {'angletype': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                           'csdm': 'https://linked.data.gov.au/def/csdm/',\n                           'dct': 'http://purl.org/dc/terms/',\n                           'distancetype': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                           'geopose': 'https://linked.data.gov.au/def/csdm/utils/geopose/',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',\n                           'surv': 'https://linked.data.gov.au/def/csdm/surveyfeatures/',\n                           'surveyable': 'https://linked.data.gov.au/def/csdm/defs/surveyableproperties/',\n                           'surveyproc': 'https://linked.data.gov.au/def/csdm/defs/surveyprocedures/'}}\n\nOn instance:\n    {'featureType': 'sosa:ObservationCollection',\n     'features': [{'geometry': None,\n                   'place': None,\n                   'properties': {'hasFeatureOfInterest': 'l973158',\n                                  'hasResult': {'pose': {'angles': {'pitch': -0.001,\n                                                                    'yaw': 231.38},\n                                                         'distance': 333207.1}}},\n                   'time': None,\n                   'type': 'Feature'}],\n     'id': 'vectorObservations',\n     'properties': {'angleType': 'angletype:bearing',\n                    'distanceType': 'distancetype:ellipsoidal',\n                    'observedProperty': 'surveyable:VectorDetermination',\n                    'resultTime': '2023-05-24T16:41:00',\n                    'usedProcedure': 'surveyproc:traverse'},\n     'time': None,\n     'type': 'FeatureCollection'}"
+              "message": "ValidationError: {'id': 'vectorObservations', 'type': 'FeatureCollection', 'featureType': 'sosa:ObservationCollection', 'time': None, 'properties': {'resultTime': '2023-05-24T16:41:00', 'observedProperty': 'surveyable:VectorDetermination', 'usedProcedure': 'surveyproc:traverse', 'angleType': 'angletype:bearing', 'distanceType': 'distancetype:ellipsoidal'}, 'features': [{'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'hasResult': {'pose': {'angles': {'yaw': 231.38, 'pitch': -0.001}, 'distance': 333207.1}}}}]} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$defs': {'SensorType': {'allOf': [{'properties': {'sensorType': {'$ref': '#/$defs/coderef'}},\n                                         'required': ['sensorType']},\n                                        {'oneOf': [{'properties': {'baseSensor': {'type': 'string'},\n                                                                   'roverSensor': {'type': 'string'},\n                                                                   'sensorType': {'const': 'DifferentialGPS'}},\n                                                    'required': ['baseSensor',\n                                                                 'roverSensor']},\n                                                   {'properties': {'sensorType': {'not': {'const': 'DifferentialGPS'}}}}]}]},\n               'SurveyVectorObsCollection': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml'},\n                                                       {'properties': {'features': {'items': {'$ref': '#/$defs/SurveyVectorObsFeature'},\n                                                                                    'type': 'array',\n                                                                                    'x-jsonld-container': '@set',\n                                                                                    'x-jsonld-id': 'sosa:hasMember'},\n                                                                       'properties': {'not': {'required': ['hasResult']},\n                                                                                      'properties': {'angleType': {'$ref': '#/$defs/coderef',\n                                                                                                                   'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                                                                                                                   'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/angleType',\n                                                                                                                   'x-jsonld-type': '@id'},\n                                                                                                     'distanceType': {'$ref': '#/$defs/coderef',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                                                                                                                      'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/distanceType',\n                                                                                                                      'x-jsonld-type': '@id'},\n                                                                                                     'madeBySensor': {'$ref': '#/$defs/SensorType',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/sensors/Sensor',\n                                                                                                                      'x-jsonld-id': 'sosa:madeBySensor'},\n                                                                                                     'observedProperty': {'$ref': '#/$defs/coderef',\n                                                                                                                          'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/property/',\n                                                                                                                          'x-jsonld-id': 'sosa:observedProperty',\n                                                                                                                          'x-jsonld-type': '@id'}},\n                                                                                      'required': ['madeBySensor',\n                                                                                                   'observedProperty']}}}]},\n               'SurveyVectorObsFeature': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml'},\n                                                    {'properties': {'properties': {'$ref': '#/$defs/SurveyVectorObsProps'}}}]},\n               'SurveyVectorObsProps': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml'},\n                                                  {'properties': {'hasResult': {'anyOf': [{'required': ['pose']},\n                                                                                          {'required': ['distance']},\n                                                                                          {'required': ['angle']}],\n                                                                                'properties': {'angle': {'type': 'number'},\n                                                                                               'distance': {'type': 'number',\n                                                                                                            'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/distance'},\n                                                                                               'pose': {'$ref': '#/$defs/pose-lenient',\n                                                                                                        'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/pose'}},\n                                                                                'x-jsonld-id': 'sosa:hasResult'},\n                                                                  'hasResultQuality': {'$ref': 'https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml'}},\n                                                   'required': ['hasResult'],\n                                                   'type': 'object'}]},\n               'angles': {'description': 'Basic-YPR: Basic GeoPose using '\n                                         'yaw, pitch, and roll to specify '\n                                         'orientation - only yaw is '\n                                         'mandatory allowing basic 2D '\n                                         'applications',\n                          'properties': {'pitch': {'type': 'number'},\n                                         'roll': {'type': 'number'},\n                                         'yaw': {'type': 'number'}},\n                          'required': ['yaw'],\n                          'type': 'object'},\n               'coderef': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml'},\n               'pose-lenient': {'description': 'Basic-YPR: Basic GeoPose '\n                                               'using yaw, pitch, and roll '\n                                               'to specify orientation',\n                                'properties': {'angles': {'$ref': '#/$defs/angles'}},\n                                'required': ['angles'],\n                                'type': 'object'}},\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'anyOf': [{'$ref': '#/$defs/SurveyVectorObsFeature'},\n               {'$ref': '#/$defs/SurveyVectorObsCollection'}],\n     'description': 'Survey Vector Observation',\n     'x-jsonld-prefixes': {'angletype': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                           'csdm': 'https://linked.data.gov.au/def/csdm/',\n                           'dct': 'http://purl.org/dc/terms/',\n                           'distancetype': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                           'geopose': 'https://linked.data.gov.au/def/csdm/utils/geopose/',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',\n                           'surv': 'https://linked.data.gov.au/def/csdm/surveyfeatures/',\n                           'surveyable': 'https://linked.data.gov.au/def/csdm/defs/surveyableproperties/',\n                           'surveyproc': 'https://linked.data.gov.au/def/csdm/defs/surveyprocedures/'}}\n\nOn instance:\n    {'featureType': 'sosa:ObservationCollection',\n     'features': [{'geometry': None,\n                   'place': None,\n                   'properties': {'hasFeatureOfInterest': 'l973158',\n                                  'hasResult': {'pose': {'angles': {'pitch': -0.001,\n                                                                    'yaw': 231.38},\n                                                         'distance': 333207.1}}},\n                   'time': None,\n                   'type': 'Feature'}],\n     'id': 'vectorObservations',\n     'properties': {'angleType': 'angletype:bearing',\n                    'distanceType': 'distancetype:ellipsoidal',\n                    'observedProperty': 'surveyable:VectorDetermination',\n                    'resultTime': '2023-05-24T16:41:00',\n                    'usedProcedure': 'surveyproc:traverse'},\n     'time': None,\n     'type': 'FeatureCollection'}"
             }
           ]
         },
@@ -396,10 +396,8 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "<file:///github/workspace/vectorObservations>/sosa:hasMember"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
@@ -411,7 +409,7 @@
                     "<file:///github/workspace/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testResult>": {
@@ -419,12 +417,14 @@
                     "<file:///github/workspace/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<file:///github/workspace/vectorObservations>/sosa:hasMember"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <file:///github/workspace/vectorObservations>/sosa:hasMember\n"
             }
           ]
         },
@@ -440,7 +440,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/csdm/features/SurveyObservations/tests/quality-fail.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/tests/quality-fail.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/tests/quality-fail.json",
         "language": "json"
       },
       "result": true,
@@ -495,7 +495,7 @@
               "exception": "ValidationError",
               "errorMessage": "{'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'observedProperty': 'pose', 'resultTime': '2023-05-22T16:41:00', 'madeBySensor': {'sensorType': 'DifferentialGPS', 'baseSensor': 'gps+38666', 'roverSensor': 'gps+37544'}, 'hasResultQuality': {'distanceAccuracy': 'a string', 'angleAccuracy': 0.028154691543, 'distanceAccuracyClass': 1.2, 'angleAccuracyClass': 'http://any.valid/'}, 'hasResult': {'pose': {'angles': {'yaw': 231.38}, 'distance': 333207.1}}}} is not valid under any of the given schemas",
               "isError": true,
-              "message": "ValidationError: {'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'observedProperty': 'pose', 'resultTime': '2023-05-22T16:41:00', 'madeBySensor': {'sensorType': 'DifferentialGPS', 'baseSensor': 'gps+38666', 'roverSensor': 'gps+37544'}, 'hasResultQuality': {'distanceAccuracy': 'a string', 'angleAccuracy': 0.028154691543, 'distanceAccuracyClass': 1.2, 'angleAccuracyClass': 'http://any.valid/'}, 'hasResult': {'pose': {'angles': {'yaw': 231.38}, 'distance': 333207.1}}}} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$defs': {'SensorType': {'allOf': [{'properties': {'sensorType': {'$ref': '#/$defs/coderef'}},\n                                         'required': ['sensorType']},\n                                        {'oneOf': [{'properties': {'baseSensor': {'type': 'string'},\n                                                                   'roverSensor': {'type': 'string'},\n                                                                   'sensorType': {'const': 'DifferentialGPS'}},\n                                                    'required': ['baseSensor',\n                                                                 'roverSensor']},\n                                                   {'properties': {'sensorType': {'not': {'const': 'DifferentialGPS'}}}}]}]},\n               'SurveyVectorObsCollection': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml'},\n                                                       {'properties': {'features': {'items': {'$ref': '#/$defs/SurveyVectorObsFeature'},\n                                                                                    'type': 'array',\n                                                                                    'x-jsonld-container': '@set',\n                                                                                    'x-jsonld-id': 'sosa:hasMember'},\n                                                                       'properties': {'not': {'required': ['hasResult']},\n                                                                                      'properties': {'angleType': {'$ref': '#/$defs/coderef',\n                                                                                                                   'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                                                                                                                   'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/angleType',\n                                                                                                                   'x-jsonld-type': '@id'},\n                                                                                                     'distanceType': {'$ref': '#/$defs/coderef',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                                                                                                                      'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/distanceType',\n                                                                                                                      'x-jsonld-type': '@id'},\n                                                                                                     'madeBySensor': {'$ref': '#/$defs/SensorType',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/sensors/Sensor',\n                                                                                                                      'x-jsonld-id': 'sosa:madeBySensor'},\n                                                                                                     'observedProperty': {'$ref': '#/$defs/coderef',\n                                                                                                                          'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/property/',\n                                                                                                                          'x-jsonld-id': 'sosa:observedProperty',\n                                                                                                                          'x-jsonld-type': '@id'}},\n                                                                                      'required': ['madeBySensor',\n                                                                                                   'observedProperty']}}}]},\n               'SurveyVectorObsFeature': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml'},\n                                                    {'properties': {'properties': {'$ref': '#/$defs/SurveyVectorObsProps'}}}]},\n               'SurveyVectorObsProps': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml'},\n                                                  {'properties': {'hasResult': {'anyOf': [{'required': ['pose']},\n                                                                                          {'required': ['distance']},\n                                                                                          {'required': ['angle']}],\n                                                                                'properties': {'angle': {'type': 'number'},\n                                                                                               'distance': {'type': 'number',\n                                                                                                            'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/distance'},\n                                                                                               'pose': {'$ref': '#/$defs/pose-lenient',\n                                                                                                        'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/pose'}},\n                                                                                'x-jsonld-id': 'sosa:hasResult'},\n                                                                  'hasResultQuality': {'$ref': 'https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml'}},\n                                                   'required': ['hasResult'],\n                                                   'type': 'object'}]},\n               'angles': {'description': 'Basic-YPR: Basic GeoPose using '\n                                         'yaw, pitch, and roll to specify '\n                                         'orientation - only yaw is '\n                                         'mandatory allowing basic 2D '\n                                         'applications',\n                          'properties': {'pitch': {'type': 'number'},\n                                         'roll': {'type': 'number'},\n                                         'yaw': {'type': 'number'}},\n                          'required': ['yaw'],\n                          'type': 'object'},\n               'coderef': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml'},\n               'pose-lenient': {'description': 'Basic-YPR: Basic GeoPose '\n                                               'using yaw, pitch, and roll '\n                                               'to specify orientation',\n                                'properties': {'angles': {'$ref': '#/$defs/angles'}},\n                                'required': ['angles'],\n                                'type': 'object'}},\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'anyOf': [{'$ref': '#/$defs/SurveyVectorObsFeature'},\n               {'$ref': '#/$defs/SurveyVectorObsCollection'}],\n     'description': 'Survey Vector Observation',\n     'x-jsonld-prefixes': {'angletype': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                           'csdm': 'https://linked.data.gov.au/def/csdm/',\n                           'dct': 'http://purl.org/dc/terms/',\n                           'distancetype': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                           'geopose': 'https://linked.data.gov.au/def/csdm/utils/geopose/',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',\n                           'surv': 'https://linked.data.gov.au/def/csdm/surveyfeatures/',\n                           'surveyable': 'https://linked.data.gov.au/def/csdm/defs/surveyableproperties/',\n                           'surveyproc': 'https://linked.data.gov.au/def/csdm/defs/surveyprocedures/'}}\n\nOn instance:\n    {'geometry': None,\n     'place': None,\n     'properties': {'hasFeatureOfInterest': 'l973158',\n                    'hasResult': {'pose': {'angles': {'yaw': 231.38},\n                                           'distance': 333207.1}},\n                    'hasResultQuality': {'angleAccuracy': 0.028154691543,\n                                         'angleAccuracyClass': 'http://any.valid/',\n                                         'distanceAccuracy': 'a string',\n                                         'distanceAccuracyClass': 1.2},\n                    'madeBySensor': {'baseSensor': 'gps+38666',\n                                     'roverSensor': 'gps+37544',\n                                     'sensorType': 'DifferentialGPS'},\n                    'observedProperty': 'pose',\n                    'resultTime': '2023-05-22T16:41:00'},\n     'time': None,\n     'type': 'Feature'}"
+              "message": "ValidationError: {'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'observedProperty': 'pose', 'resultTime': '2023-05-22T16:41:00', 'madeBySensor': {'sensorType': 'DifferentialGPS', 'baseSensor': 'gps+38666', 'roverSensor': 'gps+37544'}, 'hasResultQuality': {'distanceAccuracy': 'a string', 'angleAccuracy': 0.028154691543, 'distanceAccuracyClass': 1.2, 'angleAccuracyClass': 'http://any.valid/'}, 'hasResult': {'pose': {'angles': {'yaw': 231.38}, 'distance': 333207.1}}}} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema:\n    {'$defs': {'SensorType': {'allOf': [{'properties': {'sensorType': {'$ref': '#/$defs/coderef'}},\n                                         'required': ['sensorType']},\n                                        {'oneOf': [{'properties': {'baseSensor': {'type': 'string'},\n                                                                   'roverSensor': {'type': 'string'},\n                                                                   'sensorType': {'const': 'DifferentialGPS'}},\n                                                    'required': ['baseSensor',\n                                                                 'roverSensor']},\n                                                   {'properties': {'sensorType': {'not': {'const': 'DifferentialGPS'}}}}]}]},\n               'SurveyVectorObsCollection': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml'},\n                                                       {'properties': {'features': {'items': {'$ref': '#/$defs/SurveyVectorObsFeature'},\n                                                                                    'type': 'array',\n                                                                                    'x-jsonld-container': '@set',\n                                                                                    'x-jsonld-id': 'sosa:hasMember'},\n                                                                       'properties': {'not': {'required': ['hasResult']},\n                                                                                      'properties': {'angleType': {'$ref': '#/$defs/coderef',\n                                                                                                                   'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                                                                                                                   'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/angleType',\n                                                                                                                   'x-jsonld-type': '@id'},\n                                                                                                     'distanceType': {'$ref': '#/$defs/coderef',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                                                                                                                      'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyobs/distanceType',\n                                                                                                                      'x-jsonld-type': '@id'},\n                                                                                                     'madeBySensor': {'$ref': '#/$defs/SensorType',\n                                                                                                                      'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/sensors/Sensor',\n                                                                                                                      'x-jsonld-id': 'sosa:madeBySensor'},\n                                                                                                     'observedProperty': {'$ref': '#/$defs/coderef',\n                                                                                                                          'x-jsonld-base': 'https://linked.data.gov.au/def/csdm/property/',\n                                                                                                                          'x-jsonld-id': 'sosa:observedProperty',\n                                                                                                                          'x-jsonld-type': '@id'}},\n                                                                                      'required': ['madeBySensor',\n                                                                                                   'observedProperty']}}}]},\n               'SurveyVectorObsFeature': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml'},\n                                                    {'properties': {'properties': {'$ref': '#/$defs/SurveyVectorObsProps'}}}]},\n               'SurveyVectorObsProps': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml'},\n                                                  {'properties': {'hasResult': {'anyOf': [{'required': ['pose']},\n                                                                                          {'required': ['distance']},\n                                                                                          {'required': ['angle']}],\n                                                                                'properties': {'angle': {'type': 'number'},\n                                                                                               'distance': {'type': 'number',\n                                                                                                            'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/distance'},\n                                                                                               'pose': {'$ref': '#/$defs/pose-lenient',\n                                                                                                        'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/surveyfeatures/pose'}},\n                                                                                'x-jsonld-id': 'sosa:hasResult'},\n                                                                  'hasResultQuality': {'$ref': 'https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml'}},\n                                                   'required': ['hasResult'],\n                                                   'type': 'object'}]},\n               'angles': {'description': 'Basic-YPR: Basic GeoPose using '\n                                         'yaw, pitch, and roll to specify '\n                                         'orientation - only yaw is '\n                                         'mandatory allowing basic 2D '\n                                         'applications',\n                          'properties': {'pitch': {'type': 'number'},\n                                         'roll': {'type': 'number'},\n                                         'yaw': {'type': 'number'}},\n                          'required': ['yaw'],\n                          'type': 'object'},\n               'coderef': {'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml'},\n               'pose-lenient': {'description': 'Basic-YPR: Basic GeoPose '\n                                               'using yaw, pitch, and roll '\n                                               'to specify orientation',\n                                'properties': {'angles': {'$ref': '#/$defs/angles'}},\n                                'required': ['angles'],\n                                'type': 'object'}},\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'anyOf': [{'$ref': '#/$defs/SurveyVectorObsFeature'},\n               {'$ref': '#/$defs/SurveyVectorObsCollection'}],\n     'description': 'Survey Vector Observation',\n     'x-jsonld-prefixes': {'angletype': 'https://linked.data.gov.au/def/csdm/defs/angletypes/',\n                           'csdm': 'https://linked.data.gov.au/def/csdm/',\n                           'dct': 'http://purl.org/dc/terms/',\n                           'distancetype': 'https://linked.data.gov.au/def/csdm/defs/distancetypes/',\n                           'geopose': 'https://linked.data.gov.au/def/csdm/utils/geopose/',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',\n                           'surv': 'https://linked.data.gov.au/def/csdm/surveyfeatures/',\n                           'surveyable': 'https://linked.data.gov.au/def/csdm/defs/surveyableproperties/',\n                           'surveyproc': 'https://linked.data.gov.au/def/csdm/defs/surveyprocedures/'}}\n\nOn instance:\n    {'geometry': None,\n     'place': None,\n     'properties': {'hasFeatureOfInterest': 'l973158',\n                    'hasResult': {'pose': {'angles': {'yaw': 231.38},\n                                           'distance': 333207.1}},\n                    'hasResultQuality': {'angleAccuracy': 0.028154691543,\n                                         'angleAccuracyClass': 'http://any.valid/',\n                                         'distanceAccuracy': 'a string',\n                                         'distanceAccuracyClass': 1.2},\n                    'madeBySensor': {'baseSensor': 'gps+38666',\n                                     'roverSensor': 'gps+37544',\n                                     'sensorType': 'DifferentialGPS'},\n                    'observedProperty': 'pose',\n                    'resultTime': '2023-05-22T16:41:00'},\n     'time': None,\n     'type': 'Feature'}"
             }
           ]
         },
@@ -540,35 +540,35 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:N5acb8a5094224260b743fa364274f2a4"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:N5acb8a5094224260b743fa364274f2a4"
+                    "_:N92cbc9d755494ac0b472284d573450c5"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:N5acb8a5094224260b743fa364274f2a4"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "_:N5acb8a5094224260b743fa364274f2a4"
+                    "_:N92cbc9d755494ac0b472284d573450c5"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N92cbc9d755494ac0b472284d573450c5"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:N92cbc9d755494ac0b472284d573450c5"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N5acb8a5094224260b743fa364274f2a4\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N5acb8a5094224260b743fa364274f2a4\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N5acb8a5094224260b743fa364274f2a4\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N5acb8a5094224260b743fa364274f2a4\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N92cbc9d755494ac0b472284d573450c5\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N92cbc9d755494ac0b472284d573450c5\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N92cbc9d755494ac0b472284d573450c5\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N92cbc9d755494ac0b472284d573450c5\n"
             }
           ]
         },
@@ -584,7 +584,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/csdm/features/SurveyObservations/tests/result-vector-fail.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/features/SurveyObservations/tests/result-vector-fail.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/tests/result-vector-fail.json",
         "language": "json"
       },
       "result": true,
@@ -684,35 +684,35 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:Na70b576ace0140d696efe3e19c80e4a3"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:Na70b576ace0140d696efe3e19c80e4a3"
+                    "_:N486754740e0a4324b371711daf105e42"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:Na70b576ace0140d696efe3e19c80e4a3"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "_:Na70b576ace0140d696efe3e19c80e4a3"
+                    "_:N486754740e0a4324b371711daf105e42"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N486754740e0a4324b371711daf105e42"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:N486754740e0a4324b371711daf105e42"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Na70b576ace0140d696efe3e19c80e4a3\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Na70b576ace0140d696efe3e19c80e4a3\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Na70b576ace0140d696efe3e19c80e4a3\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Na70b576ace0140d696efe3e19c80e4a3\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N486754740e0a4324b371711daf105e42\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N486754740e0a4324b371711daf105e42\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N486754740e0a4324b371711daf105e42\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N486754740e0a4324b371711daf105e42\n"
             }
           ]
         },
@@ -728,7 +728,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/csdm/features/SurveyObservations/newvector",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector",
+        "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/features/SurveyObservations/newvector",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"
@@ -822,35 +822,35 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:Nffda03d236df40d897b07410ff1c9a38"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:Nffda03d236df40d897b07410ff1c9a38"
+                    "_:N4a021df8b1f04aa780ca884332251848"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:Nffda03d236df40d897b07410ff1c9a38"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "_:Nffda03d236df40d897b07410ff1c9a38"
+                    "_:N4a021df8b1f04aa780ca884332251848"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N4a021df8b1f04aa780ca884332251848"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:N4a021df8b1f04aa780ca884332251848"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nffda03d236df40d897b07410ff1c9a38\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nffda03d236df40d897b07410ff1c9a38\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nffda03d236df40d897b07410ff1c9a38\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nffda03d236df40d897b07410ff1c9a38\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N4a021df8b1f04aa780ca884332251848\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N4a021df8b1f04aa780ca884332251848\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N4a021df8b1f04aa780ca884332251848\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N4a021df8b1f04aa780ca884332251848\n"
             }
           ]
         },
@@ -866,7 +866,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/csdm/features/SurveyObservations/newvector-3d",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/newvector-3d",
+        "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/features/SurveyObservations/newvector-3d",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "json"
@@ -960,35 +960,35 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:N2226bc05f9754c1f8623db32b4cfc954"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:N2226bc05f9754c1f8623db32b4cfc954"
+                    "_:N6142ad7272aa41b0b6b609bebc667c5f"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:N2226bc05f9754c1f8623db32b4cfc954"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "_:N2226bc05f9754c1f8623db32b4cfc954"
+                    "_:N6142ad7272aa41b0b6b609bebc667c5f"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N6142ad7272aa41b0b6b609bebc667c5f"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:N6142ad7272aa41b0b6b609bebc667c5f"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N2226bc05f9754c1f8623db32b4cfc954\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N2226bc05f9754c1f8623db32b4cfc954\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N2226bc05f9754c1f8623db32b4cfc954\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N2226bc05f9754c1f8623db32b4cfc954\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N6142ad7272aa41b0b6b609bebc667c5f\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N6142ad7272aa41b0b6b609bebc667c5f\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N6142ad7272aa41b0b6b609bebc667c5f\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N6142ad7272aa41b0b6b609bebc667c5f\n"
             }
           ]
         },
@@ -1004,7 +1004,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/csdm/features/SurveyObservations/example_3_1.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_3_1.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/features/SurveyObservations/example_3_1.json",
         "exampleIndex": 3,
         "snippetIndex": 1,
         "language": "json"
@@ -1098,35 +1098,35 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:Nb7c43b512e5d4ca5a57f675b1905b749"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:Nb7c43b512e5d4ca5a57f675b1905b749"
+                    "_:N4c5b7fafad96477b992ac40cc84b656d"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:Nb7c43b512e5d4ca5a57f675b1905b749"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "_:Nb7c43b512e5d4ca5a57f675b1905b749"
+                    "_:N4c5b7fafad96477b992ac40cc84b656d"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:N4c5b7fafad96477b992ac40cc84b656d"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:N4c5b7fafad96477b992ac40cc84b656d"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nb7c43b512e5d4ca5a57f675b1905b749\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nb7c43b512e5d4ca5a57f675b1905b749\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nb7c43b512e5d4ca5a57f675b1905b749\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nb7c43b512e5d4ca5a57f675b1905b749\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N4c5b7fafad96477b992ac40cc84b656d\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N4c5b7fafad96477b992ac40cc84b656d\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N4c5b7fafad96477b992ac40cc84b656d\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N4c5b7fafad96477b992ac40cc84b656d\n"
             }
           ]
         },
@@ -1142,7 +1142,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/csdm/features/SurveyObservations/example_4_1.json",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/example_4_1.json",
+        "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/features/SurveyObservations/example_4_1.json",
         "exampleIndex": 4,
         "snippetIndex": 1,
         "language": "json"
@@ -1236,35 +1236,35 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "_:N99dd714b00a44d01b393d0bfb4b72d5e"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
-                    "_:N99dd714b00a44d01b393d0bfb4b72d5e"
+                    "_:Nd37ba2b1effa4314bc34667a5944e1c8"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                   "nodes": [
-                    "_:N99dd714b00a44d01b393d0bfb4b72d5e"
-                  ]
-                },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                  "nodes": []
-                },
-                "<https://www.ogc.org/rules/sosa/#testResult>": {
-                  "nodes": [
-                    "_:N99dd714b00a44d01b393d0bfb4b72d5e"
+                    "_:Nd37ba2b1effa4314bc34667a5944e1c8"
                   ]
                 },
                 "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": [
+                    "_:Nd37ba2b1effa4314bc34667a5944e1c8"
+                  ]
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "_:Nd37ba2b1effa4314bc34667a5944e1c8"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N99dd714b00a44d01b393d0bfb4b72d5e\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N99dd714b00a44d01b393d0bfb4b72d5e\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N99dd714b00a44d01b393d0bfb4b72d5e\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N99dd714b00a44d01b393d0bfb4b72d5e\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nd37ba2b1effa4314bc34667a5944e1c8\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nd37ba2b1effa4314bc34667a5944e1c8\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nd37ba2b1effa4314bc34667a5944e1c8\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nd37ba2b1effa4314bc34667a5944e1c8\n"
             }
           ]
         },
@@ -1280,7 +1280,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/csdm/features/SurveyObservations/collection",
-        "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/features/SurveyObservations/collection",
+        "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/features/SurveyObservations/collection",
         "exampleIndex": 5,
         "snippetIndex": 1,
         "language": "json"
@@ -1376,10 +1376,8 @@
             {
               "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
-                  "nodes": [
-                    "<http://www.example.com/features/vectorObservations>/sosa:hasMember"
-                  ]
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                   "nodes": [
@@ -1391,7 +1389,7 @@
                     "<http://www.example.com/features/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
                   "nodes": []
                 },
                 "<https://www.ogc.org/rules/sosa/#testResult>": {
@@ -1399,12 +1397,14 @@
                     "<http://www.example.com/features/vectorObservations>/sosa:hasMember"
                   ]
                 },
-                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                  "nodes": []
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": [
+                    "<http://www.example.com/features/vectorObservations>/sosa:hasMember"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: <http://www.example.com/features/vectorObservations>/sosa:hasMember\n"
             }
           ]
         },

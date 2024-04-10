@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2024-04-09",
+  "dateOfLastChange": "2024-04-10",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -24,17 +24,17 @@
   ],
   "shaclRules": {
     "icsm.csdm.datatypes.compoundName": [
-      "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/rules.shacl"
+      "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
     ]
   },
-  "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld",
+  "ldContext": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/schema.json"
+    "application/yaml": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml",
+    "application/json": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.json"
   },
-  "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/context.jsonld",
-  "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/schema.json",
-  "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/compoundName/",
+  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/context.jsonld",
+  "sourceSchema": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/schema.json",
+  "sourceFiles": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/",
   "validationPassed": true,
   "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/datatypes/compoundName/",
   "examples": [
@@ -47,17 +47,17 @@
           "ref": "example.json",
           "base-uri": "http://www.example.com/namedobjects/",
           "code": "{\n    \"id\": \"CompoundNameExample\",\n    \"type\": \"CompoundName\",\n    \"label\": \"IS II - DP 3333\",\n    \"comment\": \"note: label may be absent or subject to rules regarding presence of parts\",\n    \"hasPart\": [\n        {\n            \"type\": \"Source\",\n            \"label\": \"DP 3333\"\n        },\n        {\n            \"type\": \"Stamp\",\n            \"label\": \"IS II\"\n        }\n    ]\n}",
-          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/compoundName/example_1_1.json"
+          "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/compoundName/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"id\": \"CompoundNameExample\",\n  \"type\": \"CompoundName\",\n  \"label\": \"IS II - DP 3333\",\n  \"comment\": \"note: label may be absent or subject to rules regarding presence of parts\",\n  \"hasPart\": [\n    {\n      \"type\": \"Source\",\n      \"label\": \"DP 3333\"\n    },\n    {\n      \"type\": \"Stamp\",\n      \"label\": \"IS II\"\n    }\n  ],\n  \"@context\": \"https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/compoundName/context.jsonld\"\n}",
-          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/compoundName/example_1_1.jsonld"
+          "code": "{\n  \"id\": \"CompoundNameExample\",\n  \"type\": \"CompoundName\",\n  \"label\": \"IS II - DP 3333\",\n  \"comment\": \"note: label may be absent or subject to rules regarding presence of parts\",\n  \"hasPart\": [\n    {\n      \"type\": \"Source\",\n      \"label\": \"DP 3333\"\n    },\n    {\n      \"type\": \"Stamp\",\n      \"label\": \"IS II\"\n    }\n  ],\n  \"@context\": \"https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld\"\n}",
+          "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/compoundName/example_1_1.jsonld"
         },
         {
           "language": "ttl",
-          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"IS II - DP 3333\" ;\n    dcterms:hasPart [ rdfs:label \"IS II\" ;\n            commonpatterns:namePartType \"Stamp\" ],\n        [ rdfs:label \"DP 3333\" ;\n            commonpatterns:namePartType \"Source\" ] .\n\n",
-          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/compoundName/example_1_1.ttl"
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"IS II - DP 3333\" ;\n    dcterms:hasPart [ rdfs:label \"DP 3333\" ;\n            commonpatterns:namePartType \"Source\" ],\n        [ rdfs:label \"IS II\" ;\n            commonpatterns:namePartType \"Stamp\" ] .\n\n",
+          "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/compoundName/example_1_1.ttl"
         }
       ]
     }

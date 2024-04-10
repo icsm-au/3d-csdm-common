@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2024-04-09",
+  "dateOfLastChange": "2024-04-10",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -27,14 +27,14 @@
     "ogc.ogc-utils.iri-or-curie",
     "ogc.geo.json-fg.link-role"
   ],
-  "ldContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
+  "ldContext": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.json"
+    "application/yaml": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema.yaml",
+    "application/json": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema.json"
   },
-  "sourceLdContext": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/context.jsonld",
-  "sourceSchema": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/schema.json",
-  "sourceFiles": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/_sources/csdm/datatypes/annotation/",
+  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/annotation/context.jsonld",
+  "sourceSchema": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/annotation/schema.json",
+  "sourceFiles": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/annotation/",
   "validationPassed": true,
   "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/datatypes/annotation/",
   "examples": [
@@ -47,17 +47,17 @@
           "ref": "example.json",
           "base-uri": "http://www.example.com/namedobjects/",
           "code": "[\n  {\n    \"description\": \"Annotation with link and role\",\n    \"href\": \"http://example.org/aDocument\",\n    \"role\": \"http://example.org/myReason\",\n    \"rel\": \"related\"\n  },\n  {\n    \"description\": \"Annotation with role\",\n    \"role\": \"http://example.org/myReason\"\n  },\n  \"Plain text annotation\"\n]\n",
-          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.json"
+          "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/annotation/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld\",\n  \"@graph\": [\n    {\n      \"description\": \"Annotation with link and role\",\n      \"href\": \"http://example.org/aDocument\",\n      \"role\": \"http://example.org/myReason\",\n      \"rel\": \"related\"\n    },\n    {\n      \"description\": \"Annotation with role\",\n      \"role\": \"http://example.org/myReason\"\n    },\n    \"Plain text annotation\"\n  ]\n}",
-          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/context.jsonld\",\n  \"@graph\": [\n    {\n      \"description\": \"Annotation with link and role\",\n      \"href\": \"http://example.org/aDocument\",\n      \"role\": \"http://example.org/myReason\",\n      \"rel\": \"related\"\n    },\n    {\n      \"description\": \"Annotation with role\",\n      \"role\": \"http://example.org/myReason\"\n    },\n    \"Plain text annotation\"\n  ]\n}",
+          "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/annotation/example_1_1.jsonld"
         },
         {
           "language": "ttl",
-          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] dcterms:description \"Annotation with link and role\" ;\n    ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/myReason> ;\n    oa:hasTarget <http://example.org/aDocument> .\n\n[] dcterms:description \"Annotation with role\" ;\n    prof:hasRole <http://example.org/myReason> .\n\n",
-          "url": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/annotation/example_1_1.ttl"
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n\n[] dcterms:description \"Annotation with role\" ;\n    prof:hasRole <http://example.org/myReason> .\n\n[] dcterms:description \"Annotation with link and role\" ;\n    ns1:relation <http://www.iana.org/assignments/relation/related> ;\n    prof:hasRole <http://example.org/myReason> ;\n    oa:hasTarget <http://example.org/aDocument> .\n\n",
+          "url": "https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/annotation/example_1_1.ttl"
         }
       ]
     }

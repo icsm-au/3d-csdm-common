@@ -85,7 +85,7 @@ An example observation of a vector based on bearing and distance - in 2D
       }
     }
   },
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
@@ -169,7 +169,7 @@ An example observation of a vector based on bearing,pitch (azimuth angle) and di
       }
     }
   },
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
@@ -232,7 +232,7 @@ Example Survey Observation - vector only distance
       "distance": 333207.1
     }
   },
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
@@ -309,7 +309,7 @@ Example Survey Observation - vector only bearing
       }
     }
   },
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld"
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld"
 }
 ```
 
@@ -378,7 +378,7 @@ Example Collection of Survey Observations
 ```jsonld
 {
   "@context": [
-    "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld",
+    "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld",
     {}
   ],
   "id": "vectorObservations",
@@ -502,7 +502,7 @@ $defs:
     - type: object
       properties:
         hasResultQuality:
-          $ref: https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml
+          $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml
         hasResult:
           properties:
             pose:
@@ -584,8 +584,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema.yaml)
+* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.json)
+* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml)
 
 
 # JSON-LD Context
@@ -1107,7 +1107,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/context.jsonld)
+[context.jsonld](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld)
 
 ## Sources
 

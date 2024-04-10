@@ -50,8 +50,8 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-commo
 
 <blockquote class="lang-specific json">
   <p class="example-links">
-    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/quality/example_1_1.json">Open in new window</a>
-    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fquality%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/quality/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-common%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fquality%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
 
 
@@ -63,14 +63,14 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-commo
   "angleAccuracy": 0.028154691543,
   "distanceAccuracyClass": "http://any.valid/",
   "angleAccuracyClass": "http://any.valid/",
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld"
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/context.jsonld"
 }
 ```
 
 <blockquote class="lang-specific jsonld">
   <p class="example-links">
-    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/quality/example_1_1.jsonld">Open in new window</a>
-    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fquality%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/quality/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-common%2Fbuild%2Ftests%2Fcsdm%2Fdatatypes%2Fquality%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
 </blockquote>
 
 
@@ -90,7 +90,7 @@ This building block is <strong><a href="https://github.com/icsm-au/3d-csdm-commo
 
 <blockquote class="lang-specific turtle">
   <p class="example-links">
-    <a target="_blank" href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/tests/csdm/datatypes/quality/example_1_1.ttl">Open in new window</a>
+    <a target="_blank" href="https://icsm-au.github.io/3d-csdm-common/build/tests/csdm/datatypes/quality/example_1_1.ttl">Open in new window</a>
 </blockquote>
 
 
@@ -124,12 +124,12 @@ x-jsonld-prefixes:
 
 ```
 
-> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fquality%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
+> <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-common%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fquality%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a>
 
 Links to the schema:
 
-* YAML version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.yaml</a>
-* JSON version: <a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.json" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.json</a>
+* YAML version: <a href="https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml" target="_blank">https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml</a>
+* JSON version: <a href="https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.json" target="_blank">https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.json</a>
 
 
 # JSON-LD Context
@@ -153,10 +153,10 @@ Links to the schema:
 }
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ficsm-au%2F3d-csdm-common%2Fmain%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fquality%2Fcontext.jsonld">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Ficsm-au.github.io%2F3d-csdm-common%2Fbuild%2Fannotated%2Fcsdm%2Fdatatypes%2Fquality%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
-<a href="https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld" target="_blank">https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/context.jsonld</a>
+<a href="https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/context.jsonld" target="_blank">https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/context.jsonld</a>
 
 # References
 

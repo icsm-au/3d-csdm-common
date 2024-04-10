@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyFeatures - Survey Features
-Generated 2024-04-10T02:26:52.688691+00:00
+Generated 2024-04-10T06:13:00.571245+00:00
 === Files ===
 Using surveymark (example_1_1) from examples
 JSON-LD context is present - uplifting
@@ -12,6 +12,21 @@ Validation passed
 === End JSON Schema ===
 
 === SHACL ===
+Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:n65ecd911c39d48e1be608738129101afb1: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n782e9aad7f674c508af9b74cf31f931ab3: eg1:P1/geojson:geometry
+ - Shape _:n782e9aad7f674c508af9b74cf31f931ab1: eg1:P1/geojson:geometry
+
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
@@ -19,21 +34,6 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
  - Shape topo:testTopoLinesReferencePoints: *none*
  - Shape topo:testTopoReferencesExist: *none*
-
-Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n34e7bc12b86a4032adb0b302e5144c23b1: eg1:P1/geojson:geometry
- - Shape _:n34e7bc12b86a4032adb0b302e5144c23b3: eg1:P1/geojson:geometry
-
-Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n132888c868be4119a578c863353e63bfb1: *none*
 
 === End SHACL ===
 

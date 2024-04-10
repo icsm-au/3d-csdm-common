@@ -4,14 +4,14 @@
       "description": "Survey Vector Observation",
       "$defs": {
         "coderef": {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
         },
         "SensorType": {
           "allOf": [
             {
               "properties": {
                 "sensorType": {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/coderef"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/coderef"
                 }
               },
               "required": [
@@ -73,7 +73,7 @@
           "type": "object",
           "properties": {
             "angles": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/angles"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/angles"
             }
           },
           "required": [
@@ -83,13 +83,13 @@
         "SurveyVectorObsProps": {
           "allOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
             },
             {
               "type": "object",
               "properties": {
                 "hasResultQuality": {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/raw.githubusercontent.com_icsm-au_3d-csdm-common_main_build_annotated_csdm_datatypes_quality_schema.json"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm-au.github.io_3d-csdm-common_build_annotated_csdm_datatypes_quality_schema.json"
                 },
                 "hasResult": {
                   "properties": {
@@ -131,12 +131,12 @@
         "SurveyVectorObsFeature": {
           "allOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.features.observation"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.features.observation"
             },
             {
               "properties": {
                 "properties": {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsProps"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsProps"
                 }
               }
             }
@@ -145,14 +145,14 @@
         "SurveyVectorObsCollection": {
           "allOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection"
             },
             {
               "properties": {
                 "features": {
                   "type": "array",
                   "items": {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsFeature"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsFeature"
                   },
                   "x-jsonld-id": "sosa:hasMember",
                   "x-jsonld-container": "@set"
@@ -181,10 +181,10 @@
       },
       "anyOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsFeature"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsFeature"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsCollection"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations/$defs/SurveyVectorObsCollection"
         }
       ],
       "x-jsonld-prefixes": {
@@ -199,7 +199,7 @@
         "surveyable": "https://linked.data.gov.au/def/csdm/defs/surveyableproperties/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json"
+      "x-schema-source": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json"
     },
     "ogc.ogc-utils.iri-or-curie": {
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
@@ -694,7 +694,7 @@
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
       "x-schema-source": "https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json"
     },
-    "raw.githubusercontent.com_icsm-au_3d-csdm-common_main_build_annotated_csdm_datatypes_quality_schema.json": {
+    "icsm-au.github.io_3d-csdm-common_build_annotated_csdm_datatypes_quality_schema.json": {
       "description": "Survey Vector Observation Quality",
       "properties": {
         "angleAccuracy": {
@@ -720,14 +720,14 @@
         "csdm": "https://linked.data.gov.au/def/csdm/"
       },
       "x-schema-version": "https://json-schema.org/draft/2020-12/schema",
-      "x-schema-source": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/quality/schema.json"
+      "x-schema-source": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.json"
     },
     "ogc.sosa.features.observation": {
       "description": "SOSA Observation Feature",
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.feature-lenient"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.json-fg.feature-lenient"
         },
         {
           "type": "object",
@@ -1237,13 +1237,13 @@
               "items": {
                 "anyOf": [
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection/$defs/collection"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection/$defs/collection"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observation"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.iri-or-curie"
                   }
                 ]
               },
@@ -1255,7 +1255,7 @@
       },
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection/$defs/collection"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.sosa.properties.observationCollection/$defs/collection"
         },
         {
           "not": {
@@ -1648,7 +1648,7 @@
     "ogc.geo.json-fg.feature-lenient": {
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.features.feature"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.features.feature"
         },
         {
           "type": "object",
@@ -1682,23 +1682,23 @@
               "items": {
                 "allOf": [
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_link.json"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_link.json"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
                   }
                 ]
               },
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
             "time": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json"
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "place": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_place.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_place.json"
             },
             "geometry": {},
             "properties": {
@@ -1745,18 +1745,18 @@
     "ogc.geo.features.feature": {
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.geojson"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.geojson"
         },
         {
           "type": "object",
           "properties": {
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.bounding_box"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.bounding_box"
             },
             "links": {
               "type": "array",
               "items": {
-                "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
+                "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
               },
               "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
             },
@@ -1887,13 +1887,13 @@
           "type": "object",
           "properties": {
             "date": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
             },
             "timestamp": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
             },
             "interval": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/interval"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/interval"
             }
           }
         }
@@ -1914,10 +1914,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
+                "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/date"
               },
               {
-                "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
+                "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_time.json/$defs/timestamp"
               },
               {
                 "type": "string",
@@ -1938,12 +1938,12 @@
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
         },
         {
           "type": "array",
           "items": {
-            "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
+            "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/single-refsys"
           },
           "minItems": 2
         }
@@ -1952,13 +1952,13 @@
         "single-refsys": {
           "oneOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-simpleref"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-simpleref"
             },
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-byref"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-byref"
             },
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-custom"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json/$defs/refsys-custom"
             }
           ]
         },
@@ -2013,37 +2013,37 @@
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polyhedron"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polyhedron"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolyhedron"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolyhedron"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPrism"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPrism"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/CustomGeometry"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/CustomGeometry"
         }
       ],
       "nullable": true,
@@ -2055,25 +2055,25 @@
       "description": "This JSON Schema is part of JSON-FG version 0.2.2",
       "oneOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
         },
         {
-          "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/GeometryCollection"
+          "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/GeometryCollection"
         }
       ],
       "nullable": true,
@@ -2731,13 +2731,13 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -2756,17 +2756,17 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
               "minItems": 2,
               "items": {
-                "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -2785,7 +2785,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -2793,12 +2793,12 @@
                 "type": "array",
                 "minItems": 4,
                 "items": {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
                 }
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -2817,16 +2817,16 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
               "items": {
-                "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -2845,7 +2845,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -2853,12 +2853,12 @@
                 "type": "array",
                 "minItems": 2,
                 "items": {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
                 }
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -2877,7 +2877,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -2887,13 +2887,13 @@
                   "type": "array",
                   "minItems": 4,
                   "items": {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position"
                   }
                 }
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -2912,7 +2912,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -2927,14 +2927,14 @@
                     "type": "array",
                     "minItems": 4,
                     "items": {
-                      "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
+                      "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
                     }
                   }
                 }
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
             }
           }
         },
@@ -2953,7 +2953,7 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "coordinates": {
               "type": "array",
@@ -2970,7 +2970,7 @@
                       "type": "array",
                       "minItems": 4,
                       "items": {
-                        "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
+                        "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/position3d"
                       }
                     }
                   }
@@ -2978,7 +2978,7 @@
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
             }
           }
         },
@@ -2998,27 +2998,27 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "base": {
               "oneOf": [
                 {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
                 },
                 {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
                 },
                 {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
                 },
                 {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
                 },
                 {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
                 },
                 {
-                  "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+                  "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
                 }
               ]
             },
@@ -3029,7 +3029,7 @@
               "type": "number"
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
             }
           }
         },
@@ -3048,16 +3048,16 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "prisms": {
               "type": "array",
               "items": {
-                "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
+                "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Prism"
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
             }
           }
         },
@@ -3076,35 +3076,35 @@
               ]
             },
             "coordRefSys": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_coordrefsys.json"
             },
             "geometries": {
               "type": "array",
               "items": {
                 "oneOf": [
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Point"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPoint"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/LineString"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiLineString"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/Polygon"
                   },
                   {
-                    "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
+                    "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/MultiPolygon"
                   }
                 ]
               }
             },
             "bbox": {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox"
             }
           }
         },
@@ -3127,10 +3127,10 @@
         "bbox": {
           "oneOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox2d"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox2d"
             },
             {
-              "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
+              "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/beta.schemas.opengis.net_json-fg_geometry-objects.json/$defs/bbox3d"
             }
           ]
         },
@@ -3157,7 +3157,7 @@
   },
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations"
+      "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema-oas3.0.json#/x-defs/icsm.csdm.features.SurveyObservations"
     }
   ]
 }

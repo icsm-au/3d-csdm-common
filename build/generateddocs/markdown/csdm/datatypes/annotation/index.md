@@ -32,7 +32,7 @@ A name with a label, but also a set of parts with roles that can be validated ag
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld",
+  "@context": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/context.jsonld",
   "@graph": [
     {
       "description": "Annotation with link and role",
@@ -56,13 +56,13 @@ A name with a label, but also a set of parts with roles that can be validated ag
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 
+[] dcterms:description "Annotation with role" ;
+    prof:hasRole <http://example.org/myReason> .
+
 [] dcterms:description "Annotation with link and role" ;
     ns1:relation <http://www.iana.org/assignments/relation/related> ;
     prof:hasRole <http://example.org/myReason> ;
     oa:hasTarget <http://example.org/aDocument> .
-
-[] dcterms:description "Annotation with role" ;
-    prof:hasRole <http://example.org/myReason> .
 
 
 ```
@@ -104,8 +104,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/schema.yaml)
+* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema.json)
+* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema.yaml)
 
 
 # JSON-LD Context
@@ -147,7 +147,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/icsm-au/3d-csdm-common/main/build/annotated/csdm/datatypes/annotation/context.jsonld)
+[context.jsonld](https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/context.jsonld)
 
 ## Sources
 

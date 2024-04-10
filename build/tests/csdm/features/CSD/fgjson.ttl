@@ -43,10 +43,10 @@
 <https://linked.data.gov.au/def/csdm/csd-example/44396823> a surv:CadastralMark,
         geojson:Feature ;
     rdfs:label [ rdfs:label "ALP I DP 481392" ;
-            dct:hasPart [ rdfs:label "ALP I" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "DP 481392" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+            dct:hasPart [ rdfs:label "DP 481392" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "ALP I" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
             surv:form nz-monument-form:pin ;
             surv:state nz-monument-state:original ] ;
@@ -91,14 +91,14 @@
     rdfs:label [ rdfs:label "RM C DP 119552 (EQ9W)" ;
             dct:hasPart [ rdfs:label "RM" ;
                     commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "EQ9W" ;
+                    commonpatterns:namePartType "geodeticStamp" ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "119552" ;
-                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "C" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "EQ9W" ;
-                    commonpatterns:namePartType "geodeticStamp" ] ] ;
+                [ rdfs:label "119552" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     surv:geodeticid "XX FFF" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
             surv:form nz-monument-form:pin ;
