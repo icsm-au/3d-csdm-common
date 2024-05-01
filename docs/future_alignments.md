@@ -46,7 +46,7 @@ The rationale for this conflation is twofold:
 
 A OGC LADM Specifications Working Group (SWG) is being established (voting on the charter is currently underway).
  
-In the meantime, intentions to develop an encoding standard for LADM have been published [3], with a workshop in September 2024.
+In the meantime, intentions to develop an encoding standard for LADM have been published[[3]](#3), with a workshop in September 2024.
  
 "This workshop will provide solid input to the "Implementation" part of Edition II of LADM, to be developed in collaboration with OGC. The workshop should enable making important choices, such as the technical encodings."
  
