@@ -9,8 +9,7 @@
 
 :testRequiredProperties
   a sh:NodeShape ;
-  sh:targetObjectsOf sosa:hasMember ;
-  sh:targetClass sosa:Observation ;
+  sh:targetClass sosa:Observation, sosa:ObservationCollection ;
   sh:property [
     sh:path ( [sh:zeroOrMorePath [sh:inversePath sosa:hasMember]] sosa:madeBySensor ) ;
     sh:minCount 1 ;

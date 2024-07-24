@@ -53,6 +53,8 @@ This structure allows for:
 
 ## Further documentation
 
+The [OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/) documentation describes the general approach to packaging and testing specifications.
+
 The OGC register of Building Blocks is [here](https://opengeospatial.github.io/bblocks/register.html)
 
 This is a "permissive" schema suitable for international contexts, with ICSM common and specific jurisdictional profiles described with machine-readable constraints in a separate repository [https://github.com/icsm-au/3d-csdm-profiles](https://github.com/icsm-au/3d-csdm-profiles)
