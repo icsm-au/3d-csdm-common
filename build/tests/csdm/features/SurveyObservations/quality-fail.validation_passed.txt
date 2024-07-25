@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-04-10T06:13:00.058797+00:00
+Generated 2024-07-25T00:08:38.306392+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -17,14 +17,19 @@ Output Turtle quality-fail.ttl created
 ValidationError: {'type': 'Feature', 'geometry': None, 'time': None, 'place': None, 'properties': {'hasFeatureOfInterest': 'l973158', 'observedProperty': 'pose', 'resultTime': '2023-05-22T16:41:00', 'madeBySensor': {'sensorType': 'DifferentialGPS', 'baseSensor': 'gps+38666', 'roverSensor': 'gps+37544'}, 'hasResultQuality': {'distanceAccuracy': 'a string', 'angleAccuracy': 0.028154691543, 'distanceAccuracyClass': 1.2, 'angleAccuracyClass': 'http://any.valid/'}, 'hasResult': {'pose': {'angles': {'yaw': 231.38}, 'distance': 333207.1}}}} is not valid under any of the given schemas
 
 Failed validating 'anyOf' in schema:
-    {'$defs': {'SensorType': {'allOf': [{'properties': {'sensorType': {'$ref': '#/$defs/coderef'}},
+    {'$defs': {'SensorType': {'allOf': [{'properties': {'sensorType': {'$ref': '#/$defs/coderef',
+                                                                       'x-jsonld-id': '@type'}},
                                          'required': ['sensorType']},
-                                        {'oneOf': [{'properties': {'baseSensor': {'type': 'string'},
-                                                                   'roverSensor': {'type': 'string'},
-                                                                   'sensorType': {'const': 'DifferentialGPS'}},
+                                        {'oneOf': [{'properties': {'baseSensor': {'type': 'string',
+                                                                                  'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/sensors/baseSensor'},
+                                                                   'roverSensor': {'type': 'string',
+                                                                                   'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/sensors/roverSensor'},
+                                                                   'sensorType': {'const': 'DifferentialGPS',
+                                                                                  'x-jsonld-id': '@type'}},
                                                     'required': ['baseSensor',
                                                                  'roverSensor']},
-                                                   {'properties': {'sensorType': {'not': {'const': 'DifferentialGPS'}}}}]}]},
+                                                   {'properties': {'sensorType': {'not': {'const': 'DifferentialGPS'},
+                                                                                  'x-jsonld-id': '@type'}}}]}]},
                'SurveyVectorObsCollection': {'allOf': [{'$ref': 'https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.yaml'},
                                                        {'properties': {'features': {'items': {'$ref': '#/$defs/SurveyVectorObsFeature'},
                                                                                     'type': 'array',
@@ -77,7 +82,8 @@ Failed validating 'anyOf' in schema:
                'pose-lenient': {'description': 'Basic-YPR: Basic GeoPose '
                                                'using yaw, pitch, and roll '
                                                'to specify orientation',
-                                'properties': {'angles': {'$ref': '#/$defs/angles'}},
+                                'properties': {'angles': {'$ref': '#/$defs/angles',
+                                                          'x-jsonld-id': 'https://linked.data.gov.au/def/csdm/utils/geopose/angles'}},
                                 'required': ['angles'],
                                 'type': 'object'}},
      '$schema': 'https://json-schema.org/draft/2020-12/schema',
@@ -127,11 +133,11 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N92cbc9d755494ac0b472284d573450c5
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N92cbc9d755494ac0b472284d573450c5
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N1a45164d9da040a49ddf7a53178e66b0
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N92cbc9d755494ac0b472284d573450c5
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N92cbc9d755494ac0b472284d573450c5
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N1a45164d9da040a49ddf7a53178e66b0
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N1a45164d9da040a49ddf7a53178e66b0
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N1a45164d9da040a49ddf7a53178e66b0
 
 === End SHACL ===
 

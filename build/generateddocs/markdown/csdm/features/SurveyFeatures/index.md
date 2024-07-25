@@ -772,87 +772,16 @@ Links to the schema:
       "@type": "@id"
     },
     "wasInvalidatedBy": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
+      "@context": {},
       "@id": "prov:wasInvalidatedBy",
       "@type": "@id"
     },
     "wasQuotedFrom": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
       "@id": "prov:wasQuotedFrom",
       "@type": "@id"
     },
     "wasRevisionOf": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
       "@id": "prov:wasRevisionOf",
-      "@type": "@id"
-    },
-    "mentionOf": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "prov:mentionOf",
       "@type": "@id"
     },
     "atLocation": {
@@ -883,7 +812,23 @@ Links to the schema:
       "@context": {
         "atTime": {
           "@id": "prov:atTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
+        },
+        "hadRole": {
+          "@id": "prov:hadRole",
+          "@type": "@id"
+        },
+        "influencer": {
+          "@id": "prov:influencer",
+          "@type": "@id"
+        },
+        "hadActivity": {
+          "@id": "prov:hadActivity",
+          "@type": "@id"
+        },
+        "activity": {
+          "@id": "prov:activity",
+          "@type": "@id"
         }
       },
       "@id": "prov:qualifiedGeneration",
@@ -893,7 +838,23 @@ Links to the schema:
       "@context": {
         "atTime": {
           "@id": "prov:atTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
+        },
+        "hadRole": {
+          "@id": "prov:hadRole",
+          "@type": "@id"
+        },
+        "influencer": {
+          "@id": "prov:influencer",
+          "@type": "@id"
+        },
+        "hadActivity": {
+          "@id": "prov:hadActivity",
+          "@type": "@id"
+        },
+        "activity": {
+          "@id": "prov:activity",
+          "@type": "@id"
         }
       },
       "@id": "prov:qualifiedInvalidation",
@@ -905,7 +866,19 @@ Links to the schema:
           "@context": {
             "atTime": {
               "@id": "prov:atTime",
-              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "@type": "xsd:dateTime"
+            },
+            "hadRole": {
+              "@id": "prov:hadRole",
+              "@type": "@id"
+            },
+            "influencer": {
+              "@id": "prov:influencer",
+              "@type": "@id"
+            },
+            "activity": {
+              "@id": "prov:activity",
+              "@type": "@id"
             }
           },
           "@id": "prov:hadGeneration",
@@ -919,7 +892,7 @@ Links to the schema:
           "@context": {
             "atTime": {
               "@id": "prov:atTime",
-              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "@type": "xsd:dateTime"
             }
           },
           "@id": "prov:hadUsage",
@@ -991,6 +964,10 @@ Links to the schema:
           "@id": "prov:entity",
           "@type": "@id"
         },
+        "activity": {
+          "@id": "prov:activity",
+          "@type": "@id"
+        },
         "agent": {
           "@context": {
             "href": {
@@ -1025,7 +1002,7 @@ Links to the schema:
     "activityType": "@type",
     "endedAtTime": {
       "@id": "prov:endedAtTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "wasAssociatedWith": {
       "@context": {
@@ -1081,7 +1058,7 @@ Links to the schema:
       "@context": {
         "atTime": {
           "@id": "prov:atTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
         },
         "entity": {
           "@id": "prov:entity",
@@ -1095,7 +1072,23 @@ Links to the schema:
       "@context": {
         "atTime": {
           "@id": "prov:atTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
+        },
+        "hadRole": {
+          "@id": "prov:hadRole",
+          "@type": "@id"
+        },
+        "influencer": {
+          "@id": "prov:influencer",
+          "@type": "@id"
+        },
+        "hadActivity": {
+          "@id": "prov:hadActivity",
+          "@type": "@id"
+        },
+        "activity": {
+          "@id": "prov:activity",
+          "@type": "@id"
         }
       },
       "@id": "prov:qualifiedCommunication",
@@ -1105,7 +1098,7 @@ Links to the schema:
       "@context": {
         "atTime": {
           "@id": "prov:atTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
         },
         "entity": {
           "@id": "prov:entity",
@@ -1123,7 +1116,7 @@ Links to the schema:
       "@context": {
         "atTime": {
           "@id": "prov:atTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "@type": "xsd:dateTime"
         },
         "entity": {
           "@id": "prov:entity",
@@ -1243,25 +1236,25 @@ Links to the schema:
     "Removal": "prov:Removal",
     "generatedAtTime": {
       "@id": "prov:generatedAtTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "invalidatedAtTime": {
       "@id": "prov:invalidatedAtTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "startedAtTime": {
       "@id": "prov:startedAtTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type": "xsd:dateTime"
     },
     "value": "prov:value",
     "provenanceUriTemplate": "prov:provenanceUriTemplate",
     "pairKey": {
       "@id": "prov:pairKey",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type": "rdfs:Literal"
     },
     "removedKey": {
       "@id": "prov:removedKey",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type": "rdfs:Literal"
     },
     "influenced": {
       "@id": "prov:influenced",
@@ -1331,6 +1324,10 @@ Links to the schema:
       "@id": "prov:asInBundle",
       "@type": "@id"
     },
+    "mentionOf": {
+      "@id": "prov:mentionOf",
+      "@type": "@id"
+    },
     "ptQuality": {
       "@id": "commonpatterns:qualityClass",
       "@type": "@id"
@@ -1368,9 +1365,48 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
+    "time": {
+      "@context": {
+        "date": {
+          "@id": "owlTime:hasTime",
+          "@type": "xsd:date"
+        },
+        "timestamp": {
+          "@id": "owlTime:hasTime",
+          "@type": "xsd:dateTime"
+        },
+        "interval": {
+          "@id": "owlTime:hasTime",
+          "@container": "@list"
+        }
+      },
+      "@id": "dct:time"
+    },
+    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "place": "dct:spatial",
+    "Polyhedron": "geojson:Polyhedron",
+    "MultiPolyhedron": "geojson:MultiPolyhedron",
+    "Prism": {
+      "@id": "geojson:Prism",
+      "@context": {
+        "base": "geojson:prismBase",
+        "lower": "geojson:prismLower",
+        "upper": "geojson:prismUpper"
+      }
+    },
+    "MultiPrism": {
+      "@id": "geojson:MultiPrism",
+      "@context": {
+        "prisms": "geojson:prisms"
+      }
+    },
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
+    },
+    "geometries": {
+      "@id": "geojson:geometry",
+      "@container": "@list"
     },
     "age": "surv:age",
     "note": "rdfs:comment",
@@ -1425,7 +1461,6 @@ Links to the schema:
       "@type": "@id",
       "@id": "surv:vectorPurpose"
     },
-    "place": "geojson:geometry",
     "CadastralMark": {
       "@id": "surv:CadastralMark",
       "@type": "@id"
@@ -1459,6 +1494,7 @@ Links to the schema:
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "oa": "http://www.w3.org/ns/oa#",
+    "owlTime": "http://www.w3.org/2006/time#",
     "@version": 1.1
   }
 }

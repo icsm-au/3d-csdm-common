@@ -135,19 +135,24 @@ This is an abstract class, usually implemented by a subclass such as a SurevyMar
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
-    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ;
+    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ;
+                    geopose:angles [ ] ] ] ;
     sosa:hasResultQuality [ ns1:angleAccuracyClass <http://any.valid/> ;
             ns1:angleAccuracyMeasure 2.815469e-02 ;
             ns1:distanceAccuracyClass <http://any.valid/> ;
             ns1:distanceAccuracyMeasure 1.00138e-04 ] ;
-    sosa:madeBySensor [ ] ;
+    sosa:madeBySensor [ a ns2:DifferentialGPS ;
+            ns2:baseSensor "gps+38666" ;
+            ns2:roverSensor "gps+37544" ] ;
     sosa:observedProperty <https://linked.data.gov.au/def/csdm/property/pose> ;
     sosa:resultTime "2023-05-22T16:41:00" .
 
@@ -244,14 +249,19 @@ An example observation of a vector based on bearing and distance - in 2D
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
-    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ;
-    sosa:madeBySensor [ ] ;
+    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ;
+                    geopose:angles [ ] ] ] ;
+    sosa:madeBySensor [ a ns1:DifferentialGPS ;
+            ns1:baseSensor "gps+38666" ;
+            ns1:roverSensor "gps+37544" ] ;
     sosa:observedProperty <https://linked.data.gov.au/def/csdm/property/pose> ;
     sosa:resultTime "2023-05-22T16:41:00" .
 
@@ -332,6 +342,7 @@ An example observation of a vector based on bearing,pitch (azimuth angle) and di
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -339,7 +350,9 @@ An example observation of a vector based on bearing,pitch (azimuth angle) and di
 [] a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
     sosa:hasResult [ surv:distance 3.332071e+05 ] ;
-    sosa:madeBySensor [ ] ;
+    sosa:madeBySensor [ a ns1:DifferentialGPS ;
+            ns1:baseSensor "gps+38666" ;
+            ns1:roverSensor "gps+37544" ] ;
     sosa:observedProperty <https://linked.data.gov.au/def/csdm/property/pose> ;
     sosa:resultTime "2023-05-22T16:41:00+2" .
 
@@ -434,13 +447,17 @@ Example Survey Observation - vector only distance
 
 ```turtle
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 
 [] a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
-    sosa:hasResult [ surv:pose [ ] ] ;
-    sosa:madeBySensor [ ] ;
+    sosa:hasResult [ surv:pose [ geopose:angles [ ] ] ] ;
+    sosa:madeBySensor [ a ns1:DifferentialGPS ;
+            ns1:baseSensor "gps+38666" ;
+            ns1:roverSensor "gps+37544" ] ;
     sosa:observedProperty <https://linked.data.gov.au/def/csdm/property/pose> ;
     sosa:resultTime "2023-05-22T16:41:00" .
 
@@ -566,7 +583,9 @@ Example Survey Observation - vector only bearing
 @prefix angletype: <https://linked.data.gov.au/def/csdm/defs/angletypes/> .
 @prefix distancetype: <https://linked.data.gov.au/def/csdm/defs/distancetypes/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
@@ -577,8 +596,11 @@ Example Survey Observation - vector only bearing
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <http://www.example.com/features/l973158> ;
-            sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ] ;
-    sosa:madeBySensor [ ] ;
+            sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ;
+                            geopose:angles [ ] ] ] ] ;
+    sosa:madeBySensor [ a ns2:DifferentialGPS ;
+            ns2:baseSensor "gps+38666" ;
+            ns2:roverSensor "gps+37544" ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2023-05-24T00:00:00" ;
     sosa:usedProcedure surveyproc:traverse ;
@@ -610,16 +632,20 @@ $defs:
     - properties:
         sensorType:
           $ref: '#/$defs/coderef'
+          x-jsonld-id: '@type'
       required:
       - sensorType
     - oneOf:
       - properties:
           sensorType:
             const: DifferentialGPS
+            x-jsonld-id: '@type'
           baseSensor:
             type: string
+            x-jsonld-id: https://linked.data.gov.au/def/csdm/sensors/baseSensor
           roverSensor:
             type: string
+            x-jsonld-id: https://linked.data.gov.au/def/csdm/sensors/roverSensor
         required:
         - baseSensor
         - roverSensor
@@ -627,6 +653,7 @@ $defs:
           sensorType:
             not:
               const: DifferentialGPS
+            x-jsonld-id: '@type'
   angles:
     type: object
     description: 'Basic-YPR: Basic GeoPose using yaw, pitch, and roll to specify orientation
@@ -646,6 +673,7 @@ $defs:
     properties:
       angles:
         $ref: '#/$defs/angles'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/utils/geopose/angles
     required:
     - angles
   SurveyVectorObsProps:
@@ -806,9 +834,48 @@ Links to the schema:
       "@id": "rdfs:seeAlso"
     },
     "featureType": "@type",
+    "time": {
+      "@context": {
+        "date": {
+          "@id": "owlTime:hasTime",
+          "@type": "xsd:date"
+        },
+        "timestamp": {
+          "@id": "owlTime:hasTime",
+          "@type": "xsd:dateTime"
+        },
+        "interval": {
+          "@id": "owlTime:hasTime",
+          "@container": "@list"
+        }
+      },
+      "@id": "dct:time"
+    },
+    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "place": "dct:spatial",
+    "Polyhedron": "geojson:Polyhedron",
+    "MultiPolyhedron": "geojson:MultiPolyhedron",
+    "Prism": {
+      "@id": "geojson:Prism",
+      "@context": {
+        "base": "geojson:prismBase",
+        "lower": "geojson:prismLower",
+        "upper": "geojson:prismUpper"
+      }
+    },
+    "MultiPrism": {
+      "@id": "geojson:MultiPrism",
+      "@context": {
+        "prisms": "geojson:prisms"
+      }
+    },
     "coordinates": {
       "@container": "@list",
       "@id": "geojson:coordinates"
+    },
+    "geometries": {
+      "@id": "geojson:geometry",
+      "@container": "@list"
     },
     "resultTime": "sosa:resultTime",
     "phenomenonTime": {
@@ -832,7 +899,10 @@ Links to the schema:
     },
     "madeBySensor": {
       "@context": {
-        "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor"
+        "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+        "sensorType": "@type",
+        "baseSensor": "csdm:sensors/baseSensor",
+        "roverSensor": "csdm:sensors/roverSensor"
       },
       "@id": "sosa:madeBySensor",
       "@type": "@id"
@@ -983,7 +1053,12 @@ Links to the schema:
       "@id": "sosa:hasResult",
       "@type": "@id",
       "@context": {
-        "pose": "csdm:surveyfeatures/pose",
+        "pose": {
+          "@context": {
+            "angles": "csdm:utils/geopose/angles"
+          },
+          "@id": "csdm:surveyfeatures/pose"
+        },
         "distance": "csdm:surveyfeatures/distance"
       }
     },
@@ -1245,6 +1320,8 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "owlTime": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",

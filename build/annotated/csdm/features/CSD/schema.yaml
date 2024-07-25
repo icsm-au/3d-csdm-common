@@ -224,7 +224,7 @@ allOf:
 - $ref: '#/$defs/FeatureCollectionOptions'
 - properties:
     time:
-      $ref: https://beta.schemas.opengis.net/json-fg/time.json
+      $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.yaml
 - $ref: '#/$defs/CSDmeta'
 - $ref: '#/$defs/provenanceOptions'
 properties:

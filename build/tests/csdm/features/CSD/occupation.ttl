@@ -6,6 +6,7 @@
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix nz-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
@@ -14,6 +15,7 @@
 eg1:LT_584372 a csd:CSD,
         geojson:FeatureCollection ;
     rdfs:label "LT 584372" ;
+    dct:time [ owlTime:hasTime "2022-10-29"^^xsd:date ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:2106 ;
     container:occupationFeatures eg1:occupation-example ;
@@ -27,17 +29,17 @@ eg1:4494877 a eg1:OccupationMark,
     rdfs:label [ rdfs:label "Post II LT 584372" ;
             dct:hasPart [ rdfs:label "LT" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "II" ;
-                    commonpatterns:namePartType "MarkStamp" ],
                 [ rdfs:label "584372" ;
                     commonpatterns:namePartType "PlanStamp" ],
+                [ rdfs:label "II" ;
+                    commonpatterns:namePartType "MarkStamp" ],
                 [ rdfs:label "Post" ;
                     commonpatterns:namePartType "MarkType" ] ] ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 7.62376e+05 3.664124e+05 ) ] ;
     rdfs:comment "Wooden Post" ;
     surv:age "40+ years" ;
     surv:purpose nz-surveypoint-purpose:occupation ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 7.62376e+05 3.664124e+05 ) ] ;
     geojson:topology [ a eg1:Touches ;
             geojson:relatedFeatures ( eg1:964009 ) ] .
 
@@ -46,6 +48,7 @@ eg1:OccupationMarks a eg1:OccupationMark,
     geojson:features eg1:4494877 .
 
 eg1:occupation-example a geojson:FeatureCollection ;
+    owlTime:hasTime "2022-10-29"^^xsd:date ;
     geojson:features eg1:964009 .
 
 eg1:964009 a geojson:Feature ;

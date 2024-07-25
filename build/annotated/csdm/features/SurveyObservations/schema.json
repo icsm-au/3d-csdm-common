@@ -10,7 +10,8 @@
         {
           "properties": {
             "sensorType": {
-              "$ref": "#/$defs/coderef"
+              "$ref": "#/$defs/coderef",
+              "x-jsonld-id": "@type"
             }
           },
           "required": [
@@ -22,13 +23,16 @@
             {
               "properties": {
                 "sensorType": {
-                  "const": "DifferentialGPS"
+                  "const": "DifferentialGPS",
+                  "x-jsonld-id": "@type"
                 },
                 "baseSensor": {
-                  "type": "string"
+                  "type": "string",
+                  "x-jsonld-id": "https://linked.data.gov.au/def/csdm/sensors/baseSensor"
                 },
                 "roverSensor": {
-                  "type": "string"
+                  "type": "string",
+                  "x-jsonld-id": "https://linked.data.gov.au/def/csdm/sensors/roverSensor"
                 }
               },
               "required": [
@@ -41,7 +45,8 @@
                 "sensorType": {
                   "not": {
                     "const": "DifferentialGPS"
-                  }
+                  },
+                  "x-jsonld-id": "@type"
                 }
               }
             }
@@ -72,7 +77,8 @@
       "type": "object",
       "properties": {
         "angles": {
-          "$ref": "#/$defs/angles"
+          "$ref": "#/$defs/angles",
+          "x-jsonld-id": "https://linked.data.gov.au/def/csdm/utils/geopose/angles"
         }
       },
       "required": [

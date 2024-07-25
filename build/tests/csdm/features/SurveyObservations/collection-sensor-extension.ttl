@@ -1,6 +1,7 @@
 @prefix angletype: <https://linked.data.gov.au/def/csdm/defs/angletypes/> .
 @prefix distancetype: <https://linked.data.gov.au/def/csdm/defs/distancetypes/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
@@ -12,8 +13,9 @@
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
-            sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ] ;
-    sosa:madeBySensor [ ] ;
+            sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ;
+                            geopose:angles [ ] ] ] ] ;
+    sosa:madeBySensor [ a <https://linked.data.gov.au/def/csdm/sensors/someCustomSensor> ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2023-05-24T16:41:00" ;
     sosa:usedProcedure surveyproc:traverse ;

@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2024-04-10",
+  "dateOfLastChange": "2024-07-24",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -28,19 +28,15 @@
   "shaclRules": {
     "icsm.csdm.datatypes.compoundName": [
       "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
-    ],
-    "ogc.geo.topo.features.topo-feature": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ]
   },
   "dependsOn": [
     "icsm.csdm.datatypes.compoundName",
+    "ogc.geo.topo.features.topo-line",
+    "ogc.ogc-utils.iri-or-curie",
+    "ogc.ogc-utils.prov",
     "ogc.geo.json-fg.feature",
     "ogc.geo.json-fg.feature-lenient",
-    "ogc.ogc-utils.prov",
-    "ogc.ogc-utils.iri-or-curie",
-    "ogc.geo.topo.features.topo-line",
     "ogc.geo.common.data_types.geojson"
   ],
   "ldContext": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
@@ -48,8 +44,8 @@
     "application/yaml": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml",
     "application/json": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.json"
   },
-  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/context.jsonld",
   "sourceSchema": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/schema.json",
+  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/context.jsonld",
   "sourceFiles": "https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/",
   "validationPassed": true,
   "testOutputs": "https://github.com/icsm-au/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyFeatures/",

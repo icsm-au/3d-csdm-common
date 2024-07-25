@@ -4,12 +4,15 @@
 @prefix eg1: <https://linked.data.gov.au/def/csdm/csd-example/> .
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
 @prefix icsm-survey-type: <https://linked.data.gov.au/def/csdm/icsm-survey-type/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix nz-line-purpose: <https://linked.data.gov.au/def/csdm/nz-linepurpose/> .
 @prefix nz-monument-condition: <https://linked.data.gov.au/def/csdm/nz-monument-condition/> .
 @prefix nz-monument-form: <https://linked.data.gov.au/def/csdm/nz-monument-form/> .
 @prefix nz-monument-state: <https://linked.data.gov.au/def/csdm/nz-monument-state/> .
 @prefix nz-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/nz-surveypointpurpose/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -21,6 +24,7 @@
 eg1:DP_572532 a container:CSD,
         geojson:FeatureCollection ;
     rdfs:label "DP 572532" ;
+    dct:time [ owlTime:hasTime "2022-05-23"^^xsd:date ] ;
     prov:wasGeneratedBy eg1:DP-1-S2 ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:4167 ;
@@ -48,12 +52,14 @@ eg1:DP-1-S2 prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
 
 eg1:FailsToDeclareObservedProperty a geojson:Feature ;
     sosa:hasFeatureOfInterest eg1:l973158 ;
-    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ;
+    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ;
+                    geopose:angles [ ] ] ] ;
     sosa:resultTime "2023-05-22T16:41:00+2" .
 
 eg1:FailsValueObservedProperty a geojson:Feature ;
     sosa:hasFeatureOfInterest eg1:l973158 ;
-    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ] ] ;
+    sosa:hasResult [ surv:pose [ surv:distance 3.332071e+05 ;
+                    geopose:angles [ ] ] ] ;
     sosa:observedProperty eg1: ;
     sosa:resultTime "2023-05-22T16:41:00+2" .
 
@@ -61,7 +67,9 @@ eg1:obs a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember eg1:FailsToDeclareObservedProperty,
         eg1:FailsValueObservedProperty ;
-    sosa:madeBySensor [ ] ;
+    sosa:madeBySensor [ a ns1:DifferentialGPS ;
+            ns1:baseSensor "gps+38666" ;
+            ns1:roverSensor "gps+37544" ] ;
     sosa:resultTime "2023-05-24" ;
     sosa:usedProcedure surveyproc:traverse .
 
@@ -79,14 +87,14 @@ eg1:11745104 a surv:GeodeticReferenceMark,
     rdfs:label [ rdfs:label "RM C DP 119552 (EQ9W)" ;
             dct:hasPart [ rdfs:label "RM" ;
                     commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "C" ;
-                    commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "119552" ;
                     commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "EQ9W" ;
-                    commonpatterns:namePartType "geodeticStamp" ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "C" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "EQ9W" ;
+                    commonpatterns:namePartType "geodeticStamp" ] ] ;
     surv:geodeticid "XX FFF" ;
     surv:monumentedBy [ surv:condition nz-monument-condition:markfound ;
             surv:form nz-monument-form:pin ;

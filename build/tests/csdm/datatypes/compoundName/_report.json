@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.csdm.datatypes.compoundName - Compound Name",
   "bblockName": "Compound Name",
   "bblockId": "icsm.csdm.datatypes.compoundName",
-  "generated": "2024-04-10T06:12:57.384975+00:00",
+  "generated": "2024-07-25T00:08:36.004654+00:00",
   "result": true,
   "items": [
     {
@@ -87,12 +87,12 @@
             {
               "shaclFile": "_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n2acda45e047f452b8f54a6436f0f4277b1": {
+                "_:n9417b0c812c84b4cb229063cd5121672b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n2acda45e047f452b8f54a6436f0f4277b1: *none*\n"
+              "message": "Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n9417b0c812c84b4cb229063cd5121672b1: *none*\n"
             }
           ]
         },

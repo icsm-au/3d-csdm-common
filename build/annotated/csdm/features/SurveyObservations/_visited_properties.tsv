@@ -20,15 +20,15 @@ path	@id
 /links/title	http://www.w3.org/2000/01/rdf-schema#label
 /links/length	http://purl.org/dc/terms/extent
 /featureType	@type
-/time	
-/time/date	
-/time/timestamp	
-/time/interval	
-/coordRefSys	
+/time	http://purl.org/dc/terms/time
+/time/date	http://www.w3.org/2006/time#hasTime
+/time/timestamp	http://www.w3.org/2006/time#hasTime
+/time/interval	http://www.w3.org/2006/time#hasTime
+/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
 /coordRefSys/type	
 /coordRefSys/href	
 /coordRefSys/epoch	
-/place	
+/place	http://purl.org/dc/terms/spatial
 /place/type	
 /place/coordRefSys	
 /place/coordRefSys/type	
@@ -78,6 +78,8 @@ path	@id
 /properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
 /properties/madeBySensor	sosa:madeBySensor
 /properties/hasResult	sosa:hasResult
+/properties/result	
+/properties/result@links	
 /properties/hasSimpleResult	
 /properties/hasResultQuality	
 /properties/hasResultQuality/angleAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure
@@ -85,7 +87,7 @@ path	@id
 /properties/hasResultQuality/distanceAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass
 /properties/hasResultQuality/angleAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass
 /properties/hasResult/pose	https://linked.data.gov.au/def/csdm/surveyfeatures/pose
-/properties/hasResult/pose/angles	
+/properties/hasResult/pose/angles	https://linked.data.gov.au/def/csdm/utils/geopose/angles
 /properties/hasResult/pose/angles/yaw	
 /properties/hasResult/pose/angles/pitch	
 /properties/hasResult/pose/angles/roll	
@@ -112,8 +114,12 @@ path	@id
 /hasMember/hasMember/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
 /hasMember/hasMember/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
 /hasMember/hasMember/hasResult	
+/hasMember/hasMember/result	
+/hasMember/hasMember/result@links	
 /hasMember/hasMember/hasSimpleResult	
 /hasMember/hasResult	
+/hasMember/result	
+/hasMember/result@links	
 /hasMember/hasSimpleResult	
 /features	sosa:hasMember
 /features/type	@type
@@ -137,15 +143,15 @@ path	@id
 /features/links/title	http://www.w3.org/2000/01/rdf-schema#label
 /features/links/length	http://purl.org/dc/terms/extent
 /features/featureType	@type
-/features/time	
-/features/time/date	
-/features/time/timestamp	
-/features/time/interval	
-/features/coordRefSys	
+/features/time	http://purl.org/dc/terms/time
+/features/time/date	http://www.w3.org/2006/time#hasTime
+/features/time/timestamp	http://www.w3.org/2006/time#hasTime
+/features/time/interval	http://www.w3.org/2006/time#hasTime
+/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
 /features/coordRefSys/type	
 /features/coordRefSys/href	
 /features/coordRefSys/epoch	
-/features/place	
+/features/place	http://purl.org/dc/terms/spatial
 /features/place/type	
 /features/place/coordRefSys	
 /features/place/coordRefSys/type	
@@ -195,6 +201,8 @@ path	@id
 /features/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
 /features/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
 /features/properties/hasResult	sosa:hasResult
+/features/properties/result	
+/features/properties/result@links	
 /features/properties/hasSimpleResult	
 /features/properties/hasResultQuality	
 /features/properties/hasResultQuality/angleAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure
@@ -202,7 +210,7 @@ path	@id
 /features/properties/hasResultQuality/distanceAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass
 /features/properties/hasResultQuality/angleAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass
 /features/properties/hasResult/pose	https://linked.data.gov.au/def/csdm/surveyfeatures/pose
-/features/properties/hasResult/pose/angles	
+/features/properties/hasResult/pose/angles	https://linked.data.gov.au/def/csdm/utils/geopose/angles
 /features/properties/hasResult/pose/angles/yaw	
 /features/properties/hasResult/pose/angles/pitch	
 /features/properties/hasResult/pose/angles/roll	
@@ -210,6 +218,6 @@ path	@id
 /features/properties/hasResult/distance	https://linked.data.gov.au/def/csdm/surveyfeatures/distance
 /properties/angleType	https://linked.data.gov.au/def/csdm/surveyobs/angleType
 /properties/distanceType	https://linked.data.gov.au/def/csdm/surveyobs/distanceType
-/properties/madeBySensor/sensorType	
-/properties/madeBySensor/baseSensor	
-/properties/madeBySensor/roverSensor	
+/properties/madeBySensor/sensorType	@type
+/properties/madeBySensor/baseSensor	https://linked.data.gov.au/def/csdm/sensors/baseSensor
+/properties/madeBySensor/roverSensor	https://linked.data.gov.au/def/csdm/sensors/roverSensor

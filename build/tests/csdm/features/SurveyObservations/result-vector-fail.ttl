@@ -1,9 +1,12 @@
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/sensors/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 [] a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/l973158> ;
     sosa:hasResult [ ] ;
-    sosa:madeBySensor [ ] ;
+    sosa:madeBySensor [ a ns1:DifferentialGPS ;
+            ns1:baseSensor "gps+38666" ;
+            ns1:roverSensor "gps+37544" ] ;
     sosa:resultTime "2023-05-22T16:41:00" .
 

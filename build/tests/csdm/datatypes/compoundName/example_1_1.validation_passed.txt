@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.datatypes.compoundName - Compound Name
-Generated 2024-04-10T06:12:57.384913+00:00
+Generated 2024-07-25T00:08:36.004581+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for _sources/csdm/datatypes/compoundName/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n2acda45e047f452b8f54a6436f0f4277b1: *none*
+ - Shape _:n9417b0c812c84b4cb229063cd5121672b1: *none*
 
 === End SHACL ===
 

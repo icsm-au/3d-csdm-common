@@ -1,35 +1,4 @@
 x-defs:
-  icsm.csdm.datatypes.annotation:
-    $defs:
-      linkWithRole:
-        $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.geo.json-fg.link-role
-      codeRef:
-        $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie
-      Options:
-        anyOf:
-        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.annotation/$defs/linkWithRole
-        - properties:
-            role:
-              $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.annotation/$defs/codeRef
-            description:
-              type: string
-              x-jsonld-id: http://purl.org/dc/terms/description
-          required:
-          - description
-        - type: string
-      AnnotationSet:
-        anyOf:
-        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.annotation/$defs/Options
-        - nullable: true
-        - type: array
-          items:
-            $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.annotation/$defs/Options
-    allOf:
-    - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.annotation/$defs/AnnotationSet
-    x-jsonld-prefixes:
-      dct: http://purl.org/dc/terms/
-    x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml
   ogc.geo.json-fg.link-role:
     description: annotated link with role and conformance
     $defs:
@@ -40,8 +9,16 @@ x-defs:
     allOf:
     - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.json-link
     - properties:
-        role: {}
-        conformsTo: {}
+        role:
+          x-jsonld-id: http://www.w3.org/ns/dx/prof/hasRole
+          x-jsonld-type: '@id'
+          allOf:
+          - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.geo.json-fg.link-role/$defs/coderef
+        conformsTo:
+          x-jsonld-id: http://purl.org/dc/terms/conformsTo
+          x-jsonld-type: '@id'
+          allOf:
+          - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.geo.json-fg.link-role/$defs/coderefs
       required:
       - role
     x-jsonld-prefixes:
@@ -49,8 +26,40 @@ x-defs:
       dct: http://purl.org/dc/terms/
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml
   ogc.ogc-utils.iri-or-curie:
-    x-schema-version: https://json-schema.org/draft/2020-12/schema
+    description: IRI or CURIE
+    $defs:
+      IRI:
+        type: string
+        pattern: ^\w+:/*([^:<>{}|\\^`"\s/]+[^<>{}|\\^`"\s]*(:[^:<>{}|\\^`"\s]+)?)?$
+      CURIE:
+        type: string
+        pattern: ^[A-Za-z_][^\s:/]*:[^:<>{}|\\^`"\s]*(\?[^<>{}|\\^`" ]*)?(#[^<>{}|\\^`"\s]*)?$
+      LocalPart:
+        type: string
+        pattern: ^[^:<>{}|\\^`"\s]*(\?[^<>{}|\\^`"\s]*)?(#[^<>{}|\\^`"\s]*)?$
+      Single:
+        anyOf:
+        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/IRI
+        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/CURIE
+        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/LocalPart
+      Multiple:
+        oneOf:
+        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single
+        - type: array
+          items:
+            $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single
+      MultipleOrObject:
+        oneOf:
+        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Multiple
+        - type: object
+      MultipleOrObjectOrNull:
+        oneOf:
+        - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/MultipleOrObject
+        nullable: true
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
+    allOf:
+    - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie/$defs/Single
   ogc.ogc-utils.json-link:
     description: JSON Link
     type: object
@@ -86,7 +95,34 @@ x-defs:
       oa: http://www.w3.org/ns/oa#
       rdfs: http://www.w3.org/2000/01/rdf-schema#
       dct: http://purl.org/dc/terms/
-    x-schema-version: https://json-schema.org/draft/2020-12/schema
     x-schema-source: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+    x-schema-version: https://json-schema.org/draft/2020-12/schema
+$defs:
+  linkWithRole:
+    $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.geo.json-fg.link-role
+  codeRef:
+    $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/ogc.ogc-utils.iri-or-curie
+  Options:
+    anyOf:
+    - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/$defs/linkWithRole
+    - properties:
+        role:
+          $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/$defs/codeRef
+        description:
+          type: string
+          x-jsonld-id: http://purl.org/dc/terms/description
+      required:
+      - description
+    - type: string
+  AnnotationSet:
+    anyOf:
+    - $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/$defs/Options
+    - nullable: true
+    - type: array
+      items:
+        $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/$defs/Options
 allOf:
-- $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/x-defs/icsm.csdm.datatypes.annotation
+- $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/schema-oas3.0.yaml#/$defs/AnnotationSet
+x-jsonld-prefixes:
+  dct: http://purl.org/dc/terms/
+x-schema-version: https://json-schema.org/draft/2020-12/schema

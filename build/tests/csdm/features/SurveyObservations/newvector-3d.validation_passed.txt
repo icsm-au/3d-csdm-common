@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.features.SurveyObservations - Survey Observations
-Generated 2024-04-10T06:13:00.099201+00:00
+Generated 2024-07-25T00:08:38.353674+00:00
 === Files ===
 Using newvector-3d (example_2_1) from examples
 JSON-LD context is present - uplifting
@@ -25,11 +25,11 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl:
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:N6142ad7272aa41b0b6b609bebc667c5f
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:N6142ad7272aa41b0b6b609bebc667c5f
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:Nd47cb62e772d4e4087b738a7a4ec4863
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:N6142ad7272aa41b0b6b609bebc667c5f
- - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: _:N6142ad7272aa41b0b6b609bebc667c5f
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: _:Nd47cb62e772d4e4087b738a7a4ec4863
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: _:Nd47cb62e772d4e4087b738a7a4ec4863
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: _:Nd47cb62e772d4e4087b738a7a4ec4863
 
 === End SHACL ===
 
